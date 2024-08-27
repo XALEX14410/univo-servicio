@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitios web univo</title>
     <style>
+        :root{
+            --color_boton: #dd00ff;
+        }
+
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -28,13 +33,13 @@
             margin: 10px 0;
             padding: 10px;
             text-decoration: none;
-            color: #dd00ff;
-            border: 1px solid #dd00ff;
+            color: var(--color_boton);
+            border: 1px solid var(--color_boton);
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
         .container a:hover {
-            background-color: #dd00ff;
+            background-color: var(--color_boton);
             color: #fff;
         }
     </style>
