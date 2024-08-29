@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.encabezado {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 20px 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    height: 150px;
+    overflow: hidden; /* Evita que el logo se vea cuando se oculta */
+}
+
+.logo {
+    max-width: 200px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.barra-navegacion {
+    background-color: #f8f9fa;
+    /* border-top: 1px solid #ddd; */
+}
+
+.barra-navegacion ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.barra-navegacion ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.barra-navegacion ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.barra-navegacion ul li a:hover {
+    color: #007bff;
+}

@@ -1,0 +1,140 @@
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #212529; /* Color de texto */
+    padding: 80px 0; /* Espaciado vertical */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+    position: absolute; /* Asegura que el pie de página se mantenga en su lugar */
+    left: 0;
+}
+
+.container-f {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: auto;
+}
+
+.footer .container-fluid {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    max-width: 100%; /* Elimina cualquier ancho máximo */
+    padding: 0; /* Elimina el relleno para asegurar que el pie de página ocupe todo el ancho */
+}
+
+/* Estilo para los encabezados dentro del pie de página */
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-weight: bold; /* Negrita para los títulos */
+}
+
+/* Estilo para los párrafos y listas dentro del pie de página */
+.footer p, .footer ul {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
+
+/* Estilo para los enlaces dentro del pie de página */
+.footer a {
+    color: #007bff; /* Color de los enlaces */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Espaciado entre los ítems de la lista sin estilo */
+.footer .list-unstyled li {
+    margin-bottom: 10px; /* Espacio debajo de cada ítem */
+}
+
+/* Espaciado entre el ícono y el texto dentro del pie de página */
+.footer .list-unstyled i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Centrando el texto en la parte inferior del pie de página */
+.footer .text-center {
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Tamaño de los íconos de Bootstrap si se usan */
+.footer .bi {
+    font-size: 1.2rem; /* Tamaño de los íconos */
+}
+ 
+
+iframe{
+    width: 500px;
+    height: 200px;
+}
+
+/* Media Queries para responsividad */
+
+/* Dispositivos móviles (pantallas más pequeñas) */
+@media screen and (max-width: 576px) {
+
+
+    .footer h5 {
+        font-size: 1rem; /* Reduce el tamaño del título en el pie de página */
+    }
+
+    .footer p, .footer ul {
+        font-size: 0.8rem; /* Reduce el tamaño de fuente en el pie de página */
+    }
+
+    .footer {
+        padding: 40px 0; /* Reduce el padding del pie de página */
+    }
+}
+
+/* Tabletas (pantallas medianas) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+    .footer h5 {
+        font-size: 1.1rem; /* Ajusta el tamaño del título en el pie de página */
+    }
+
+    .footer p, .footer ul {
+        font-size: 0.85rem; /* Ajusta el tamaño de fuente en el pie de página */
+    }
+
+    .footer {
+        padding: 60px 0; /* Ajusta el padding del pie de página */
+    }
+}
+
+/* Escritorio pequeño a mediano */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+
+    .footer h5 {
+        font-size: 1.2rem; /* Ajusta el tamaño del título */
+    }
+
+    .footer p, .footer ul {
+        font-size: 0.9rem; /* Ajusta el tamaño de fuente */
+    }
+
+    .footer {
+        padding: 70px 0; /* Ajusta el padding del pie de página */
+    }
+}
+
+/* Escritorio grande (pantallas más grandes) */
+@media screen and (min-width: 993px) {
+
+    .footer h5 {
+        font-size: 1.25rem; /* Tamaño original del título */
+    }
+
+    .footer p, .footer ul {
+        font-size: 0.95rem; /* Tamaño original de fuente */
+    }
+
+    .footer {
+        padding: 80px 0; /* Tamaño original del padding */
+    }
+}
