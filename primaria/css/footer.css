@@ -72,26 +72,33 @@ Creado por: Jesus Alejandro Lara
  
 
 iframe{
-    width: 500px;
+    max-width: 400px;
     height: 200px;
 }
 
-/* Media Queries para responsividad */
+
+
+
+
 
 /* Dispositivos móviles (pantallas más pequeñas) */
 @media screen and (max-width: 576px) {
 
-
     .footer h5 {
-        font-size: 1rem; /* Reduce el tamaño del título en el pie de página */
+        font-size: 1rem;
     }
 
     .footer p, .footer ul {
-        font-size: 0.8rem; /* Reduce el tamaño de fuente en el pie de página */
+        font-size: 0.8rem;
     }
 
     .footer {
-        padding: 40px 0; /* Reduce el padding del pie de página */
+        padding: 40px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 150px; /* Ajusta la altura para pantallas pequeñas */
     }
 }
 
@@ -99,32 +106,41 @@ iframe{
 @media screen and (min-width: 577px) and (max-width: 768px) {
 
     .footer h5 {
-        font-size: 1.1rem; /* Ajusta el tamaño del título en el pie de página */
+        font-size: 1.1rem;
     }
 
     .footer p, .footer ul {
-        font-size: 0.85rem; /* Ajusta el tamaño de fuente en el pie de página */
+        font-size: 0.85rem;
     }
 
     .footer {
-        padding: 60px 0; /* Ajusta el padding del pie de página */
+        padding: 60px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 180px; /* Ajusta la altura para pantallas medianas */
     }
 }
 
 /* Escritorio pequeño a mediano */
 @media screen and (min-width: 769px) and (max-width: 992px) {
 
-
     .footer h5 {
-        font-size: 1.2rem; /* Ajusta el tamaño del título */
+        font-size: 1.2rem;
     }
 
     .footer p, .footer ul {
-        font-size: 0.9rem; /* Ajusta el tamaño de fuente */
+        font-size: 0.9rem;
     }
 
     .footer {
-        padding: 70px 0; /* Ajusta el padding del pie de página */
+        padding: 70px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px; /* Ajusta la altura para pantallas medianas */
     }
 }
 
@@ -132,14 +148,39 @@ iframe{
 @media screen and (min-width: 993px) {
 
     .footer h5 {
-        font-size: 1.25rem; /* Tamaño original del título */
+        font-size: 1.25rem;
     }
 
     .footer p, .footer ul {
-        font-size: 0.95rem; /* Tamaño original de fuente */
+        font-size: 0.95rem;
     }
 
     .footer {
-        padding: 80px 0; /* Tamaño original del padding */
+        padding: 80px 0;
+    }
+
+    iframe {
+        width: 500px; /* Mantén el tamaño original o ajústalo según sea necesario */
+        height: 200px;
+    }
+}
+
+
+
+/* Dispositivos grandes (pantallas entre 997px y 1141px) */
+@media screen and (min-width: 997px) and (max-width: 1141px) {
+
+    iframe {
+        width: 100%; /* Asegura que el iframe ocupe todo el ancho disponible */
+        height: 230px; /* Puedes ajustar la altura según sea necesario */
+    }
+}
+
+/* Escritorio grande (pantallas más grandes) */
+@media screen and (min-width: 1142px) {
+
+    iframe {
+        width: 300px; /* Tamaño original o ajustado */
+        height: 250px;
     }
 }
