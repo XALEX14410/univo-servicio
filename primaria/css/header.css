@@ -1,14 +1,6 @@
-/*
-Codigo de header
-
+/* Código de header
 Creado por: Jesus Alejandro Lara
-
 */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
 .encabezado {
     background-color: #f8f9fa;
@@ -35,7 +27,6 @@ body {
 
 .barra-navegacion {
     background-color: #f8f9fa;
-    /* border-top: 1px solid #ddd; */
 }
 
 .barra-navegacion ul {
@@ -48,14 +39,190 @@ body {
 .barra-navegacion ul li {
     display: inline;
     margin: 0 15px;
+    position: relative;
 }
 
+/* Estilo de los enlaces del menú principal */
 .barra-navegacion ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.barra-navegacion ul li a:hover {
+/* Estilo del botón de menú para pantallas pequeñas */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 55px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+/* Estilo para el ícono cuando está activo */
+.nav-toggle.is-active {
+    transform: rotate(360deg);
+}
+
+.nav-toggle .bi-x-lg {
+    display: none;
+}
+
+.nav-toggle.is-active .bi-list {
+    display: none;
+}
+
+.nav-toggle.is-active .bi-x-lg {
+    display: block;
+}
+
+/* Estilo de la lista de navegación */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.nav-list li {
+    list-style: none;
+    position: relative;
+    margin: 0 15px;
+    padding: 10px 0;
+}
+
+/* Estilo de los enlaces dentro de la lista de navegación */
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 10px;
+    font-size: 18px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background-color: #ffffff;
     color: #007bff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del submenú */
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    width: 220px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+.submenu_2{
+    display: none;
+    position:unset;
+    background-color: #ffffff;
+    z-index: 1;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+    padding: 5px;
+    width: 220px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+/* Submenú de nivel 2 */
+.submenu_2 {
+    left: 100%; /* Alineado al lado derecho del submenú principal */
+    top: 0;
+}
+
+/* Mostrar submenú principal al hacer clic */
+.nav-list > li.active > .submenu {
+    display: block;
+    max-height: 500px; /* Ajusta según el contenido */
+    opacity: 1;
+}
+
+/* Mostrar submenú de nivel 2 al hacer clic */
+.submenu li.active > .submenu_2 {
+    display: block;
+    max-height: 500px; /* Ajusta según el contenido */
+    opacity: 1;
+}
+
+/* Estilo de los enlaces dentro del submenú */
+.submenu li a, .submenu_2 li a {
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu li a:hover, .submenu_2 li a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 1094px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%; /* Ajustar al ancho completo */
+        border-radius: 5px;
+        padding: 5px 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-list li a {
+        padding: 15px 20px;
+        text-align: center;
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+
+    /* Estilo del submenú con animación */
+    .submenu {
+        position: static; /* Cambiar a estático en pantallas pequeñas */
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease; /* Cambiar animación */
+    }
+    
+    .nav-list li.active .submenu {
+        opacity: 1;
+        max-height: 500px;
+    }
 }

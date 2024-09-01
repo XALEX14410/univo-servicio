@@ -11,193 +11,122 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/conatainer.css">
 </head>
 
 <body>
+    <!-- header -->
     <header class="encabezado" id="encabezado">
-        
         <!-- Loader -->
         <div class="centrado hidden">
             <div class="centrado__icono"></div>
         </div>
-
-
+    
+        <!-- Contenedor del logo -->
         <div class="logo-container" id="logo-container">
             <img src="./img/logo_primaria.png" alt="Logo escolar" class="logo" id="logo">
             <img src="./img/GEU2030-50.png" alt="Logo de la Empresa" class="logo" id="logo1">
         </div>
-
+    
+        <!-- Botón de menú para pantallas pequeñas -->
+        <button class="nav-toggle" id="nav-toggle">
+            <i class="bi bi-list"> </i> <!-- Icono de hamburguesa -->
+            <i class="bi bi-x-lg"> </i> <!-- Icono de cierre -->
+        </button>
+    
+        <!-- Barra de navegación -->
         <nav class="barra-navegacion" id="barra-navegacion">
-            <ul class="" id="mainMenu">
-            <li>
-                <a class="dropdown-toggle" href="http://primaria.univo.edu.mx/index.php">
-                    Inicio
-                </a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#">
-                    Nosotros
-                    <i class="icon icon-caret-down">
-                    </i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="http://primaria.univo.edu.mx/nosotros/historia.php">
-                            Historia
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://primaria.univo.edu.mx/nosotros/mision.php">
-                            Misión − Visión
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://primaria.univo.edu.mx/nosotros/objetivos.php">
-                            Objetivo
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://primaria.univo.edu.mx/nosotros/valores.php">
-                            Decálogo de Valores
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://primaria.univo.edu.mx/nosotros/directorio.php">
-                            Directorio
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#">
-                    Área Académica
-                    <i class="icon icon-caret-down">
-                    </i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="http://primaria.univo.edu.mx/planes">
-                            Plan de Estudios
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://primaria.univo.edu.mx/clubes/index.php">
-                            Clubes
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://virtual.univo.com.mx/">
-                            Plataforma Virtual
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#">
-                    Servicios
-                    <i class="icon icon-caret-down">
-                    </i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li class="dropdown-submenu">
-                        <a href="#">
-                            Becas
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="http://www2.univo.edu.mx/web/becas/becas.php#tipos" target="_blanck">
-                                    Tipos de Becas
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://www2.univo.edu.mx/web/becas/convocatorias/Convocatoria Beca Primaria1.pdf"
-                                    target="_blanck">
-                                    Convocatoria
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://www2.univo.edu.mx/SISE/REDIRECCIONES/primaria.html" target="_blanck">
-                                    Trámite y Formatos
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li>
-                <a class="dropdown-toggle" href="http://primaria.univo.edu.mx/galeria/index.php">
-                    Galería
-                </a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#">
-                    Sise
-                    <i class="icon icon-caret-down">
-                    </i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="https://sise.univo.edu.mx/WEB2/SISE/WebPrimaria/SisePrimaria/Autenticacion.php"
-                            target="_blank">
-                            Alumnos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://sise.univo.edu.mx/WEB2/SISE/DocentesPrimaria/Autenticacion.php"
-                            target="_blank">
-                            Docentes UniVO
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#">
-                    Correo
-                    <i class="icon icon-caret-down">
-                    </i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="https://alumnos.univo.edu.mx:2096/" target="_blank">
-                            Alumnos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://correo.univo.edu.mx:2096/" target="_blank">
-                            Docentes
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="dropdown-toggle" href="http://primaria.univo.edu.mx/contacto/index.php">
-                    Contacto
-                    <!--<i class="icon icon-envelope"></i>-->
-                </a>
-            </li>
-            <!--<li>
-                                          <a class="dropdown-toggle" href="http://primaria.univo.edu.mx/infografia/conocenos.php">
-                                              Conócenos
-                                              <<i class="icon icon-envelope"></i>
-                                          </a>
-                                      </li>-->
+            <!-- <ul class="nav-list">
+                <li>
+                    <a href="#">Menu 1</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Submenu 1-1</a>
+                            <ul class="submenu_2">
+                                <li><a href="#">Submenu 1-1-1</a></li>
+                                <li><a href="#">Submenu 1-1-2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Submenu 1-2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Menu 2</a>
+                    <ul class="submenu">
+                        <li><a href="#">Submenu 2-1</a></li>
+                        <li><a href="#">Submenu 2-2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu 3</a></li>
+            </ul> -->
+            <ul class="nav-list" id="nav_list">
+                <li><a href="http://primaria.univo.edu.mx/index.php">Inicio</a></li>
+                <li>
+                    <a href="#">Nosotros<i class="icon icon-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="http://primaria.univo.edu.mx/nosotros/historia.php">Historia</a></li>
+                        <li><a href="http://primaria.univo.edu.mx/nosotros/mision.php">Misión − Visión</a></li>
+                        <li><a href="http://primaria.univo.edu.mx/nosotros/objetivos.php">Objetivo</a></li>
+                        <li><a href="http://primaria.univo.edu.mx/nosotros/valores.php">Decálogo de Valores</a></li>
+                        <li><a href="http://primaria.univo.edu.mx/nosotros/directorio.php">Directorio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Área Académica<i class="icon icon-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="http://primaria.univo.edu.mx/planes">Plan de Estudios</a></li>
+                        <li><a href="http://primaria.univo.edu.mx/clubes/index.php">Clubes</a></li>
+                        <li><a href="http://virtual.univo.com.mx/">Plataforma Virtual</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#">Servicios<i class="icon icon-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Becas</a>
+                            <ul class="submenu_2">
+                                <li><a href="http://www2.univo.edu.mx/web/becas/becas.php#tipos" target="_blank">Tipos de Becas</a></li>
+                                <li><a href="http://www2.univo.edu.mx/web/becas/convocatorias/Convocatoria Beca Primaria1.pdf" target="_blank">Convocatoria</a></li>
+                                <li><a href="http://www2.univo.edu.mx/SISE/REDIRECCIONES/primaria.html" target="_blank">Trámite y Formatos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="http://primaria.univo.edu.mx/galeria/index.php">Galería</a></li>
+                <li>
+                    <a href="#">Sise<i class="icon icon-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="https://sise.univo.edu.mx/WEB2/SISE/WebPrimaria/SisePrimaria/Autenticacion.php" target="_blank">Alumnos</a></li>
+                        <li><a href="https://sise.univo.edu.mx/WEB2/SISE/DocentesPrimaria/Autenticacion.php" target="_blank">Docentes UniVO</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Correo<i class="icon icon-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="https://alumnos.univo.edu.mx:2096/" target="_blank">Alumnos</a></li>
+                        <li><a href="https://correo.univo.edu.mx:2096/" target="_blank">Docentes</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://primaria.univo.edu.mx/contacto/index.php">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    
+    <!-- End header -->
 
-
-
-
-    <main>
+<!-- Main  -->
+   <main class="contenido">
+    <h1>Bienvenidos a la vista previa del contenido de la pagina</h1>
+    <p>Contenido de la página...</p>
+        <img src="./img/GEU2030-50.png" alt="" srcset="">
         <!-- Contenido principal de la página -->
-        <div style="height: 2000px;"> <!-- Simula un contenido largo para hacer scroll -->
-            <p>Contenido de la página...</p>
+        <div> <!-- Simula un contenido largo para hacer scroll -->
+            
         </div>
     </main>
 
-
+<!-- End main -->
 
 
 
@@ -240,8 +169,36 @@
                 </div>
 
             </div>
+
+
+
             <div class="text-center mt-4">
-                <p>&copy; 2024 NSTITUTO DE ESTUDIOS SUPERIORES DEL VALLE DE ORIZABA. Todos los derechos reservados.
+                
+                
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="facebook-icon" title="Facebook">
+                        <img src="logo_redes_sociales/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="twitter-icon" title="Twitter">
+                        <img src="logo_redes_sociales/twitter-x.svg" alt="Twitter">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="instagram-icon" title="Instagram">
+                        <img src="logo_redes_sociales/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="linkedin-icon" title="LinkedIn">
+                        <img src="logo_redes_sociales/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://youtube.com" target="_blank" class="youtube-icon" title="YouTube">
+                        <img src="logo_redes_sociales/youtube.svg" alt="YouTube">
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="tiktok-icon" title="TikTok">
+                        <img src="logo_redes_sociales/tiktok.svg" alt="TikTok">
+                    </a>
+                </div>
+
+
+            <div class="text-center mt-4">
+                <p>&copy; 2024 INSTITUTO DE ESTUDIOS SUPERIORES DEL VALLE DE ORIZABA. Todos los derechos reservados.
                     Grupo educativo univo</p>
             </div>
         </div>
@@ -251,6 +208,13 @@
 
     <script src="./js/header.js"></script>
     <script src="./js/loader.js"></script>
+    <script src="./js/nav-toggle.js"></script>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </body>
 
 </html>

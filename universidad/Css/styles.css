@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-prin {
+    background: url(../Imagenes/Background1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.logo-prin {
+    width: 84px;
+    height: 80px;
+}
+
+.logo2-prin {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar {
+    
+    background: linear-gradient(to bottom, #153657, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5% 1%;
+    font-weight: bold;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    position: -webkit-sticky; /* Soporte para navegadores webkit (Safari, Chrome) */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-shadow: 0px 0px 2px white;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none !important;
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-horizontal>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-horizontal>li:hover {
+    background-color: #153657;
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: #151515cc;
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical li:hover {
+    background-color: #153657;
+    font-size: 15px;
+}
+
+.menu-vertical li a {
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+}
+
+
+/* @NAV */
+@media (max-width: 1200px) {
+    .offer {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-horizontal>li {
+        width: 100%;
+    }
+
+    .offer {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu-horizontal.active {
+        display: flex;
+    }
+
+    .menu-horizontal>li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .menu-horizontal>li>a {
+        padding: 10px;
+        font-size: 14px; /* Reducir tamaño de fuente para dispositivos pequeños */
+        
+    }
+
+    .menu-vertical {
+        width: 100%;
+        position: static;
+        background-color: transparent;
+        display: none;
+    }
+    .menu-horizontal li:hover .menu-vertical {
+        display: table-column;
+    }
+
+    .menu-horizontal .active {
+        display: block;
+    }
+
+    .offer {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+}
+
+/* Ofertas Educativas */
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.offer {
+    background-color: #ffffffaa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    width: calc(33.333% - 40px);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.offer img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.offer h3 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #153657;
+    font-weight: 600;
+}
+
+.offer p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.offer:hover {
+    transform: scale(1.05);
+}
+.offer a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.offer a:hover {
+    text-decoration: none;
+    transform: scale(1.03);
+}
+
+.none:hover{
+    transform: scale(1);
+}
+
+
+/* Pie de página */
+footer {
+    background-color: #153657;
+    color: white;
+    height:  400px ;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.inscripciones, .contacto {
+    flex-basis: calc(50% - 40px); /* Ajustar el tamaño de cada sección */
+    margin-bottom: 20px;
+}
+
+.inscripciones h3, .contacto h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.inscripciones p, .contacto p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+.menu-horizontal.active li:hover .menu-vertical{
+    display: block;
+}
+@media (max-width: 768px) {
+    .inscripciones, .contacto {
+        flex-basis: 100%; /* Cambiar el tamaño a 100% en pantallas más pequeñas */
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Pagina misión y visión Valores */
+.mision--vision{
+    background-color: #151515e3;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+    color: #ffffff;
+}
+.mision--vision h1, h2{
+    padding: 20px;
+    text-shadow: 0px 0px 2px #222;
+}
+.mision--vision p{
+    padding:0px 50px 10px 50px;
+    font-size: 18px;
+    text-align: justify;
+}
+.mision--vision li{
+    list-style: none;
+    text-align: justify;
+    padding-left:   auto;
+    margin: 50px;
+    font-size: large;
+}
+.mision--vision span{
+    font-weight: 700;
+    color: #222;
+    text-shadow: 0px 0px 1px #222;
+}
+.caja--misionvision{
+    color: #222;
+    padding: 10px;
+    background: #fffb;
+    border-radius: 2px;
+}
+/* Pagina Directorio*/
+.caja--directorio{
+    background-color: #fffa;
+    padding: 50px;
+    margin: 100px;
+    margin-top: 15px;
+    border: 5px solid #222;
+}
+.caja--directorio h1{
+    padding:20px;
+    text-align: center;
+    text-shadow: 0px 0px 2px #222;
+}
+.caja--directorio label{
+    padding-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    text-shadow: 0px 0px 1px #222;
+}
+.caja--directorio span{
+    text-shadow: 0px 0px 1px #222;
+}
+.caja--directorio details{
+    background-color: #fff;
+    text-align: center;
+    border: 2px solid #222;
+    padding: 10px;
+    margin: 10px;
+}
+.caja--directorio li{
+    list-style: none;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom:8px ;
+}
+/* .caja--directorio--grados{
+    background-color: #fff;
+    padding: 50px;
+    margin: 50px;
+
+} */

@@ -77,7 +77,69 @@ iframe{
 }
 
 
+/* Iconos sociales */
+.social-icons {
+    margin: 20px 0;
+}
 
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons a img {
+    width: 64px;
+    height: 44px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0) ;
+}
+
+/* Efectos hover */
+.social-icons a.facebook-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(95%) saturate(2034%) hue-rotate(180deg) brightness(91%) contrast(101%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.twitter-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(21%) saturate(7474%) hue-rotate(174deg) brightness(97%) contrast(106%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.instagram-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(67%) saturate(2852%) hue-rotate(334deg) brightness(97%) contrast(104%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.linkedin-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(33%) saturate(537%) hue-rotate(171deg) brightness(91%) contrast(96%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.youtube-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(96%) saturate(3658%) hue-rotate(357deg) brightness(95%) contrast(106%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.tiktok-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(47%) saturate(621%) hue-rotate(286deg) brightness(90%) contrast(88%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+/* Enlaces del footer */
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #f0f0f0;
+}
 
 
 
