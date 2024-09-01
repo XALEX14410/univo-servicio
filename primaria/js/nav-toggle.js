@@ -1,10 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Manejar clics en elementos de menú principal
+    // Seleccionar todos los elementos de menú principal que tienen un submenú
     var menuItems = document.querySelectorAll('.nav-list > li');
 
     menuItems.forEach(function(item) {
         item.addEventListener('click', function(event) {
+            // Verifica si el clic fue en un enlace dentro del submenú
+            if (event.target.tagName === 'A' && this.querySelector('.submenu') === null) {
+                return; // Permite el comportamiento predeterminado del enlace
+            }
+
             event.stopPropagation(); // Evitar que el clic se propague al contenedor
+            event.preventDefault(); // Prevenir el comportamiento predeterminado solo si es necesario
 
             // Alternar la clase 'active' al hacer clic en un elemento de menú
             this.classList.toggle('active');
@@ -18,27 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Manejar clics en elementos de submenú
-    var submenuItems = document.querySelectorAll('.submenu > li');
-
-    submenuItems.forEach(function(item) {
-        item.addEventListener('click', function(event) {
-            event.stopPropagation(); // Evitar que el clic se propague al contenedor
-
-            // Alternar la clase 'active' al hacer clic en un submenú
-            this.classList.toggle('active');
-
-            // Cerrar otros submenús de nivel 2 abiertos (opcional)
-            var submenus = this.parentNode.querySelectorAll('.submenu_2');
-            submenus.forEach(function(submenu) {
-                if (submenu !== this.querySelector('.submenu_2')) {
-                    submenu.classList.remove('active');
-                }
-            }.bind(this));
-        });
-    });
-
-    // Manejar el botón de menú en pantallas pequeñas
+    // Para el botón de menú en pantallas pequeñas
     var navToggle = document.querySelector('.nav-toggle');
     var navList = document.querySelector('.nav-list');
 
