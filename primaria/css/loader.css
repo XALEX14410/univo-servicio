@@ -18,7 +18,7 @@
     z-index: 1000;
     opacity: 1;
     pointer-events: unset;
-    transition: opacity 5s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
 /* Permite desaparecer el loader */
