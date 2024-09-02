@@ -115,54 +115,49 @@ Creado por: Jesus Alejandro Lara
 }
 
 /* Estilo del submenú */
-.submenu{
+.submenu {
     display: none;
     position: absolute;
     background-color: #ffffff;
-    z-index: 0;
+    z-index: 1;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 5px;
     width: 220px;
-    max-height: 0;
-    overflow: hidden;
+    opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
-.submenu_2{
-    display: none;
-    position:unset;
-    background-color: #ffffff;
-    z-index: 1;
-    border-radius: 5px;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
-    padding: 5px;
-    width: 220px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-}
+
 /* Submenú de nivel 2 */
 .submenu_2 {
-    left: 100%; /* Alineado al lado derecho del submenú principal */
+    display: none;
+    position: absolute;
+    left: 100%;
     top: 0;
+    background-color: #ffffff;
+    z-index: 2;
+    border-radius: 5px;
+    padding: 5px;
+    width: 220px;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 /* Mostrar submenú principal al hacer clic */
 .nav-list > li.active > .submenu {
     display: block;
-    max-height: 500px; /* Ajusta según el contenido */
     opacity: 1;
 }
 
 /* Mostrar submenú de nivel 2 al hacer clic */
 .submenu li.active > .submenu_2 {
     display: block;
-    max-height: 500px; /* Ajusta según el contenido */
     opacity: 1;
 }
 
 /* Estilo de los enlaces dentro del submenú */
-.submenu li a, .submenu_2 li a {
+.submenu li a,
+.submenu_2 li a {
     color: black;
     padding: 5px 10px;
     text-decoration: none;
@@ -171,10 +166,15 @@ Creado por: Jesus Alejandro Lara
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.submenu li a:hover, .submenu_2 li a:hover {
+.submenu li a:hover,
+.submenu_2 li a:hover {
     background-color: #007bff;
     color: white;
     border-radius: 3px;
+}
+
+.submenu_2{
+    left: 100px;
 }
 
 /* Estilos para dispositivos móviles */
@@ -197,8 +197,14 @@ Creado por: Jesus Alejandro Lara
     }
 
     .nav-list li {
+        display: none;
         margin: 0;
         width: 100%;
+    }
+
+    /* Mostrar solo el primer elemento de la lista */
+    .nav-list li:first-child {
+        display: block;
     }
 
     .nav-list li a {
@@ -212,13 +218,20 @@ Creado por: Jesus Alejandro Lara
 
     /* Estilo del submenú con animación */
     .submenu {
-        position: static; /* Cambiar a estático en pantallas pequeñas */
+        position: relative; /* Cambiar a estático en pantallas pequeñas */
         width: 100%;
         z-index: 1;
         opacity: 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease, opacity 0.5s ease; /* Cambiar animación */
+    }
+
+    .submenu_2{
+        position: relative;
+        width: 100%;
+        left: 0px;
+        text-align: center;
     }
     
     .nav-list li.active .submenu {
