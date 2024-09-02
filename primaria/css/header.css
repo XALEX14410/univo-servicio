@@ -141,6 +141,11 @@ Creado por: Jesus Alejandro Lara
     width: 220px;
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
+
+
+
+    left: 105px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Mostrar submenú principal al hacer clic */
@@ -173,10 +178,6 @@ Creado por: Jesus Alejandro Lara
     border-radius: 3px;
 }
 
-.submenu_2{
-    left: 105px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 1094px) {
