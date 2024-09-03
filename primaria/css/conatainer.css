@@ -1,15 +1,16 @@
 .contenido{
     position: relative;
     /* border: 10px solid black; */
+    background: url(./../img/bg_body.jpg);
     padding: 80px;
-    transform: translateY(235px);
+    transform: translateY(100px);
     height: 2000px;
 }
 
 @media (max-width: 1094px) {
     .contenido{
         /* border: 1px solid black; */
-        transform: translateY(150px);
+        /* transform: translateY(150px); */
         
     }
 }

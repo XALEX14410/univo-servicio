@@ -73,6 +73,7 @@ Creado por: Jesus Alejandro Lara
 
 iframe{
     max-width: 400px;
+    min-width: 400px;
     height: 200px;
 }
 

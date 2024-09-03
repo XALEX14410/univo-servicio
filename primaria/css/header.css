@@ -7,6 +7,7 @@ Creado por: Jesus Alejandro Lara
     border-bottom: 1px solid #ddd;
     position: fixed;
     width: 100%;
+    height: 120px;
     top: 0;
     z-index: 1000;
 }
@@ -23,12 +24,13 @@ Creado por: Jesus Alejandro Lara
     text-align: center;
     padding: 20px 0;
     transition: height 0.3s ease, opacity 0.3s ease;
-    height: 150px;
+    
     overflow: hidden; /* Evita que el logo se vea cuando se oculta */
 }
+
 .logo {
-    max-width: 400px;
-    height: 100px;
+    max-width: 300px;
+    height: 80px;
     transition: transform 0.3s ease;
 }
 
@@ -36,11 +38,11 @@ Creado por: Jesus Alejandro Lara
     background-color: #f8f9fa;
 }
 
-.barra-navegacion ul {
+.barra-navegacion #nav_list {
     
     list-style: none;
-    padding: 20px 0;
-    margin: 0;
+    /* padding: 40px 0; */
+    padding-top: 70px;
     
     text-align: center;
 }
@@ -196,6 +198,10 @@ Creado por: Jesus Alejandro Lara
     .logo-container_max{
         position: absolute;
         width: 100%;
+        /* padding: 20px 80px 50px 00px; */
+        padding-top: 20px;
+        padding-left: 100px;
+        padding-right: 200px;
         justify-content: center;
         /* border: 1px solid black; */
         column-gap: 70%;
@@ -203,6 +209,12 @@ Creado por: Jesus Alejandro Lara
         z-index: 1;
     }
 
+}
+
+@media (max-width:700px){
+    .logo-container{
+        display: none;
+    }
 }
 
 /* Estilos para dispositivos móviles */
