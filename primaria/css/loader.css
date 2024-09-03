@@ -29,8 +29,8 @@
 
 /* Estilo del ícono del loader */
 .centrado__icono {
-    width: 100px; /* Ajusté el tamaño para que sea más manejable */
-    height: 100px;
+    width: 300px; /* Ajusté el tamaño para que sea más manejable */
+    height: 300px;
     background-image: url(../loader/geu_loader.gif);
     background-size: contain; /* Ajustado para que la imagen mantenga su aspecto original */
     background-position: center;

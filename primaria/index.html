@@ -9,8 +9,10 @@
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/carousel/carousel.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/loader.css">
@@ -117,13 +119,41 @@
 
     <!-- Main  -->
     <main class="contenido">
-        <h1>Bienvenidos a la vista previa del contenido de la pagina</h1>
+        <!-- <h1>Bienvenidos a la vista previa del contenido de la pagina</h1>
         <p>Contenido de la página...</p>
-        <img src="./img/GEU2030-50.png" alt="" srcset="">
+        <img src="./img/GEU2030-50.png" alt="" srcset=""> -->
         <!-- Contenido principal de la página -->
-        <div> <!-- Simula un contenido largo para hacer scroll -->
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-controles">
+                    <button class="carousel-anterior"><i class="bi bi-caret-left-fill"></i></button>
+                    <button class="carousel-siguiente"><i class="bi bi-caret-right-fill"></i></button>
+                </div>
+                <div class="carousel-item active">
+                    <img src="./img/carousel/pagina-web-primaria (1).jpg" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/carousel/22-1-_Banner-Primaria.jpg" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/carousel/Banner-Primaria-2019-2.png" alt="Imagen 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/carousel/Banner-Primaria-2019-3.png" alt="Imagen 3">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/carousel/Banner-Primaria-2019-4.png" alt="Imagen 3">
+                </div>
+
+            </div>
+
+
+
 
         </div>
+
+
     </main>
 
     <!-- End main -->
@@ -160,7 +190,7 @@
 
 
 
-            <div class="text-center mt-4">
+            <div class="text-center">
 
 
                 <div class="social-icons">
@@ -198,10 +228,13 @@
     <script src="./js/loader.js"></script>
     <script src="./js/nav-toggle.js"></script>
 
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bosstrap/bootstrap.min.js"></script>
+    <script src="./js/carousel/carousel.js"></script>
+    <!-- <script src="js/bosstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/bosstrap/bootstrap.bundle.min.js.map"></script> -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </body>
 
