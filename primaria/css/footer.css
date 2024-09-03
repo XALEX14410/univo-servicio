@@ -142,11 +142,8 @@ iframe{
     color: #f0f0f0;
 }
 
-
-
 /* Dispositivos móviles (pantallas más pequeñas) */
 @media screen and (max-width: 576px) {
-
     .footer h5 {
         font-size: 1rem;
     }
@@ -167,7 +164,6 @@ iframe{
 
 /* Tabletas (pantallas medianas) */
 @media screen and (min-width: 577px) and (max-width: 768px) {
-
     .footer h5 {
         font-size: 1.1rem;
     }
@@ -188,7 +184,6 @@ iframe{
 
 /* Escritorio pequeño a mediano */
 @media screen and (min-width: 769px) and (max-width: 992px) {
-
     .footer h5 {
         font-size: 1.2rem;
     }
@@ -208,8 +203,7 @@ iframe{
 }
 
 /* Escritorio grande (pantallas más grandes) */
-@media screen and (min-width: 993px) {
-
+@media screen and (min-width: 993px) and (max-width: 1095px) {
     .footer h5 {
         font-size: 1.25rem;
     }
@@ -221,29 +215,35 @@ iframe{
     .footer {
         padding: 80px 0;
     }
+    .container-f{
+        padding-left: 20px;
+    }
 
     iframe {
-        width: 500px; /* Mantén el tamaño original o ajústalo según sea necesario */
-        height: 200px;
+        width: 100%; /* Ajusta el tamaño del iframe para pantallas grandes */
+        height: 230px; /* Ajusta la altura para pantallas grandes */
     }
 }
 
-
-
-/* Dispositivos grandes (pantallas entre 997px y 1141px) */
-@media screen and (min-width: 997px) and (max-width: 1141px) {
-
+/* Dispositivos grandes (pantallas más grandes) */
+@media screen and (min-width: 1096px) and (max-width: 1141px) {
     iframe {
         width: 100%; /* Asegura que el iframe ocupe todo el ancho disponible */
         height: 230px; /* Puedes ajustar la altura según sea necesario */
     }
+    .container-f{
+        padding-left: 20px;
+    }
 }
 
 /* Escritorio grande (pantallas más grandes) */
-@media screen and (min-width: 1142px) {
-
+@media screen and (max-width: 1172px) {
     iframe {
         width: 300px; /* Tamaño original o ajustado */
         height: 250px;
+    }
+    
+    .container-f{
+        padding-left: 20px;
     }
 }

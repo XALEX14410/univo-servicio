@@ -1,5 +1,6 @@
 .contenido{
     position: relative;
+    width: 100%;
     /* border: 10px solid black; */
     background: url(./../img/bg_body.jpg);
     padding: 80px;
@@ -8,9 +9,5 @@
 }
 
 @media (max-width: 1094px) {
-    .contenido{
-        /* border: 1px solid black; */
-        /* transform: translateY(150px); */
-        
-    }
+
 }
