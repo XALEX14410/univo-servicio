@@ -1,0 +1,196 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #0044cc;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0044cc;
+    padding: 10px 20px;
+}
+
+.menu-horizontal {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-horizontal li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.menu-horizontal li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.menu-vertical li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-vertical li a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Offer Section */
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.offer {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.offer:hover {
+    transform: scale(1.05);
+}
+
+.offer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.offer h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #0044cc;
+}
+
+.offer p {
+    font-size: 1em;
+    color: #555;
+    padding: 0 10px 10px;
+}
+
+/* Carrusel */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer h3 {
+    margin-top: 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-horizontal {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0044cc;
+    }
+
+    .menu-horizontal.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .offers {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .offer {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .carousel-inner img {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-prin, .logo2-prin {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    .menu-icon {
+        align-self: flex-end;
+    }
+
+    .offer h3 {
+        font-size: 1.3em;
+    }
+
+    .offer p {
+        font-size: 0.9em;
+    }
+}
