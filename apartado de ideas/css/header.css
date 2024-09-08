@@ -1,0 +1,310 @@
+/* Código de header
+Creado por: Jesus Alejandro Lara
+*/
+
+.encabezado {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    top: 0;
+    z-index: 1000;
+}
+
+/* .logo-container {
+    text-align: center;
+    padding: 20px 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    height: 150px;
+    overflow: hidden; 
+} */
+
+.logo-container {
+    text-align: center;
+    padding: 20px 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    
+    overflow: hidden; /* Evita que el logo se vea cuando se oculta */
+}
+
+.logo {
+    max-width: 300px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.barra-navegacion {
+    background-color: #f8f9fa;
+}
+
+.barra-navegacion #nav_list {
+    
+    list-style: none;
+    /* padding: 40px 0; */
+    padding-top: 70px;
+    
+    text-align: center;
+}
+
+.barra-navegacion ul li {
+    z-index: 2;
+    display: inline;
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Estilo de los enlaces del menú principal */
+.barra-navegacion ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Estilo del botón de menú para pantallas pequeñas */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 55px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+/* Estilo para el ícono cuando está activo */
+.nav-toggle.is-active {
+    transform: rotate(360deg);
+}
+
+.nav-toggle .bi-x-lg {
+    display: none;
+}
+
+.nav-toggle.is-active .bi-list {
+    display: none;
+}
+
+.nav-toggle.is-active .bi-x-lg {
+    display: block;
+}
+
+/* Estilo de la lista de navegación */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.nav-list li {
+    list-style: none;
+    position: relative;
+    margin: 0 15px;
+    padding: 10px 0;
+}
+
+/* Estilo de los enlaces dentro de la lista de navegación */
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 10px;
+    font-size: 18px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background-color: #ffffff;
+    color: #007bff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    width: 220px;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Submenú de nivel 2 */
+.submenu_2 {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 2;
+    border-radius: 5px;
+    padding: 5px;
+    width: 220px;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+
+
+
+    left: 105px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mostrar submenú principal al hacer clic */
+.nav-list > li.active > .submenu {
+    display: block;
+    opacity: 1;
+}
+
+/* Mostrar submenú de nivel 2 al hacer clic */
+.submenu li.active > .submenu_2 {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilo de los enlaces dentro del submenú */
+.submenu li a,
+.submenu_2 li a {
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submenu li a:hover,
+.submenu_2 li a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+}
+@media (min-width: 1095px){
+    .logo-container{
+        display: none;
+    }
+
+
+    .logo-container_max{
+        position: absolute;
+        width: 100%;
+        /* padding: 20px 80px 50px 00px; */
+        padding-top: 20px;
+        padding-left: 100px;
+        padding-right: 200px;
+        justify-content: center;
+        /* border: 1px solid black; */
+        column-gap: 70%;
+        display: flex;
+        z-index: 1;
+    }
+
+}
+
+@media (max-width:700px){
+    .logo-container{
+        display: none;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 1094px) {
+
+    .logo-container_max{
+        display: none;
+    }
+    .barra-navegacion{
+        margin-bottom:25px ;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%; /* Ajustar al ancho completo */
+        border-radius: 5px;
+        padding: 5px 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        display: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Mostrar solo el primer elemento de la lista */
+    .nav-list li:first-child {
+        display: block;
+    }
+
+    .nav-list li a {
+        padding: 15px 20px;
+        text-align: center;
+    }
+    
+    .nav-toggle {
+        display: block;
+        position: relative;
+        z-index: 2;
+        
+        font-size: 85px;
+        
+        
+    }
+    .logo-container {
+        position:absolute;
+        left: 0;
+        
+        right: 0;
+        
+        z-index: 1;
+        padding: 20px;
+        /* border: 1px solid black; */
+        text-align: center;
+        
+        
+        transition: height 0.3s ease, opacity 0.3s ease;
+        height: 150px;
+        overflow: hidden; /* Evita que el logo se vea cuando se oculta */
+    }
+
+    /* Estilo del submenú con animación */
+    .submenu {
+        position: relative; /* Cambiar a estático en pantallas pequeñas */
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease; /* Cambiar animación */
+    }
+
+    .submenu_2{
+        position: relative;
+        width: 100%;
+        left: 0px;
+        text-align: center;
+    }
+    
+    .nav-list li.active .submenu {
+        opacity: 1;
+        max-height: 500px;
+    }
+}

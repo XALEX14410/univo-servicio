@@ -1,0 +1,10 @@
+.contenido{
+    position: relative;
+    width: 100%;
+    /* border: 10px solid black; */
+    background: url(./../img/bg_body.jpg);
+    padding: 80px;
+    transform: translateY(100px);
+    height: 2000px;
+}
+

@@ -1,0 +1,249 @@
+/* 
+codigo de footer
+Creado por: Jesus Alejandro Lara
+*/
+
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #212529; /* Color de texto */
+    padding: 80px 0; /* Espaciado vertical */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+    position: absolute; /* Asegura que el pie de página se mantenga en su lugar */
+    left: 0;
+}
+
+.container-f {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: auto;
+}
+
+.footer .container-fluid {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    max-width: 100%; /* Elimina cualquier ancho máximo */
+    padding: 0; /* Elimina el relleno para asegurar que el pie de página ocupe todo el ancho */
+}
+
+/* Estilo para los encabezados dentro del pie de página */
+.footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-weight: bold; /* Negrita para los títulos */
+}
+
+/* Estilo para los párrafos y listas dentro del pie de página */
+.footer p, .footer ul {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
+
+/* Estilo para los enlaces dentro del pie de página */
+.footer a {
+    color: #007bff; /* Color de los enlaces */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Espaciado entre los ítems de la lista sin estilo */
+.footer .list-unstyled li {
+    margin-bottom: 10px; /* Espacio debajo de cada ítem */
+}
+
+/* Espaciado entre el ícono y el texto dentro del pie de página */
+.footer .list-unstyled i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Centrando el texto en la parte inferior del pie de página */
+.footer .text-center {
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Tamaño de los íconos de Bootstrap si se usan */
+.footer .bi {
+    font-size: 1.2rem; /* Tamaño de los íconos */
+}
+ 
+
+iframe{
+    max-width: 400px;
+    min-width: 400px;
+    height: 200px;
+}
+
+
+/* Iconos sociales */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons a img {
+    width: 64px;
+    height: 44px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0) ;
+}
+
+/* Efectos hover */
+.social-icons a.facebook-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(95%) saturate(2034%) hue-rotate(180deg) brightness(91%) contrast(101%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.twitter-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(21%) saturate(7474%) hue-rotate(174deg) brightness(97%) contrast(106%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.instagram-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(67%) saturate(2852%) hue-rotate(334deg) brightness(97%) contrast(104%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.linkedin-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(33%) saturate(537%) hue-rotate(171deg) brightness(91%) contrast(96%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.youtube-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(96%) saturate(3658%) hue-rotate(357deg) brightness(95%) contrast(106%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.tiktok-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(47%) saturate(621%) hue-rotate(286deg) brightness(90%) contrast(88%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+/* Enlaces del footer */
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #f0f0f0;
+}
+
+/* Dispositivos móviles (pantallas más pequeñas) */
+@media screen and (max-width: 576px) {
+    .footer h5 {
+        font-size: 1rem;
+    }
+
+    .footer p, .footer ul {
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 150px; /* Ajusta la altura para pantallas pequeñas */
+    }
+}
+
+/* Tabletas (pantallas medianas) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .footer h5 {
+        font-size: 1.1rem;
+    }
+
+    .footer p, .footer ul {
+        font-size: 0.85rem;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 180px; /* Ajusta la altura para pantallas medianas */
+    }
+}
+
+/* Escritorio pequeño a mediano */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .footer h5 {
+        font-size: 1.2rem;
+    }
+
+    .footer p, .footer ul {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 70px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px; /* Ajusta la altura para pantallas medianas */
+    }
+}
+
+/* Escritorio grande (pantallas más grandes) */
+@media screen and (min-width: 993px) and (max-width: 1095px) {
+    .footer h5 {
+        font-size: 1.25rem;
+    }
+
+    .footer p, .footer ul {
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        padding: 80px 0;
+    }
+    .container-f{
+        padding-left: 20px;
+    }
+
+    iframe {
+        width: 100%; /* Ajusta el tamaño del iframe para pantallas grandes */
+        height: 230px; /* Ajusta la altura para pantallas grandes */
+    }
+}
+
+/* Dispositivos grandes (pantallas más grandes) */
+@media screen and (min-width: 1096px) and (max-width: 1141px) {
+    iframe {
+        width: 100%; /* Asegura que el iframe ocupe todo el ancho disponible */
+        height: 230px; /* Puedes ajustar la altura según sea necesario */
+    }
+    .container-f{
+        padding-left: 20px;
+    }
+}
+
+/* Escritorio grande (pantallas más grandes) */
+@media screen and (max-width: 1172px) {
+    iframe {
+        width: 300px; /* Tamaño original o ajustado */
+        height: 250px;
+    }
+    
+    .container-f{
+        padding-left: 20px;
+    }
+}
