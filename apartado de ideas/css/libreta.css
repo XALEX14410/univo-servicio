@@ -1,0 +1,31 @@
+.libreta{
+    position: relative;
+    border: 1px solid black;
+    width: 1400px;
+    height: auto;
+    border-radius: 5%;
+    background: repeating-linear-gradient(
+        white,
+        white 39px,
+        #ccc 40px
+    );
+    position: relative;
+    margin: 0 auto; /* Centra el div horizontalmente */
+    
+    padding: 40px 40px 80px 80px;
+}
+.libreta h1{
+    font-size: 80px;
+}
+.libreta p{
+    font-size: 32px;
+}
+
+.libreta .linea-roja {
+    position: absolute;
+    top: 0;
+    left: 50px; /* Ajusta según sea necesario */
+    width: 2px;
+    height: 100%;
+    background-color: red;
+}
