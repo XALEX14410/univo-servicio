@@ -1,10 +1,11 @@
 /* Código de header
 Creado por: Jesus Alejandro Lara
 */
+@import url(estilos.css);
 
 .encabezado {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
+    background-color:var(--bg-header);
+    /* border-bottom: 1px solid #ddd; */
     position: fixed;
     width: 100%;
     height: 120px;
@@ -19,6 +20,22 @@ Creado por: Jesus Alejandro Lara
     height: 150px;
     overflow: hidden; 
 } */
+/* .titulo{
+    display: flex;
+    justify-content: center;
+    margin: -10px;
+    
+}
+.titulo div{
+    margin: 10px;
+} */
+
+
+.encabezado.scrolled, .barra-navegacion.scrolled {
+    
+    background-color:var(--bg-header-full);
+}
+
 
 .logo-container {
     text-align: center;
@@ -35,7 +52,8 @@ Creado por: Jesus Alejandro Lara
 }
 
 .barra-navegacion {
-    background-color: #f8f9fa;
+    background-color: var(--bg-header);
+    
 }
 
 .barra-navegacion #nav_list {
@@ -120,11 +138,13 @@ Creado por: Jesus Alejandro Lara
 }
 
 .nav-list li a:hover {
-    background-color: #ffffff;
     color: #007bff;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid black;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
+
+/* web: transition.style */
+
 
 /* Estilo del submenú */
 .submenu {

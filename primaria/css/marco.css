@@ -1,0 +1,36 @@
+.image-frame{
+    display: flex;
+    justify-content: center;
+}
+
+
+.image-frame img{
+    width: 100px;
+    height:100px;
+}
+/* Estilos para las imágenes individuales con rotación */
+#imagen-1 {
+    transform: rotate(45deg);
+    /* border: 5px solid #87ceeb; */
+    border-radius: 10px;
+    
+}
+
+#imagen-2 {
+    transform: rotate(-45deg);
+    /* border: 5px solid #87ceeb; */
+    border-radius: 10px;
+}
+
+#imagen-3 {
+    transform: rotate(60deg);
+    /* border: 5px solid #87ceeb; */
+    border-radius: 10px;
+}
+
+#imagen-4 {
+    transform: rotate(-60deg);
+    /* border: 5px solid #87ceeb; */
+    border-radius: 10px;
+}
+
