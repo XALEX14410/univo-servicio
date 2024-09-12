@@ -81,6 +81,7 @@
     /* border: 10px solid black; */
     background: url(./../img/bg_body.jpg);
     padding: 80px;
+    z-index: 0;
     /* transform: translateY(100px); */
     height: 2000px;
     z-index: 1;
