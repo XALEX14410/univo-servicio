@@ -1,0 +1,68 @@
+/* 
+    Creado por: Jesus Alejandro Lara Castro
+    DIseño libreta css
+ */
+
+@import url(./estilos.css);
+
+.libreta {
+    position: relative;
+    /* border: 1px solid black; */
+    width: 1500px;
+    height: auto;
+    border-radius: 5%;
+    background: repeating-linear-gradient(white,
+            white 39px,
+            #ccc 40px);
+    position: relative;
+    margin: 0 auto;
+    /* Centra el div horizontalmente */
+
+    padding: 40px 40px 80px 80px;
+}
+
+.libreta h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    border-bottom: 2px solid black;
+    font-size: 80px;
+}
+.libreta h2{
+    font-size: 60px;
+    text-align: center;
+}
+
+.libreta p {
+    font-size: 30px;
+}
+.libreta .texto-centrado{
+    text-align: center;
+}
+.libreta .azul {
+    font-size: 32px;
+    color: var(--azul);
+}
+
+.libreta .linea-roja {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    /* Ajusta según sea necesario */
+    width: 2px;
+    height: 100%;
+    background-color: red;
+}
+
+.lista-en-libreta {
+    font-size: 30px;
+    list-style-type: circle;
+}
+
+
+.lista-en-libreta li {
+    padding: 18px;
+}
+
+.lista-en-libreta li p {
+    display: inline;
+}

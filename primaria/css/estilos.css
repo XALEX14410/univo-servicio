@@ -6,19 +6,84 @@ Creado por: Jesus Alejandro Lara
 @import url("https://fonts.googleapis.com");
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
-body{
-    font-family: "Itim", cursive;
-    /* font-weight: 400; */
-    cursor: url(./../img/image.png),auto;
-    font-style: normal;
-  }
+
+body {
+  font-family: "Itim", cursive;
+  /* font-weight: 400; */
+  cursor: url(./../img/image.png), auto;
+  font-style: normal;
+}
+
+
+
+
 :root {
-    /* header */
-    --bg-header: #e4f4f7;
+  --bg-header: #e4f4f7;
+  --bg-animation: wave-color 10s ease infinite;
 
-    /* footer */
-    --bg-footer: #6adff7;
-    --color-footer:#212529;
+  /* footer */
+  /* --bg-footer: #6adff7; */
+  /* --color-footer: #212529; */
 
-    
+  /* footer */
+  --bg-footer: linear-gradient(90deg, #6ac3f7, #06bbc4, #50fcff);
+  --bg-animation-footer: footer-wave 12s ease infinite;
+  --color-footer: #212529;
+
+
+
+
+
+
+    /* Colores básicos */
+    --rojo: red;
+    --azul: blue;
+    --amarillo: yellow;
+    --verde: green;
+    --naranja: orange;
+    --violeta: violet;
+    --negro: black;
+    --blanco: white;
+    --gris: gray;
+    --rosa: pink;
+    --cian: cyan;
+    --magenta: magenta;
+    --marron: brown;
+    --lima: lime;
+    --oro: gold;
+    --plata: silver;
+    --coral: coral;
+    --turquesa: turquoise;
+    --lavanda: lavender;
+    --indigo: indigo;
+  
+  }
+
+@keyframes wave-color {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Animación del footer */
+@keyframes footer-wave {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

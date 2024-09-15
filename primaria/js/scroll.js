@@ -12,3 +12,17 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled'); // Quitar clase si el scroll está por debajo de 959px
     }
 });
+
+
+
+$(document).ready(function() {
+    // Animar el footer cuando el usuario hace scroll
+    $(window).on('scroll', function() {
+        var scrollPosition = $(window).scrollTop();
+        var footerPosition = $('.footer').offset().top;
+
+        if (scrollPosition + $(window).height() > footerPosition) {
+            $('.footer').addClass('animate-bg');
+        }
+    });
+});

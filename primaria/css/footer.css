@@ -6,11 +6,13 @@ Creado por: Jesus Alejandro Lara
 
 /* Estilos para el pie de página */
 .footer {
-    background-color:var(--bg-footer); 
-    color: var(--color-footer); /* Color de texto */
-    padding: 80px 0; /* Espaciado vertical */
-    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
-    position: absolute; /* Asegura que el pie de página se mantenga en su lugar */
+    background: var(--bg-footer);
+    transition: background-position 2s ease;   
+    animation: var(--bg-animation-footer);
+    color: var(--color-footer);
+    padding: 80px 0;
+    width: 100%;
+    position: absolute;
     left: 0;
 }
 
@@ -71,7 +73,7 @@ Creado por: Jesus Alejandro Lara
 }
  
 
-iframe{
+.map-footer{
     max-width: 300px;
     min-width: 400px;
     height: 200px;
@@ -156,7 +158,7 @@ iframe{
         padding: 40px 0;
     }
 
-    iframe {
+    .map-footer {
         width: 100%;
         height: 150px; /* Ajusta la altura para pantallas pequeñas */
     }
@@ -176,7 +178,7 @@ iframe{
         padding: 60px 0;
     }
 
-    iframe {
+    .map-footer {
         width: 100%;
         height: 180px; /* Ajusta la altura para pantallas medianas */
     }
@@ -196,7 +198,7 @@ iframe{
         padding: 70px 0;
     }
 
-    iframe {
+    .map-footer {
         width: 100%;
         height: 200px; /* Ajusta la altura para pantallas medianas */
     }
@@ -219,16 +221,16 @@ iframe{
         padding-left: 20px;
     }
 
-    iframe {
-        width: 100%; /* Ajusta el tamaño del iframe para pantallas grandes */
+    .map-footer {
+        width: 100%; /* Ajusta el tamaño del .map-footer para pantallas grandes */
         height: 230px; /* Ajusta la altura para pantallas grandes */
     }
 }
 
 /* Dispositivos grandes (pantallas más grandes) */
 @media screen and (min-width: 1096px) and (max-width: 1141px) {
-    iframe {
-        width: 100%; /* Asegura que el iframe ocupe todo el ancho disponible */
+    .map-footer {
+        width: 100%; /* Asegura que el .map-footer ocupe todo el ancho disponible */
         height: 230px; /* Puedes ajustar la altura según sea necesario */
     }
     .container-f{
@@ -238,7 +240,7 @@ iframe{
 
 /* Escritorio grande (pantallas más grandes) */
 @media screen and (max-width: 1172px) {
-    iframe {
+    .map-footer {
         width: 300px; /* Tamaño original o ajustado */
         height: 250px;
     }

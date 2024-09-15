@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .contact-section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-section h2 {
+            color: #333;
+        }
+        .contact-section p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .contact-section a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-form {
+            margin-top: 20px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Contáctanos</h1>
+    </div>
+
+    <div class="container">
+        <div class="contact-section">
+            <h2>Información de Contacto</h2>
+            <p>
+                La Sociedad Civil El Instituto de Estudios Superiores del Valle de Orizaba, titular de la denominación autorizada Universidad del Valle de Orizaba, ubicada en Av. 20 de Noviembre No. 1 Esq. con Calle de los Censos Col. El Espinal, C.P 94300 Orizaba, Ver., es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección. La información personal que recabe, será de utilidad para su operación, cumplimiento de obligaciones, respeto a sus derechos y en general la prestación de servicios educativos, culturales, deportivos, recreativos; así como para elaborar estudios y programas que son necesarios para determinar las necesidades de los clientes potenciales; evaluar la calidad del servicio que brindamos a alumnos, ex alumnos, egresados, personal académico, personal no académico, padres de familia y, en ciertos casos, a visitantes, proveedores y terceros. Lo anterior respetando lo señalado en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares publicada en el DOF el 5 de julio del 2010. Para visualizar el aviso de privacidad completo, consulte la página <a href="http://www.univo.edu.mx/av/avisodeprivacidad.pdf" target="_blank">http://www.univo.edu.mx/av/avisodeprivacidad.pdf</a>. Cualquier duda o aclaración envíe correo electrónico a: <a href="mailto:datos_personales@univo.edu.mx">datos_personales@univo.edu.mx</a>. De realizarse modificaciones al aviso de privacidad, serán publicadas en la página web antes mencionada. Si el titular proporciona sus datos personales, significa que ha leído, entendido y aceptado los términos antes expuestos.
+            </p>
+            <div class="contact-form">
+                <h2>Formulario de Contacto</h2>
+                <form action="#" method="post">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre Apellido" required>
+
+                    <label for="email">E−mail:</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@domain.com" required>
+
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Información General" required>
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Mensaje" required></textarea>
+
+                    <label for="code">Código:</label>
+                    <input type="text" id="code" name="code" placeholder="Código" required>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Universidad del Valle de Orizaba</p>
+    </div>
+</body>
+</html>
