@@ -58,6 +58,7 @@
 .texto{
     padding: 0px 40px 0 40px;
 }
+
 /* Cambios en el estilo del texto al hacer hover */
 .galeria a:hover .texto-imagen {
     /* background: rgba(0, 0, 0, 0.8); Cambia a fondo blanco con opacidad */
@@ -74,8 +75,10 @@
 .galeria a:hover {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
+    
 }
 
+    
 
 /* Estilo del lightbox */
 .light-box {
@@ -88,42 +91,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000;
-    transition: transform 0.3s ease-in-out;
-    transform: scale(0);
+    z-index: 20000;
+    transition: opacity 0.2s ease, transform 0.4s ease;
+    opacity: 0;
+    /* transform: translateY(-100%); */
+    visibility: hidden; /* Oculta el lightbox por defecto */
 }
 
+/* Efecto del contenido del lightbox */
 .light-box img {
-    width: 60vw;
-    max-height: 80vh;
+    width: 70vw;
+    max-height: 90vh;
     border-radius: 10px;
     padding: 20px;
     background: white;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombra más marcada para el lightbox */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Abrir el lightbox al hacer clic */
 .light-box:target {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible; /* Muestra el lightbox cuando está en el estado :target */
 }
 
 /* Botón de cierre del lightbox */
 .close {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 20px;
+    right: 20px;
     background: red;
     color: white;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     text-align: center;
-    line-height: 60px;
-    font-size: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    line-height: 40px;
+    font-size: 24px;
     text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8; /* Agrega algo de opacidad por defecto */
 }
 
 .close:hover {
     background: darkred;
+    transform: scale(1.2) rotate(45deg); /* Animación de escala y rotación */
+    opacity: 1; /* Aumenta la opacidad al pasar el ratón */
 }

@@ -16,3 +16,4 @@ $(document).ready(function() {
         $(this).find('img').css('filter', 'none');
     });
 });
+
