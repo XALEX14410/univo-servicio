@@ -26,7 +26,7 @@ body {
   /* --color-footer: #212529; */
 
   /* footer */
-  --bg-footer: linear-gradient(90deg, #6ac3f7, #06bbc4, #50fcff);
+  --bg-footer: linear-gradient(90deg,#087fff, #6ac3f7, #41B1E0);
   --bg-animation-footer: footer-wave 12s ease infinite;
   --color-footer: #212529;
 

@@ -25,6 +25,7 @@
 .centrado--oculto { 
     opacity: 0; 
     pointer-events: none; 
+    
 }
 
 /* Estilo del ícono del loader */

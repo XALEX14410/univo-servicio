@@ -6,11 +6,13 @@
     padding: 40px 0;
     width: 95%;
     margin: auto;
+    
 }
 
 /* Estilo de los enlaces que contienen las imágenes */
 .galeria a {
     position: relative;
+    cursor: zoom-in;
     border-radius: 5%;
     overflow: hidden;
     display: block;
@@ -40,9 +42,9 @@
     
     left: 50%;
     transform: translate(-50%, -50%);
-
+    width: 75%;
     
-    width: 50%;
+    
     margin: 40px 0px 0px 0px;
     /* background: rgba(35, 34, 34, 0.6);  */
     /* Fondo negro semitransparente */
