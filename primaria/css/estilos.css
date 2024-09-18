@@ -18,19 +18,94 @@ body {
 
 
 :root {
-  --bg-header: #e4f4f7;
-  --bg-animation: wave-color 10s ease infinite;
+  /* header */
+  --bg-header: url("./../img/bg_body.jpg"); /* Fondo del encabezado */
+  --bg-animation: headerAnimation 5s infinite; /* Animación del encabezado */
+  --logo-max-width: 300px; /* Ancho máximo del logo */
+  --logo-height: 80px; /* Altura del logo */
+  --nav-link-color: #333; /* Color de los enlaces del menú */
+  --nav-link-hover-color: #007bff; /* Color de hover en los enlaces */
+
+  /* scroll */
+  --scrollbar-color: #007bff; /* Azul personalizado */
+  --scrollbar-width: 24px;    /* Ancho del scrollbar */
+
+  /* libreta */
+    --azul: #007bff;
+    --ancho-libreta-grande: 1500px;
+    --ancho-libreta-mediana: 90%;
+    --ancho-libreta-pequena: 100%;
+    --padding-libreta: 40px;
+    --padding-libreta-mediana: 30px;
+    --padding-libreta-pequena: 20px;
+    --padding-bottom-libreta: 80px;
+    --font-h1-grande: 80px;
+    --font-h1-mediana: 50px;
+    --font-h1-pequena: 40px;
+    --font-h2-grande: 60px;
+    --font-h2-mediana: 40px;
+    --font-h2-pequena: 32px;
+    --font-p-grande: 30px;
+    --font-p-mediana: 22px;
+    --font-p-pequena: 18px;
+  /* container */
+  --bg-contenido: url(./../img/bg_body.jpg); /* Fondo para el contenido */
+  --contenido-padding: 80px; /* Padding para el contenido */
+  --contenido-margin-bottom: 80px; /* Margen inferior para el contenido */
+  --contenido-transform: translateY(100px); /* Transformación del contenido */
+  --hero-bg-gradient: linear-gradient(to bottom right, #4e54c8, #8f94fb); /* Gradiente del hero */
+  --hero-padding: 100px 0; /* Padding del hero */
+  --hero-h1-font-size: 3em; /* Tamaño de la fuente para h1 en el hero */
+  --hero-p-font-size: 1.5em; /* Tamaño de la fuente para el párrafo en el hero */
+  --section-padding: 80px 0; /* Padding de las secciones */
+  --features-padding: 50px 0; /* Padding de la sección features */
+  --grid-gap: 20px; /* Espaciado entre elementos del grid */
+  --grid-padding: 60px; /* Padding dentro de los elementos del grid */
+  --container-max-width: 1200px; /* Ancho máximo del contenedor */
+  --container-padding: 0 20px; /* Padding del contenedor */
+
+
 
   /* footer */
   /* --bg-footer: #6adff7; */
   /* --color-footer: #212529; */
 
+
   /* footer */
-  --bg-footer: linear-gradient(90deg,#087fff, #6ac3f7, #41B1E0);
-  --bg-animation-footer: footer-wave 12s ease infinite;
-  --color-footer: #212529;
+    --bg-footer: linear-gradient(90deg,#087fff, #6ac3f7, #41B1E0);
+    --bg-animation-footer: footer-wave 12s ease infinite;
+    --color-footer: #212529;
+    --footer-link-color: #007bff; /* Color de los enlaces en el footer */
+    --footer-link-hover-color: #f0f0f0; /* Color de los enlaces al hacer hover */
+    --footer-padding: 80px; /* Padding del footer */
+    --footer-border-radius: 10% 10% 0% 0%; /* Radio del borde del footer */
+    --social-icon-hover-scale: 1.2; /* Escala de íconos sociales al hacer hover */
+    --social-icon-hover-translate: -5px; /* Desplazamiento de los íconos sociales al hacer hover */
+    --font-size-footer-title: 1.25rem; /* Tamaño de los títulos */
+    --font-size-footer-text: 0.875rem; /* Tamaño de los textos */
+    --font-size-footer-icon: 1.2rem; /* Tamaño de los íconos */
+    --map-footer-width: 100%; /* Ancho del mapa en el footer */
+    --map-footer-height: 230px; /* Altura del mapa en el footer */
 
 
+/* Estilos para el scrollbar en navegadores basados en Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 6px; /* Opcional: redondear los bordes del thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Fondo del track del scrollbar */
+  border-radius: 6px; /* Opcional: redondear los bordes del track */
+}
+
+/* Estilos para el scrollbar en Firefox */
+scrollbar-width: thin;
+scrollbar-color: var(--scrollbar-color) #f1f1f1;
 
 
 
@@ -87,3 +162,5 @@ body {
     background-position: 0% 50%;
   }
 }
+
+

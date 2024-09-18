@@ -3,66 +3,36 @@ Creado por: Jesus Alejandro Lara
 */
 @import url(estilos.css);
 
+/* Encabezado fijo */
 .encabezado {
     background: var(--bg-header);
-    /* border-radius: 0% 0% 10% 10%;     */
     animation: var(--bg-animation);
     position: fixed;
     width: 100%;
     height: 150px;
     top: 0;
     z-index: 1;
+    border-bottom: 5px solid #41B1E0;
 }
 
-/* .logo-container {
-    text-align: center;
-    padding: 20px 0;
-    transition: height 0.3s ease, opacity 0.3s ease;
-    height: 150px;
-    overflow: hidden; 
-} */
-/* .titulo{
-    display: flex;
-    justify-content: center;
-    margin: -10px;
-    
-}
-.titulo div{
-    margin: 10px;
-} */
-
-
-/* .encabezado.scrolled, .barra-navegacion.scrolled {
-    
-    background-color:cadetblue;
-} */
-
-
+/* Estilos para el contenedor del logo */
 .logo-container {
     text-align: center;
     padding: 20px 0;
     transition: height 0.3s ease, opacity 0.3s ease;
-    
-    overflow: hidden; /* Evita que el logo se vea cuando se oculta */
+    overflow: hidden;
 }
 
 .logo {
-    max-width: 300px;
-    height: 80px;
+    max-width: var(--logo-max-width);
+    height: var(--logo-height);
     transition: transform 0.3s ease;
 }
 
-/* .barra-navegacion {
-    background-color: var(--bg-header);
-    
-} */
-
+/* Barra de navegación */
 .barra-navegacion #nav_list {
-    
     list-style: none;
-    /* padding: 40px 0; */
     padding-top: 70px;
-    
     text-align: center;
 }
 
@@ -73,15 +43,20 @@ Creado por: Jesus Alejandro Lara
     position: relative;
 }
 
-/* Estilo de los enlaces del menú principal */
 .barra-navegacion ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--nav-link-color);
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-/* Estilo del botón de menú para pantallas pequeñas */
+.barra-navegacion ul li a:hover {
+    color: var(--nav-link-hover-color);
+    border-bottom: 2px solid black;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+/* Botón de menú para pantallas pequeñas */
 .nav-toggle {
     display: none;
     background: none;
@@ -109,7 +84,7 @@ Creado por: Jesus Alejandro Lara
     display: block;
 }
 
-/* Estilo de la lista de navegación */
+/* Lista de navegación */
 .nav-list {
     list-style-type: none;
     display: flex;
@@ -127,7 +102,6 @@ Creado por: Jesus Alejandro Lara
     padding: 10px 0;
 }
 
-/* Estilo de los enlaces dentro de la lista de navegación */
 .nav-list li a {
     color: white;
     text-decoration: none;
@@ -139,15 +113,10 @@ Creado por: Jesus Alejandro Lara
 }
 
 .nav-list li a:hover {
-    color: #007bff;
-    border-bottom: 2px solid black;
-    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    color: var(--nav-link-hover-color);
 }
 
-/* web: transition.style */
-
-
-/* Estilo del submenú */
+/* Submenú */
 .submenu {
     display: none;
     position: absolute;
@@ -161,7 +130,6 @@ Creado por: Jesus Alejandro Lara
     transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
-/* Submenú de nivel 2 */
 .submenu_2 {
     display: none;
     position: absolute;
@@ -174,79 +142,46 @@ Creado por: Jesus Alejandro Lara
     width: 220px;
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
-
-
-
     left: 105px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Mostrar submenú principal al hacer clic */
-.nav-list > li.active > .submenu {
-    display: block;
-    opacity: 1;
-}
-
-/* Mostrar submenú de nivel 2 al hacer clic */
+/* Mostrar submenús al hacer clic */
+.nav-list > li.active > .submenu,
 .submenu li.active > .submenu_2 {
     display: block;
     opacity: 1;
 }
 
-/* Estilo de los enlaces dentro del submenú */
-.submenu li a,
-.submenu_2 li a {
-    color: black;
-    padding: 5px 10px;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.submenu li a:hover,
-.submenu_2 li a:hover {
-    background-color: #007bff;
-    color: white;
-    border-radius: 3px;
-}
-@media (min-width: 1095px){
-    .logo-container{
+/* Estilos para dispositivos grandes */
+@media (min-width: 1095px) {
+    .logo-container {
         display: none;
     }
 
-
-    .logo-container_max{
+    .logo-container_max {
         position: absolute;
         width: 100%;
-        /* padding: 20px 80px 50px 00px; */
         padding-top: 20px;
         padding-left: 100px;
         padding-right: 200px;
         justify-content: center;
-        /* border: 1px solid black; */
         column-gap: 70%;
         display: flex;
         z-index: 1;
     }
-
 }
 
-@media (max-width:700px){
-    .logo-container{
-        display: none;
-    }
-}
-
-/* Estilos para dispositivos móviles */
+/* Estilos para dispositivos medianos */
 @media (max-width: 1094px) {
-
-    .logo-container_max{
+    .logo-container_max {
         display: none;
     }
-    .barra-navegacion{
-        margin-bottom:25px ;
+
+    .barra-navegacion {
+        margin-bottom: 25px;
     }
+
     .nav-list {
         display: none;
         flex-direction: column;
@@ -255,7 +190,7 @@ Creado por: Jesus Alejandro Lara
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%; /* Ajustar al ancho completo */
+        width: 100%;
         border-radius: 5px;
         padding: 5px 0;
     }
@@ -270,7 +205,6 @@ Creado por: Jesus Alejandro Lara
         width: 100%;
     }
 
-    /* Mostrar solo el primer elemento de la lista */
     .nav-list li:first-child {
         display: block;
     }
@@ -279,53 +213,53 @@ Creado por: Jesus Alejandro Lara
         padding: 15px 20px;
         text-align: center;
     }
-    
+
     .nav-toggle {
         display: block;
         position: relative;
         z-index: 2;
-        
         font-size: 85px;
-        
-        
-    }
-    .logo-container {
-        position:absolute;
-        left: 0;
-        
-        right: 0;
-        
-        z-index: 1;
-        padding: 20px;
-        /* border: 1px solid black; */
-        text-align: center;
-        
-        
-        transition: height 0.3s ease, opacity 0.3s ease;
-        height: 150px;
-        overflow: hidden; /* Evita que el logo se vea cuando se oculta */
     }
 
-    /* Estilo del submenú con animación */
+    .logo-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        padding: 20px;
+        text-align: center;
+        transition: height 0.3s ease, opacity 0.3s ease;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    /* Submenús en dispositivos móviles */
     .submenu {
-        position: relative; /* Cambiar a estático en pantallas pequeñas */
+        position: relative;
         width: 100%;
         z-index: 1;
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.5s ease, opacity 0.5s ease; /* Cambiar animación */
+        transition: max-height 0.5s ease, opacity 0.5s ease;
     }
 
-    .submenu_2{
+    .submenu_2 {
         position: relative;
         width: 100%;
-        left: 0px;
+        left: 0;
         text-align: center;
     }
-    
+
     .nav-list li.active .submenu {
         opacity: 1;
         max-height: 500px;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 700px) {
+    .logo-container {
+        display: none;
     }
 }

@@ -7,18 +7,18 @@
 
 .libreta {
     position: relative;
-    /* border: 1px solid black; */
-    width: 1500px;
+    border: 0.1px solid black;
+    width: 100%;
     height: auto;
-    border-radius: 5%;
+    /* border-radius: 2% 2% 2% 2%; */
     background: repeating-linear-gradient(white,
             white 39px,
             #ccc 40px);
-    position: relative;
+
     margin: 0 auto;
     /* Centra el div horizontalmente */
 
-    padding: 40px 40px 80px 80px;
+    padding: 40px 40px 120px 120px;
 }
 
 .libreta h1 {
@@ -39,18 +39,29 @@
     text-align: center;
 }
 .libreta .azul {
-    font-size: 32px;
+    font-size: 50px;
     color: var(--azul);
 }
 
 .libreta .linea-roja {
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 80px;
     /* Ajusta según sea necesario */
     width: 2px;
     height: 100%;
-    background-color: red;
+    background-color: red;  
+}
+
+.img_libreta{
+    position: relative;
+    left: 100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 1%;
+    object-fit:inherit;
+    margin: 90px;
+    transform: rotate(-25deg);
 }
 
 .lista-en-libreta {
@@ -65,4 +76,18 @@
 
 .lista-en-libreta li p {
     display: inline;
+}
+
+@media (max-width: 1094px) {
+    .libreta{
+        padding: 100px;
+    }
+    .libreta .linea-roja {
+        left: 0px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 100%;
+        height:2px ;
+        background-color: rgb(255, 0, 0);
+    }   
 }
