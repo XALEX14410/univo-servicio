@@ -10,6 +10,7 @@ Creado por: Jesus Alejandro Lara
 body {
   font-family: "Itim", cursive;
   /* font-weight: 400; */
+  background: url("./../img/bg_body.jpg");
   cursor: url(./../img/image.png), auto;
   font-style: normal;
 }

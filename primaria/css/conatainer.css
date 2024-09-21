@@ -65,16 +65,42 @@
 .grid {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(1, auto);
     gap: 20px;
 }
 
 .grid > div {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     padding: 60px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
 }
+
+.grid > .hero1{
+    background-color: #0866FF;
+    color: white;
+}
  
+
+.grid > .hero2{
+    background-color: #ED0090;
+    color: white;
+}
+.grid > .hero3{
+    background-color: #0C81C8;
+    color: white;
+}
+.grid > .hero4{
+    background-color: #6E31A5;
+    color: white;
+}
+.grid > .hero5{
+    background-color: #94C300;
+    color: white;
+}
+.grid > .hero6{
+    background-color: #00CCCD;
+    color: white;
+}

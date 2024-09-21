@@ -1,39 +1,115 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Seleccionar todos los elementos de menú principal que tienen un submenú
     var menuItems = document.querySelectorAll('.nav-list > li');
-
-    menuItems.forEach(function(item) {
-        item.addEventListener('click', function(event) {
-            // Evita que se cierren al hacer clic en el submenú
-            event.stopPropagation();
-
-            // Alternar la clase 'active' al hacer clic en un elemento de menú
-            this.classList.toggle('active');
-
-            // Cerrar otros submenús abiertos (opcional)
-            menuItems.forEach(function(otherItem) {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
-        });
-    });
-
-    // Manejar los submenús de segundo nivel
     var submenuItems = document.querySelectorAll('.submenu > li');
-
-    submenuItems.forEach(function(subItem) {
-        subItem.addEventListener('click', function(event) {
-            event.stopPropagation();
-            this.classList.toggle('active');
-        });
-    });
-
-    // Para el botón de menú en pantallas pequeñas
     var navToggle = document.querySelector('.nav-toggle');
     var navList = document.querySelector('.nav-list');
 
-    navToggle.addEventListener('click', function() {
+    // Función para agregar eventos de hover
+    function addHoverEvents() {
+        menuItems.forEach(function (item) {
+            item.addEventListener('mouseenter', handleMouseEnter);
+            item.addEventListener('mouseleave', handleMouseLeave);
+        });
+
+        submenuItems.forEach(function (subItem) {
+            subItem.addEventListener('mouseenter', handleMouseEnterSub);
+            subItem.addEventListener('mouseleave', handleMouseLeaveSub);
+        });
+    }
+
+    // Función para agregar eventos de click
+    function addClickEvents() {
+        menuItems.forEach(function (item) {
+            item.addEventListener('click', handleClick);
+        });
+
+        submenuItems.forEach(function (subItem) {
+            subItem.addEventListener('click', handleClickSub);
+        });
+    }
+
+    // Función para remover eventos de hover
+    function removeHoverEvents() {
+        menuItems.forEach(function (item) {
+            item.removeEventListener('mouseenter', handleMouseEnter);
+            item.removeEventListener('mouseleave', handleMouseLeave);
+        });
+
+        submenuItems.forEach(function (subItem) {
+            subItem.removeEventListener('mouseenter', handleMouseEnterSub);
+            subItem.removeEventListener('mouseleave', handleMouseLeaveSub);
+        });
+    }
+
+    // Función para remover eventos de click
+    function removeClickEvents() {
+        menuItems.forEach(function (item) {
+            item.removeEventListener('click', handleClick);
+        });
+
+        submenuItems.forEach(function (subItem) {
+            subItem.removeEventListener('click', handleClickSub);
+        });
+    }
+
+    // Función para manejar el hover en los menús principales
+    function handleMouseEnter() {
+        this.classList.add('active');
+        menuItems.forEach(function (otherItem) {
+            if (otherItem !== this) {
+                otherItem.classList.remove('active');
+            }
+        }.bind(this));
+    }
+
+    function handleMouseLeave() {
+        this.classList.remove('active');
+    }
+
+    // Función para manejar el hover en los submenús
+    function handleMouseEnterSub() {
+        this.classList.add('active');
+    }
+
+    function handleMouseLeaveSub() {
+        this.classList.remove('active');
+    }
+
+    // Función para manejar el click en los menús principales
+    function handleClick(event) {
+        event.stopPropagation();
+        this.classList.toggle('active');
+        menuItems.forEach(function (otherItem) {
+            if (otherItem !== this) {
+                otherItem.classList.remove('active');
+            }
+        }.bind(this));
+    }
+
+    // Función para manejar el click en los submenús
+    function handleClickSub(event) {
+        event.stopPropagation();
+        this.classList.toggle('active');
+    }
+
+    // Función para manejar el comportamiento del menú según el tamaño de la pantalla
+    function handleMenuBehavior() {
+        if (window.innerWidth > 1095) {
+            removeClickEvents();
+            addHoverEvents();
+        } else {
+            removeHoverEvents();
+            addClickEvents();
+        }
+    }
+
+    // Ejecutar la función al cargar la página y al redimensionar la ventana
+    handleMenuBehavior();
+    window.addEventListener('resize', handleMenuBehavior);
+
+    // Para el botón de menú en pantallas pequeñas
+    navToggle.addEventListener('click', function () {
         navList.classList.toggle('active');
         navToggle.classList.toggle('is-active');
     });

@@ -9,7 +9,7 @@ Creado por: Jesus Alejandro Lara
     animation: var(--bg-animation);
     position: fixed;
     width: 100%;
-    height: 150px;
+    height: 170px;
     top: 0;
     z-index: 1;
     border-bottom: 5px solid #41B1E0;
@@ -32,7 +32,8 @@ Creado por: Jesus Alejandro Lara
 /* Barra de navegación */
 .barra-navegacion #nav_list {
     list-style: none;
-    padding-top: 70px;
+    padding-top: 90px;
+    
     text-align: center;
 }
 
@@ -47,13 +48,17 @@ Creado por: Jesus Alejandro Lara
     text-decoration: none;
     color: var(--nav-link-color);
     font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 12px 20px;
+    border-radius: 4px;
+    transition: background-color 0.4s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .barra-navegacion ul li a:hover {
     color: var(--nav-link-hover-color);
-    border-bottom: 2px solid black;
-    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    background-color: rgba(0, 123, 255, 0.1); /* Fondo de hover */
+    transform: translateY(-3px) scale(1.05); /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Botón de menú para pantallas pequeñas */
@@ -61,15 +66,15 @@ Creado por: Jesus Alejandro Lara
     display: none;
     background: none;
     border: none;
-    color: rgb(0, 0, 0);
-    font-size: 55px;
+    color: var(--nav-link-color);
+    font-size: 50px;
     cursor: pointer;
     transition: transform 0.5s ease;
 }
 
 /* Estilo para el ícono cuando está activo */
 .nav-toggle.is-active {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
 }
 
 .nav-toggle .bi-x-lg {
@@ -92,28 +97,32 @@ Creado por: Jesus Alejandro Lara
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
-    width: auto;
+    gap: 15px;
 }
 
 .nav-list li {
     list-style: none;
     position: relative;
-    margin: 0 15px;
+    margin: 0;
     padding: 10px 0;
 }
 
 .nav-list li a {
-    color: white;
+    color: var(--nav-link-color);
     text-decoration: none;
     font-weight: bold;
     padding: 12px 10px;
     font-size: 18px;
     display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo leve */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-list li a:hover {
     color: var(--nav-link-hover-color);
+    background-color: #f0f0f0; /* Fondo más claro en hover */
+    transform: scale(1.08);
 }
 
 /* Submenú */
@@ -127,7 +136,8 @@ Creado por: Jesus Alejandro Lara
     padding: 5px;
     width: 220px;
     opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    transform: translateY(-10px);
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
 }
 
 .submenu_2 {
@@ -141,9 +151,10 @@ Creado por: Jesus Alejandro Lara
     padding: 5px;
     width: 220px;
     opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    left: 105px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(-10px);
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+    left: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Mostrar submenús al hacer clic */
@@ -151,7 +162,11 @@ Creado por: Jesus Alejandro Lara
 .submenu li.active > .submenu_2 {
     display: block;
     opacity: 1;
+    transform: translateY(0);
+    background-color: #f9f9f9; /* Fondo del submenú */
+    transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.4s ease;
 }
+
 
 /* Estilos para dispositivos grandes */
 @media (min-width: 1095px) {
@@ -174,12 +189,11 @@ Creado por: Jesus Alejandro Lara
 
 /* Estilos para dispositivos medianos */
 @media (max-width: 1094px) {
+    .encabezado{
+        height: 130px;
+    }
     .logo-container_max {
         display: none;
-    }
-
-    .barra-navegacion {
-        margin-bottom: 25px;
     }
 
     .nav-list {
@@ -193,6 +207,7 @@ Creado por: Jesus Alejandro Lara
         width: 100%;
         border-radius: 5px;
         padding: 5px 0;
+
     }
 
     .nav-list.active {
@@ -205,14 +220,8 @@ Creado por: Jesus Alejandro Lara
         width: 100%;
     }
 
-    .nav-list li:first-child {
-        display: block;
-    }
 
-    .nav-list li a {
-        padding: 15px 20px;
-        text-align: center;
-    }
+    
 
     .nav-toggle {
         display: block;
