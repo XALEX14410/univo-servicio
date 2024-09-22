@@ -31,6 +31,34 @@ body {
   --scrollbar-color: #007bff; /* Azul personalizado */
   --scrollbar-width: 24px;    /* Ancho del scrollbar */
 
+  /* carousel */
+  --bg-contenido: url(./../img/bg_body.jpg); /* Fondo para el contenido */
+  --contenido-padding: 80px; /* Padding para el contenido */
+  --contenido-margin-bottom: 80px auto; /* Margen inferior para el contenido */
+  --contenido-transform: translateY(100px); /* Transformación del contenido */
+  --hero-bg-gradient: linear-gradient(to bottom right, #4e54c8, #8f94fb); /* Gradiente del hero */
+  --hero-padding: 100px 0; /* Padding del hero */
+  --hero-h1-font-size: 3em; /* Tamaño de la fuente para h1 en el hero */
+  --hero-p-font-size: 1.5em; /* Tamaño de la fuente para el párrafo en el hero */
+  --section-padding: 80px 0; /* Padding de las secciones */
+  --features-padding: 50px 0; /* Padding de la sección features */
+  --grid-gap: 20px; /* Espaciado entre elementos del grid */
+  --grid-padding: 60px; /* Padding dentro de los elementos del grid */
+  --container-max-width: 1200px; /* Ancho máximo del contenedor */
+  --container-padding: 0 20px; /* Padding del contenedor */
+  --carousel-control-bg: #333; /* Fondo de los controles del carrusel */
+  --carousel-control-hover-bg: #444; /* Fondo hover de los controles del carrusel */
+  --carousel-control-color: #fff; /* Color de texto de los controles */
+  --carousel-control-radius: 25%; /* Borde redondeado de los controles */
+  --carousel-control-padding: 10px 20px; /* Padding de los controles */
+  --carousel-control-font-size: 16px; /* Tamaño de fuente de los controles */
+  --carousel-transition: 2s ease-in-out; /* Transición del carrusel */
+  --carousel-width: 90%; /* Ancho del carrusel */
+  --carousel-margin: 10% auto; /* Margen del carrusel */
+  --carousel-item-opacity: 0; /* Opacidad inicial de los ítems */
+  --carousel-item-active-opacity: 1; /* Opacidad de ítems activos */
+
+
   /* libreta */
     --azul: #007bff;
     --ancho-libreta-grande: 1500px;
@@ -64,6 +92,14 @@ body {
   --grid-padding: 60px; /* Padding dentro de los elementos del grid */
   --container-max-width: 1200px; /* Ancho máximo del contenedor */
   --container-padding: 0 20px; /* Padding del contenedor */
+  --hero-text-color: white; /* Color del texto en el hero */
+  --grid-border-radius: 5%; /* Bordes redondeados para los elementos del grid */
+  --grid-hero1-bg: #0866FF; /* Fondo para el héroe 1 */
+  --grid-hero2-bg: #ED0090; /* Fondo para el héroe 2 */
+  --grid-hero3-bg: #0C81C8; /* Fondo para el héroe 3 */
+  --grid-hero4-bg: #6E31A5; /* Fondo para el héroe 4 */
+  --grid-hero5-bg: #94C300; /* Fondo para el héroe 5 */
+  --grid-hero6-bg: #00CCCD; /* Fondo para el héroe 6 */
 
 
 
@@ -111,27 +147,6 @@ scrollbar-color: var(--scrollbar-color) #f1f1f1;
 
 
 
-    /* Colores básicos */
-    --rojo: red;
-    --azul: blue;
-    --amarillo: yellow;
-    --verde: green;
-    --naranja: orange;
-    --violeta: violet;
-    --negro: black;
-    --blanco: white;
-    --gris: gray;
-    --rosa: pink;
-    --cian: cyan;
-    --magenta: magenta;
-    --marron: brown;
-    --lima: lime;
-    --oro: gold;
-    --plata: silver;
-    --coral: coral;
-    --turquesa: turquoise;
-    --lavanda: lavender;
-    --indigo: indigo;
   
   }
 

@@ -1,4 +1,6 @@
-.contenido{
+@import url(./estilos.css);
+
+.contenido {
     position: relative;
     width: 100%;
     /* border: 10px solid black; */
@@ -11,18 +13,17 @@
     height: auto;
 }
 
-
-
-
+/* Estilos generales */
 .hero {
-    background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
+    background: var(--hero-bg-gradient);
     background-size: cover;
-    color: white;
-    padding: 100px 0;
+    color: var(--hero-text-color);
+    padding: var(--hero-padding);
+    text-align: center;
 }
 
 .features {
-    padding: 50px 0;
+    padding: var(--features-padding);
 }
 
 .features h2 {
@@ -30,77 +31,179 @@
 }
 
 .section {
-    padding: 80px 0;
-    /* background-color: #fff; */
-}
-.container .grid div{
-    border-radius: 5%;
+    /* border: 1px solid black; */
+    padding: var(--section-padding);
+    margin: -20% auto 0%;
+
 }
 
+.container .grid div {
+    border-radius: var(--grid-border-radius);
+}
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    /* color: reverse; */
-    padding: 0 20px;
+    padding: var(--container-padding);
 }
 
-
-
-.hero {
-    text-align: center;
-    
-}
-
-.hero h1 {
-    font-size: 3em;
+.hero h3 {
+    font-size: var(--hero-h1-font-size);
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.5em;
+    font-size: var(--hero-p-font-size);
     margin-bottom: 30px;
 }
 
 .grid {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(1, auto);
-    gap: 20px;
+    grid-template-rows: repeat(2, auto);
+    gap: var(--grid-gap);
 }
 
-.grid > div {
-    /* background-color: #f9f9f9; */
-    padding: 60px;
-    border-radius: 5px;
+.grid>div {
+    padding: var(--grid-padding);
+    border-radius: var(--grid-border-radius);
     display: flex;
     justify-content: center;
 }
 
-.grid > .hero1{
-    background-color: #0866FF;
-    color: white;
+.grid>.hero1 {
+    background-color: var(--grid-hero1-bg);
+    color: var(--hero-text-color);
 }
- 
 
-.grid > .hero2{
-    background-color: #ED0090;
-    color: white;
+.grid>.hero2 {
+    background-color: var(--grid-hero2-bg);
+    color: var(--hero-text-color);
 }
-.grid > .hero3{
-    background-color: #0C81C8;
-    color: white;
+
+.grid>.hero3 {
+    background-color: var(--grid-hero3-bg);
+    color: var(--hero-text-color);
 }
-.grid > .hero4{
-    background-color: #6E31A5;
-    color: white;
+
+.grid>.hero4 {
+    background-color: var(--grid-hero4-bg);
+    color: var(--hero-text-color);
 }
-.grid > .hero5{
-    background-color: #94C300;
-    color: white;
+
+.grid>.hero5 {
+    background-color: var(--grid-hero5-bg);
+    color: var(--hero-text-color);
 }
-.grid > .hero6{
-    background-color: #00CCCD;
-    color: white;
+
+.grid>.hero6 {
+    background-color: var(--grid-hero6-bg);
+    color: var(--hero-text-color);
+}
+
+/* Media Queries */
+
+/* Dispositivos móviles (pantallas más pequeñas) */
+@media screen and (max-width: 576px) {
+    .hero {
+        padding: 60px 0;
+        /* Ajusta el padding para móviles */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        /* Ajusta el tamaño de la fuente */
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        /* Ajusta el tamaño de la fuente */
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        /* Una columna en móviles */
+    }
+
+    .grid>div {
+        padding: 30px;
+        /* Reduce el padding en móviles */
+    }
+}
+
+/* Tabletas (pantallas medianas) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .hero {
+        padding: 80px 0;
+        /* Ajusta el padding para tabletas */
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+        /* Ajusta el tamaño de la fuente */
+    }
+
+    .hero p {
+        font-size: 1.4em;
+        /* Ajusta el tamaño de la fuente */
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Dos columnas en tabletas */
+    }
+
+    .grid>div {
+        padding: 40px;
+        /* Reduce el padding en tabletas */
+    }
+}
+
+/* Escritorio pequeño a mediano */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .hero {
+        padding: 90px 0;
+        /* Ajusta el padding para escritorios pequeños */
+    }
+
+    .hero h1 {
+        font-size: 2.8em;
+        /* Ajusta el tamaño de la fuente */
+    }
+
+    .hero p {
+        font-size: 1.6em;
+        /* Ajusta el tamaño de la fuente */
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Tres columnas en escritorios pequeños */
+    }
+}
+
+/* Escritorio grande (pantallas más grandes) */
+@media screen and (min-width: 993px) and (max-width: 1095px) {
+    .hero {
+        padding: 100px 0;
+        /* Mantiene el padding para escritorios grandes */
+    }
+
+    .hero h1 {
+        font-size: var(--hero-h1-font-size);
+        /* Mantiene el tamaño de la fuente */
+    }
+
+    .hero p {
+        font-size: var(--hero-p-font-size);
+        /* Mantiene el tamaño de la fuente */
+    }
+}
+
+/* Dispositivos grandes (pantallas más grandes) */
+@media screen and (min-width: 1096px) and (max-width: 1141px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Mantiene tres columnas */
+    }
 }
