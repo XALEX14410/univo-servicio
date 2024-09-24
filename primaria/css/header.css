@@ -202,7 +202,7 @@ Creado por: Jesus Alejandro Lara
         align-items: center;
         background-color: #ffffff;
         position: absolute;
-        top: 0%;
+        top: 10%;
         left: 0;
         width: 100%;
         border-radius: 5px;
@@ -218,6 +218,10 @@ Creado por: Jesus Alejandro Lara
         display: none;
         margin: 0;
         width: 100%;
+        padding: 5px;
+    }
+    .barra-navegacion ul li a:hover{
+        transform: none;
     }
 
     .nav-toggle {
@@ -225,6 +229,7 @@ Creado por: Jesus Alejandro Lara
         position: relative;
         z-index: 2;
         font-size: 85px;
+        
     }
 
     .logo-container {
@@ -245,8 +250,9 @@ Creado por: Jesus Alejandro Lara
         width: 100%;
         z-index: 1;
         opacity: 0;
-        max-height: 0;
-        overflow: hidden;
+        max-height: 400px;
+        height: auto;
+        overflow: auto;
         transition: max-height 0.5s ease, opacity 0.5s ease;
     }
 
@@ -257,9 +263,11 @@ Creado por: Jesus Alejandro Lara
         text-align: center;
     }
 
-    .nav-list li.active .submenu {
+    .nav-list li.active {
         opacity: 1;
-        max-height: 500px;
+        overflow: auto;
+        height: 70%;
+        max-height:70%;
     }
 }
 
