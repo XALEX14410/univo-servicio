@@ -8,7 +8,7 @@
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
-    margin: 40px;  
+    margin: 0px;  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,24 +28,6 @@
     color: #007bff;
     text-decoration: none;
 }
-.formulario__campo--100 {
-    width: 100%; /* Ancho del 100% */
-}
-
-.formulario__campo--49 {
-    width: 49.8%; /* Ancho del 48% */
-    display: inline-block; /* Permite que los campos se alineen horizontalmente si hay espacio */
-}
-
-.formulario__campo--50 {
-    width: 50%; /* Ancho del 50% */
-    display: inline-block; /* Permite que los campos se alineen horizontalmente si hay espacio */
-}
-
-.formulario__campo--calc {
-    width: calc(100% - 22px); /* Ajuste para padding y border */
-}
-
 .contact-form label {
     display: block;
     margin-bottom: 5px;
@@ -72,3 +54,117 @@
 .contact-form button:hover {
     background: #0056b3;
 }
+
+
+
+/* iPhone SE */
+@media screen and (max-width: 375px) and (max-height: 667px) {
+    /* Estilos específicos para dispositivos con ancho de hasta 375px y altura de hasta 667px */
+    .contact-section .map-contacto{
+        width: 100%;
+        height: 200px;
+    }
+    .contact-section {
+        border-radius: 5px;
+        margin: -60px -60px 20px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* iPhone XR */
+  @media screen and (max-width: 414px) and (max-height: 896px) {
+    /* Estilos para dispositivos de hasta 414px de ancho y 896px de alto */
+    .contact-section .map-contacto{
+        width: 100%;
+        height: 250px;
+    }
+    .contact-section {
+        border-radius: 5px;
+        margin: -60px -60px 20px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }  
+}
+  
+
+  
+  /* iPhone 14 Pro Max */
+  @media screen and (max-width: 430px) and (max-height: 932px) {
+    /* Estilos para dispositivos de hasta 430px de ancho y 932px de alto */
+    .contact-section .map-contacto{
+        width: 100%;
+        height: 180px;
+    }
+    .contact-section {
+        border-radius: 5px;
+        margin: -60px -60px 20px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }  
+}
+  
+
+  
+
+  
+  /* Surface Duo */
+  @media screen and (max-width: 540px) and (max-height: 720px) {
+    /* Estilos para dispositivos de hasta 540px de ancho y 720px de alto */
+    .contact-section .map-contacto{
+        width: 100%;
+        height: 180px;
+    }
+    .contact-section {
+        border-radius: 5px;
+        margin: -60px -60px 20px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }  
+  }
+  
+
+  
+  /* Samsung Galaxy A51/71 */
+  @media screen and (max-width: 412px) and (max-height: 914px) {
+    /* /Estilos para dispositivos de hasta 412px de ancho y 914px de alto */
+    .contact-section .map-contacto{
+        width: 100%;
+        height: 230px;
+    }
+    .contact-section {
+        border-radius: 5px;
+        margin: -60px -60px 20px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }  
+  }
+  
+  /* Nest Hub */
+  @media screen and (max-width: 1024px) and (max-height: 600px) {
+    .contact-section .map-contacto{
+        width: 100%;
+        height: 180px;
+    }
+    .contact-section {
+        border-radius: 5px;
+        margin: -60px -60px 20px;  
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }  
+  }
+  
+  /* Nest Hub Max */
+  @media screen and (max-width: 1280px) and (max-height: 800px) {
+    /* Estilos para dispositivos de hasta 1280px de ancho y 800px de alto */
+  }
+  
+  /* Dispositivos medianos (sin altura definida) */
+  @media screen and (max-width: 1094px) {
+    /* Estilos para dispositivos de hasta 1094px de ancho */
+  }
+  
+  /* Pantallas pequeñas (sin altura definida) */
+  @media screen and (max-width: 700px) {
+    /* Estilos para dispositivos de hasta 700px de ancho */
+  }
+  
+  /* Escritorio grande (pantallas más grandes, sin altura definida) */
+  @media screen and (min-width: 1095px) {
+    /* Estilos para pantallas más grandes con ancho mayor a 1095px */
+  }
+  
