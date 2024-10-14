@@ -148,23 +148,3 @@
     }  
   }
   
-  /* Nest Hub Max */
-  @media screen and (max-width: 1280px) and (max-height: 800px) {
-    /* Estilos para dispositivos de hasta 1280px de ancho y 800px de alto */
-  }
-  
-  /* Dispositivos medianos (sin altura definida) */
-  @media screen and (max-width: 1094px) {
-    /* Estilos para dispositivos de hasta 1094px de ancho */
-  }
-  
-  /* Pantallas pequeñas (sin altura definida) */
-  @media screen and (max-width: 700px) {
-    /* Estilos para dispositivos de hasta 700px de ancho */
-  }
-  
-  /* Escritorio grande (pantallas más grandes, sin altura definida) */
-  @media screen and (min-width: 1095px) {
-    /* Estilos para pantallas más grandes con ancho mayor a 1095px */
-  }
-  

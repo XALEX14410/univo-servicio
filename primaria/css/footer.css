@@ -1,109 +1,73 @@
-/* 
-codigo de footer
-Creado por: Jesus Alejandro Lara
-*/
-@import url(estilos.css);
-
 /* Estilos para el pie de página */
 .footer {
-    background: var(--bg-footer);
-    transition: background-position 2s ease;   
-    animation: var(--bg-animation-footer);
-    color: var(--color-footer);
-    padding: 80px 0px 20px 0;
-    width: 100%;
-    border-radius: 3% 3% 0% 0%;
-    border-collapse: separate;
-    
-    
-    position: absolute;
-    left: 0;
+    background: #333; /* Fondo oscuro */
+    color: #fff; /* Color de texto blanco */
+    padding: 40px 20px; /* Relleno */
+    text-align: center; /* Texto centrado */
 }
 
-.container-f {
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: auto;
+.footer-content {
+    display: flex; /* Flexbox para la disposición */
+    justify-content: space-between; /* Espacio entre secciones */
+    flex-wrap: wrap; /* Permite que las secciones se ajusten */
+    margin-bottom: 20px; /* Espacio inferior */
 }
 
-.footer .container-fluid {
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    max-width: 100%; /* Elimina cualquier ancho máximo */
-    padding: 0; /* Elimina el relleno para asegurar que el pie de página ocupe todo el ancho */
+.footer-section {
+    flex: 1; /* Cada sección ocupa el mismo ancho */
+    min-width: 200px; /* Ancho mínimo */
+    margin: 10px; /* Espacio entre secciones */
 }
 
-/* Estilo para los encabezados dentro del pie de página */
 .footer h5 {
-    font-size: 1.25rem;
-    margin-bottom: 20px; /* Espacio debajo del título */
-    font-weight: bold; /* Negrita para los títulos */
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    margin-bottom: 15px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
 }
 
-/* Estilo para los párrafos y listas dentro del pie de página */
-.footer p, .footer ul {
-    font-size: 0.875rem; /* Tamaño de fuente más pequeño */
-    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+.footer ul {
+    list-style: none; /* Sin estilo para listas */
+    padding: 0; /* Sin relleno */
 }
 
-/* Estilo para los enlaces dentro del pie de página */
 .footer a {
-    color: #007bff; /* Color de los enlaces */
-    text-decoration: none; /* Quita el subrayado */
+    color: #fff; /* Color de enlace */
+    text-decoration: none; /* Sin subrayado */
 }
 
 .footer a:hover {
     text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
-/* Espaciado entre los ítems de la lista sin estilo */
-.footer .list-unstyled li {
-    margin-bottom: 10px; /* Espacio debajo de cada ítem */
+.map-footer {
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
-/* Espaciado entre el ícono y el texto dentro del pie de página */
-.footer .list-unstyled i {
-    margin-right: 10px; /* Espacio entre el ícono y el texto */
-}
-
-/* Centrando el texto en la parte inferior del pie de página */
-.footer .text-center {
-    text-align: center; /* Centra el texto */
-    margin-top: 20px; /* Espacio superior */
-}
-
-/* Tamaño de los íconos de Bootstrap si se usan */
-.footer .bi {
-    font-size: 1.2rem; /* Tamaño de los íconos */
-}
- 
-
-.map-footer{
-    max-width: 300px;
-    min-width: 400px;
-    height: 200px;
-}
-
-
-/* Iconos sociales */
 .social-icons {
-    margin: 20px 0;
+    margin: 20px 0; /* Espacio entre iconos sociales */
 }
 
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    transition: transform 0.3s, filter 0.3s;
+
+
+.social-icon {
+    display: inline-block; /* Íconos en línea */
+    margin: 0 10px; /* Espacio entre iconos */
 }
 
-.social-icons a img {
-    width: 64px;
-    height: 44px;
-    transition: transform 0.3s, filter 0.3s;
-    filter: brightness(0) ;
+.social-icon img {
+    width: 40px; /* Tamaño del ícono */
+    height: 40px; /* Tamaño del ícono */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.social-icon:hover img {
+    transform: scale(1.1); /* Aumento de tamaño al pasar el cursor */
 }
 
 /* Efectos hover */
-.social-icons a.facebook-icon:hover img {
+/* .social-icons a.facebook-icon:hover img {
     filter: brightness(0) saturate(100%) invert(33%) sepia(95%) saturate(2034%) hue-rotate(180deg) brightness(91%) contrast(101%);
     transform: scale(1.2) translateY(-5px);
 }
@@ -131,276 +95,21 @@ Creado por: Jesus Alejandro Lara
 .social-icons a.tiktok-icon:hover img {
     filter: brightness(0) saturate(100%) invert(62%) sepia(47%) saturate(621%) hue-rotate(286deg) brightness(90%) contrast(88%);
     transform: scale(1.2) translateY(-5px);
+} */
+
+.footer p {
+    margin-top: 20px; /* Espacio superior */
+    font-size: 0.875rem; /* Tamaño de texto */
 }
 
-/* Enlaces del footer */
-.footer-links {
-    margin: 20px 0;
-}
-
-.footer-links a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #f0f0f0;
-}
-
-.texto-footer{
-    border-top: 1px solid black;
-}
-
-/* Dispositivos móviles (pantallas más pequeñas) */
-@media screen and (max-width: 576px) {
-    .footer h5 {
-        font-size: 1rem;
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Apilar secciones en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
     }
 
-    .footer p, .footer ul {
-        font-size: 0.8rem;
-    }
-
-    .footer {
-        padding: 40px 0;
-    }
-
-    .map-footer {
-        width: 100%;
-        height: 150px; /* Ajusta la altura para pantallas pequeñas */
-    }
-}
-
-/* Tabletas (pantallas medianas) */
-@media screen and (min-width: 577px) and (max-width: 768px) {
-    .footer h5 {
-        font-size: 1.1rem;
-    }
-
-    .footer p, .footer ul {
-        font-size: 0.85rem;
-    }
-
-    .footer {
-        padding: 60px 0;
-    }
-
-    .map-footer {
-        width: 100%;
-        height: 180px; /* Ajusta la altura para pantallas medianas */
-    }
-}
-
-/* Escritorio pequeño a mediano */
-@media screen and (min-width: 769px) and (max-width: 992px) {
-    .footer h5 {
-        font-size: 1.2rem;
-    }
-
-    .footer p, .footer ul {
-        font-size: 0.9rem;
-    }
-
-    .footer {
-        padding: 70px 0;
-    }
-
-    .map-footer {
-        width: 100%;
-        height: 200px; /* Ajusta la altura para pantallas medianas */
-    }
-}
-
-/* Escritorio grande (pantallas más grandes) */
-@media screen and (min-width: 993px) and (max-width: 1095px) {
-    .footer h5 {
-        font-size: 1.25rem;
-    }
-
-    .footer p, .footer ul {
-        font-size: 0.95rem;
-    }
-
-    .footer {
-        padding: 80px 0;
-    }
-    .container-f{
-        padding-left: 20px;
-    }
-
-    .map-footer {
-        width: 100%; /* Ajusta el tamaño del .map-footer para pantallas grandes */
-        height: 230px; /* Ajusta la altura para pantallas grandes */
-    }
-}
-
-/* Dispositivos grandes (pantallas más grandes) */
-@media screen and (min-width: 1096px) and (max-width: 1141px) {
-    .map-footer {
-        width: 100%; /* Asegura que el .map-footer ocupe todo el ancho disponible */
-        height: 230px; /* Puedes ajustar la altura según sea necesario */
-    }
-    .container-f{
-        padding-left: 20px;
-    }
-}
-
-/* Escritorio grande (pantallas más grandes) */
-@media screen and (max-width: 1172px) {
-    .map-footer {
-        width: 300px; /* Tamaño original o ajustado */
-        height: 250px;
-    }
-    
-    .container-f{
-        padding-left: 20px;
-    }
-}
-
-
-
-/* Dispositivos específicos: iPhone SE */
-@media screen and (max-width: 375px) and (max-height: 667px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* iPhone XR */
-@media screen and (max-width: 414px) and (max-height: 896px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* iPhone 12 Pro */
-@media screen and (max-width: 390px) and (max-height: 844px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* iPhone 14 Pro Max */
-@media screen and (max-width: 430px) and (max-height: 932px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* Pixel 7 */
-@media screen and (max-width: 412px) and (max-height: 915px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* Samsung Galaxy S8+ */
-@media screen and (max-width: 360px) and (max-height: 740px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* Samsung Galaxy S20 Ultra */
-@media screen and (max-width: 412px) and (max-height: 915px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* iPad Mini */
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-    .footer {
-        padding: 60px 0;
-    }
-}
-
-/* iPad Air */
-@media screen and (max-width: 820px) and (max-height: 1180px) {
-    .footer {
-        padding: 60px 0;
-    }
-}
-
-/* iPad Pro */
-@media screen and (max-width: 1024px) and (max-height: 1366px) {
-    .footer {
-        padding: 60px 0;
-    }
-}
-
-/* Surface Pro 7 */
-@media screen and (max-width: 912px) and (max-height: 1368px) {
-    .footer {
-        padding: 60px 0;
-    }
-}
-
-/* Surface Duo */
-@media screen and (max-width: 540px) and (max-height: 720px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* Galaxy Z Fold 5 */
-@media screen and (max-width: 344px) and (max-height: 882px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* ASUS Zenbook Fold */
-@media screen and (max-width: 853px) and (max-height: 1280px) {
-    .footer {
-        padding: 60px 0;
-    }
-}
-
-/* Samsung Galaxy A51/71 */
-@media screen and (max-width: 412px) and (max-height: 914px) {
-    .footer {
-        padding: 40px 0;
-    }
-}
-
-/* Nest Hub */
-@media screen and (max-width: 1024px) and (max-height: 600px) {
-    .footer {
-        padding: 60px 0;
-    }
-}
-
-/* Nest Hub Max */
-@media screen and (max-width: 1280px) and (max-height: 800px) {
-    .footer {
-        padding: 60px 0;
-    }
-}
-
-/* Ajuste para pantallas medianas (sin altura definida) */
-@media screen and (max-width: 1094px) {
-    .footer {
-        padding: 60px 0;
-    }
-}
-
-/* Pantallas pequeñas (sin altura definida) */
-@media screen and (max-width: 700px) {
-    .footer {
-        padding: 50px 0;
-    }
-}
-
-/* Escritorio grande (pantallas más grandes) */
-@media screen and (min-width: 1095px) {
-    .footer {
-        padding: 80px 0;
-    }
-
-    .map-footer {
-        width: 300px;
-        height: 250px;
+    .footer-section {
+        margin-bottom: 20px; /* Espacio inferior */
     }
 }
