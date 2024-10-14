@@ -1,12 +1,11 @@
 /* Contenedor de la galería */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 50px;
-    padding: 40px 0;
-    width: 95%;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Ajuste para dispositivos más pequeños */
+    gap: 50px; /* Espacio entre los elementos */
+    padding: 40px; /* Espaciado interno */
+    width: 100%;
     margin: auto;
-    
 }
 
 /* Estilo de los enlaces que contienen las imágenes */
@@ -26,13 +25,10 @@
 
 /* Estilo de las imágenes dentro de la galería */
 .galeria img {
-    border-radius: 5%;
     width: 100%;
-    min-height: 300px;
-    max-height: 500px;
-    padding: 20px 20px 0px 20px;
+    height: auto; /* Ajustar la altura automáticamente */
     display: block;
-    border-radius: 5px;
+    border-radius: 10px; /* Consistencia con los enlaces */
     transition: transform 0.5s ease, filter 0.3s ease;
 }
 
@@ -41,46 +37,31 @@
     position: relative;
     
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    
-    
-    margin: 40px 0px 0px 0px;
-    /* background: rgba(35, 34, 34, 0.6);  */
-    /* Fondo negro semitransparente */
-    color: rgb(0, 0, 0);
-    font-size: 18px;
+    transform: translate(-50%, 0);
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para mejor legibilidad */
+    color: #333;
     text-align: center;
-    padding: 10px 0;
-    opacity: 1; /* Siempre visible */
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-.texto{
-    padding: 0px 40px 0 40px;
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s ease;
 }
 
 /* Cambios en el estilo del texto al hacer hover */
 .galeria a:hover .texto-imagen {
-    color: rgb(72, 72, 72); /* Cambia el color del texto a negro */
-    
+    opacity: 1; /* Mostrar texto al hacer hover */
 }
 
 /* Efecto de hover sobre la imagen */
 .galeria a:hover img {
     filter: brightness(1.2); /* Ligero brillo al hacer hover */
-    /* transform: scale(1.05); */
 }
 
 /* Efecto de hover sobre el enlace (para hacerlo más atractivo) */
 .galeria a:hover {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     transform: scale(1.04);
-    
 }
-
-    
 
 /* Estilo del lightbox */
 .light-box {
@@ -88,32 +69,28 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 20000;
     transition: opacity 0.2s ease, transform 0.4s ease;
-    opacity: 0;
-    /* transform: translateY(-100%); */
+    opacity: 0; /* Inicialmente oculto */
     visibility: hidden; /* Oculta el lightbox por defecto */
 }
 
 /* Efecto del contenido del lightbox */
 .light-box img {
-    width: 70vw;
-    max-height: 90vh;
+    max-width: 90%; /* Asegura que la imagen no exceda el 90% del ancho */
+    max-height: 90%; /* Asegura que la imagen no exceda el 90% del alto */
     border-radius: 10px;
-    padding: 20px;
-    background: white;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Abrir el lightbox al hacer clic */
 .light-box:target {
     opacity: 1;
-    transform: translateY(0);
     visibility: visible; /* Muestra el lightbox cuando está en el estado :target */
 }
 
@@ -139,4 +116,58 @@
     background: darkred;
     transform: scale(1.2) rotate(45deg); /* Animación de escala y rotación */
     opacity: 1; /* Aumenta la opacidad al pasar el ratón */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar para pantallas más pequeñas */
+        gap: 150px; /* Espacio más pequeño en móviles */
+        padding: 20px; /* Espaciado interno */ 
+        margin: 0px;
+    }
+    .galeria a{
+        margin: -60px;
+    }
+    .texto-imagen{
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    margin: 20px 0px -20px 0px;
+    font-size: 12px;
+    text-align: center;
+    
+    }
+    .texto{
+        font-size: 10px;
+    }
+
+
+}
+
+/* Estilos responsivos */
+@media (max-width: 700px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar para pantallas más pequeñas */
+        gap: 150px; /* Espacio más pequeño en móviles */
+        padding: 20px; /* Espaciado interno */ 
+        margin: 0; /* Sin margen negativo */
+    }
+
+    .galeria a {
+        margin: -60px; /* Sin margen negativo */
+    }
+
+    .texto-imagen {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Ajuste el ancho para mejor visualización */
+        margin: 10px 0; /* Margen reducido */
+        font-size: 14px; /* Aumento del tamaño de fuente */
+        text-align: center;
+    }
+
+    .texto {
+        font-size: 12px; /* Tamaño de fuente ajustado */
+    }
 }

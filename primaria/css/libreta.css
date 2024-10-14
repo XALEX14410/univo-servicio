@@ -3,91 +3,139 @@
     DIseño libreta css
  */
 
-@import url(./estilos.css);
+ @import url(./estilos.css);
 
-.libreta {
-    position: relative;
-    border: 0.1px solid black;
-    width: auto;
-    height: auto;
-    /* border-radius: 2% 2% 2% 2%; */
-    background: repeating-linear-gradient(white,
-            white 39px,
-            #ccc 40px);
-
-    margin: 0 auto;
-    /* Centra el div horizontalmente */
-
-    padding: 40px 40px 120px 120px;
-}
-
-.libreta h1 {
-    text-align: center;
-    padding-bottom: 50px;
-    border-bottom: 2px solid black;
-    font-size: 80px;
-}
-.libreta h2{
-    font-size: 60px;
-    text-align: center;
-}
-
-.libreta p {
-    font-size: 30px;
-}
-.libreta .texto-centrado{
-    text-align: center;
-}
-.libreta .azul {
-    font-size: 50px;
-    color: var(--azul);
-}
-
-.libreta .linea-roja {
-    position: absolute;
-    top: 0;
-    left: 80px;
-    /* Ajusta según sea necesario */
-    width: 2px;
-    height: 100%;
-    background-color: red;  
-}
-
-.img_libreta{
-    position: relative;
-    left: 100px;
-    width: 300px;
-    height: 300px;
-    border-radius: 1%;
-    object-fit:inherit;
-    margin: 90px;
-    transform: rotate(-25deg);
-}
-
-.lista-en-libreta {
-    font-size: 30px;
-    list-style-type: circle;
-}
-
-
-.lista-en-libreta li {
-    padding: 18px;
-}
-
-.lista-en-libreta li p {
-    display: inline;
-}
-
-@media (max-width: 1094px) {
+ .libreta {
+     position: relative;
+     border: 0.1px solid black;
+     width: auto;
+     height: auto;
+     background: repeating-linear-gradient(white, white 39px, #ccc 40px);
+     margin: 0 auto; /* Centra el div horizontalmente */
+     padding: 40px 40px 120px 120px;
+ }
+ 
+ .libreta h1 {
+     text-align: center;
+     padding-bottom: 50px;
+     border-bottom: 2px solid black;
+     font-size: 80px;
+ }
+ 
+ .libreta h2 {
+     font-size: 60px;
+     text-align: center;
+ }
+ 
+ .libreta p {
+     font-size: 30px;
+ }
+ 
+ .libreta .texto-centrado {
+     text-align: center;
+ }
+ 
+ .libreta .azul {
+     font-size: 50px;
+     color: var(--azul);
+ }
+ 
+ .libreta .linea-roja {
+     position: absolute;
+     top: 0;
+     left: 80px; /* Ajusta según sea necesario */
+     width: 2px;
+     height: 100%;
+     background-color: red;  
+ }
+ 
+ .img_libreta {
+     position: relative;
+     left: 100px;
+     width: 300px;
+     height: 300px;
+     border-radius: 1%;
+     object-fit: inherit;
+     margin: 90px;
+     transform: rotate(-25deg);
+ }
+ 
+ .lista-en-libreta {
+     font-size: 30px;
+     list-style-type: circle;
+ }
+ 
+ .lista-en-libreta li {
+     padding: 18px;
+ }
+ 
+ .lista-en-libreta li p {
+     display: inline;
+ }
+ 
+ /* Media queries para responsividad */
+ @media (max-width: 1094px) {
+     .libreta {
+         padding: 50px; /* Reduce el padding para pantallas más pequeñas */
+     }
+     .libreta .linea-roja {
+         left: 0;
+         margin-top: 50px; /* Reduce el margen para adaptarse */
+         margin-bottom: 50px; /* Reduce el margen para adaptarse */
+         width: 100%;
+         height: 2px;
+         background-color: rgb(255, 0, 0);
+     }   
+ }
+ 
+ @media (max-width: 768px) {
     .libreta{
-        padding: 100px;
+        margin: -40px;
+        padding: 0;
     }
-    .libreta .linea-roja {
-        left: 0px;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        width: 100%;
-        height:2px ;
-        background-color: rgb(255, 0, 0);
-    }   
-}
+     .libreta h1 {
+        padding-top: 40px;
+        padding-bottom: 0px;
+         font-size: 50px; /* Ajusta el tamaño de la fuente para h1 */
+     }
+     .libreta h2 {
+         font-size: 40px; /* Ajusta el tamaño de la fuente para h2 */
+     }
+     .libreta p {
+         font-size: 20px; /* Ajusta el tamaño de la fuente para párrafos */
+     }
+     .libreta .azul {
+         font-size: 30px; /* Ajusta el tamaño de la fuente para texto azul */
+     }
+     .img_libreta {
+         left: 50px; /* Ajusta la posición de la imagen */
+         width: 200px; /* Reduce el tamaño de la imagen */
+         height: 200px; /* Reduce el tamaño de la imagen */
+         margin: 50px; /* Reduce el margen */
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     .libreta {
+         padding: 20px; /* Ajusta el padding aún más para pantallas muy pequeñas */
+     }
+     .libreta h1 {
+         font-size: 30px; /* Ajusta el tamaño de la fuente para h1 */
+     }
+     .libreta h2 {
+         font-size: 25px; /* Ajusta el tamaño de la fuente para h2 */
+     }
+     .libreta p {
+         font-size: 16px; /* Ajusta el tamaño de la fuente para párrafos */
+     }
+     .libreta .azul {
+         font-size: 24px; /* Ajusta el tamaño de la fuente para texto azul */
+     }
+     .img_libreta {
+         left: 20px; /* Ajusta la posición de la imagen */
+         width: 150px; /* Reduce aún más el tamaño de la imagen */
+         height: 150px; /* Reduce aún más el tamaño de la imagen */
+         margin: 20px; /* Reduce aún más el margen */
+     }
+ }
+ 
