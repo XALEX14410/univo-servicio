@@ -13,7 +13,13 @@ Creado por: Jesus Alejandro Lara
     top: 0;
     z-index: 1;
     border-bottom: 5px solid #41B1E0;
+
+    
+    -webkit-animation: var(--bg-animation); /* Safari y Chrome */
+    -moz-animation: var(--bg-animation); /* Firefox */
+
 }
+
 
 /* Estilos para el contenedor del logo */
 .logo-container {
@@ -21,19 +27,28 @@ Creado por: Jesus Alejandro Lara
     padding: 20px 0;
     transition: height 0.3s ease, opacity 0.3s ease;
     overflow: hidden;
+
+    
+    -webkit-transition: height 0.3s ease, opacity 0.3s ease; /* Safari y Chrome */
+    -moz-transition: height 0.3s ease, opacity 0.3s ease; /* Firefox */
+
 }
 
 .logo {
     max-width: var(--logo-max-width);
     height: var(--logo-height);
     transition: transform 0.3s ease;
+
+    
+    -webkit-transition: transform 0.3s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.3s ease; /* Firefox */
+
 }
 
 /* Barra de navegación */
 .barra-navegacion #nav_list {
     list-style: none;
     padding-top: 90px;
-    
     text-align: center;
 }
 
@@ -51,17 +66,30 @@ Creado por: Jesus Alejandro Lara
     padding: 12px 20px;
     border-radius: 4px;
     transition: background-color 0.4s ease, color 0.3s ease, transform 0.3s ease;
+
+    
+    -webkit-transition: background-color 0.4s ease, color 0.3s ease, transform 0.3s ease; /* Safari y Chrome */
+    -moz-transition: background-color 0.4s ease, color 0.3s ease, transform 0.3s ease; /* Firefox */
+
 }
 
 .barra-navegacion ul li a:hover {
     color: var(--nav-link-hover-color);
     background-color: rgba(0, 123, 255, 0.1); /* Fondo de hover */
-    transform: translateY(-3px) scale(1.05); /* Efecto de elevación */
+    transform: translateY(-3px) scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: color 0.3s ease, transform 0.3s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+
+    
+    -webkit-transform: translateY(-3px) scale(1.05); /* Safari y Chrome */
+    -moz-transform: translateY(-3px) scale(1.05); /* Firefox */
+
+    
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Safari y Chrome */
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Firefox */
+
 }
 
-/* Botón de menú para pantallas pequeñas */
 .nav-toggle {
     display: none;
     background: none;
@@ -70,11 +98,21 @@ Creado por: Jesus Alejandro Lara
     font-size: 50px;
     cursor: pointer;
     transition: transform 0.5s ease;
+
+    
+    -webkit-transition: transform 0.5s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.5s ease; /* Firefox */
+
 }
 
 /* Estilo para el ícono cuando está activo */
 .nav-toggle.is-active {
     transform: rotate(180deg);
+
+    
+    -webkit-transform: rotate(180deg); /* Safari y Chrome */
+    -moz-transform: rotate(180deg); /* Firefox */
+
 }
 
 .nav-toggle .bi-x-lg {
@@ -117,12 +155,22 @@ Creado por: Jesus Alejandro Lara
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.05); /* Fondo leve */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+    
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Safari y Chrome */
+    -moz-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Firefox */
+
 }
 
 .nav-list li a:hover {
     color: var(--nav-link-hover-color);
-    background-color: #f0f0f0; /* Fondo más claro en hover */
+    background-color: #f0f0f0;
     transform: scale(1.08);
+
+    
+    -webkit-transform: scale(1.08); /* Safari y Chrome */
+    -moz-transform: scale(1.08); /* Firefox */
+
 }
 
 /* Submenú */
@@ -138,6 +186,15 @@ Creado por: Jesus Alejandro Lara
     opacity: 0;
     transform: translateY(-10px);
     transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+
+    
+    -webkit-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Firefox */
+
+    
+    -webkit-transform: translateY(-10px); /* Safari y Chrome */
+    -moz-transform: translateY(-10px); /* Firefox */
+
 }
 
 .submenu_2 {
@@ -155,17 +212,37 @@ Creado por: Jesus Alejandro Lara
     transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
     left: 100px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    
+    -webkit-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Firefox */
+   
+    
+
 }
 
 /* Mostrar submenús al hacer clic */
-.nav-list > li.active > .submenu,
-.submenu li.active > .submenu_2 {
+.nav-list > li.active > .submenu,.submenu li.active > .submenu_2
+ {
     display: block;
     opacity: 1;
     transform: translateY(0);
     background-color: #f9f9f9; /* Fondo del submenú */
     transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.4s ease;
+
 }
+@-moz-document url-prefix() {
+
+    .submenu_2
+    {
+        transform: translateX(-20px);
+    }
+    .submenu li.active > .submenu_2{
+        transform: translateY(-78px); 
+        
+    }
+}
+
 
 
 /* Estilos para dispositivos grandes */
@@ -195,21 +272,22 @@ Creado por: Jesus Alejandro Lara
     .logo-container_max {
         display: none;
     }
-
+    
     .nav-list {
-        display: none;
+        display: block;
         flex-direction: column;
         align-items: center;
         background-color: #ffffff;
         position: absolute;
         top: 0%;
         left: 0;
-
+        border-bottom: 1px solid black;
         width: 100%;
-        margin: 0px 0px 20px 0px;
-        
-        border-radius: 5px;
+        margin: 0px ;
         padding: 5px 0;
+        border-radius: 5px;
+        
+        
 
     }
 
@@ -284,6 +362,7 @@ Creado por: Jesus Alejandro Lara
         max-width: 700px;
         display: none;
     }
+
 }
 
 
@@ -300,6 +379,10 @@ Creado por: Jesus Alejandro Lara
 
     .nav-list li a {
         font-size: 16px;
+    }
+    .submenu_2
+    {
+        padding:5px 5px 100% 5px ;
     }
 }
 
