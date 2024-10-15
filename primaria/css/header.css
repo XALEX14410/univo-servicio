@@ -169,11 +169,11 @@ Creado por: Jesus Alejandro Lara
 
 
 /* Estilos para dispositivos grandes */
-@media (min-width: 1095px) {
-    .logo-container {
+@media (min-width: 1120px) {
+    #container-logo-mini {
         display: none;
-    }
 
+    }
     .logo-container_max {
         position: absolute;
         width: 100%;
@@ -188,7 +188,7 @@ Creado por: Jesus Alejandro Lara
 }
 
 /* Estilos para dispositivos medianos */
-@media (max-width: 1094px) {
+@media (max-width: 1120px) {
     .encabezado{
         height: 130px;
     }
@@ -279,7 +279,9 @@ Creado por: Jesus Alejandro Lara
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 700px) {
-    .logo-container {
+    #logo2 {
+        width: 700px;
+        max-width: 700px;
         display: none;
     }
 }
@@ -293,7 +295,7 @@ Creado por: Jesus Alejandro Lara
     }
 
     .logo {
-        max-width: 90px;
+        max-width: 300px;
     }
 
     .nav-list li a {
@@ -308,7 +310,7 @@ Creado por: Jesus Alejandro Lara
     }
 
     .logo {
-        max-width: 160px;
+        max-width: 200px;
     }
 
     .nav-list li a {

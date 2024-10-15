@@ -1,6 +1,6 @@
 /* Estilos para el pie de página */
 .footer {
-    background: #333; /* Fondo oscuro */
+    background: #24a1d6; /* Fondo Azul */
     color: #fff; /* Color de texto blanco */
     padding: 40px 20px; /* Relleno */
     text-align: center; /* Texto centrado */
@@ -17,12 +17,16 @@
     flex: 1; /* Cada sección ocupa el mismo ancho */
     min-width: 200px; /* Ancho mínimo */
     margin: 10px; /* Espacio entre secciones */
+    text-align: start;
 }
 
 .footer h5 {
     font-size: 1.5rem; /* Tamaño de fuente más grande */
     margin-bottom: 15px; /* Espacio inferior */
     font-weight: bold; /* Negrita */
+
+    text-align: center;
+    align-self: none;
 }
 
 .footer ul {

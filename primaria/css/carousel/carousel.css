@@ -58,6 +58,8 @@
 .carousel-anterior:hover, .carousel-siguiente:hover {
     background-color: var(--carousel-control-hover-bg);
 }
+
+
 @media (max-width: 1024px) {
     .carousel {
         width: 100%;
