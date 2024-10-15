@@ -10,7 +10,7 @@
     width: 100%;
     z-index: 0;
     height: 250vh;
-    max-height: 85vh; /* Altura relativa al viewport */
+    max-height: 75vh; /* Altura relativa al viewport */
     overflow: hidden;
 }
 
