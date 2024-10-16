@@ -1,5 +1,5 @@
 <?php 
-include_once realpath(dirname(__FILE__) . "/../model/componentes.php");
+include_once realpath(dirname(__FILE__) . "/components/componentes.php");
 $micomponente = new componentes();
 ?>
 
