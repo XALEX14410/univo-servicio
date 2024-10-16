@@ -1,0 +1,119 @@
+/* Estilos para el pie de página */
+.footer {
+    background: #986CA9; /* Fondo Azul */
+    color: #fff; /* Color de texto blanco */
+    padding: 40px 20px; /* Relleno */
+    text-align: center; /* Texto centrado */
+}
+
+.footer-content {
+    display: flex; /* Flexbox para la disposición */
+    justify-content: space-between; /* Espacio entre secciones */
+    flex-wrap: wrap; /* Permite que las secciones se ajusten */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.footer-section {
+    flex: 1; /* Cada sección ocupa el mismo ancho */
+    min-width: 200px; /* Ancho mínimo */
+    margin: 10px; /* Espacio entre secciones */
+    text-align: start;
+}
+
+.footer h5 {
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    margin-bottom: 15px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+
+    text-align: center;
+    align-self: none;
+}
+
+.footer ul {
+    list-style: none; /* Sin estilo para listas */
+    padding: 0; /* Sin relleno */
+}
+
+.footer a {
+    color: #fff; /* Color de enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+.map-footer {
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Altura */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.social-icons {
+    margin: 20px 0; /* Espacio entre iconos sociales */
+}
+
+
+
+.social-icon {
+    display: inline-block; /* Íconos en línea */
+    margin: 0 10px; /* Espacio entre iconos */
+}
+
+.social-icon img {
+    width: 40px; /* Tamaño del ícono */
+    height: 40px; /* Tamaño del ícono */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.social-icon:hover img {
+    transform: scale(1.1); /* Aumento de tamaño al pasar el cursor */
+}
+
+/* Efectos hover */
+/* .social-icons a.facebook-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(95%) saturate(2034%) hue-rotate(180deg) brightness(91%) contrast(101%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.twitter-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(21%) saturate(7474%) hue-rotate(174deg) brightness(97%) contrast(106%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.instagram-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(67%) saturate(2852%) hue-rotate(334deg) brightness(97%) contrast(104%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.linkedin-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(33%) saturate(537%) hue-rotate(171deg) brightness(91%) contrast(96%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.youtube-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(96%) saturate(3658%) hue-rotate(357deg) brightness(95%) contrast(106%);
+    transform: scale(1.2) translateY(-5px);
+}
+
+.social-icons a.tiktok-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(62%) sepia(47%) saturate(621%) hue-rotate(286deg) brightness(90%) contrast(88%);
+    transform: scale(1.2) translateY(-5px);
+} */
+
+.footer p {
+    margin-top: 20px; /* Espacio superior */
+    font-size: 0.875rem; /* Tamaño de texto */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Apilar secciones en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Espacio inferior */
+    }
+}

@@ -108,22 +108,7 @@ body {
   /* --color-footer: #212529; */
 
 
-  /* footer */
-    --bg-footer: linear-gradient(90deg,#087fff, #6ac3f7, #41B1E0);
-    --bg-animation-footer: footer-wave 12s ease infinite;
-    --color-footer: #212529;
-    --footer-link-color: #007bff; /* Color de los enlaces en el footer */
-    --footer-link-hover-color: #f0f0f0; /* Color de los enlaces al hacer hover */
-    --footer-padding: 80px; /* Padding del footer */
-    --footer-border-radius: 10% 10% 0% 0%; /* Radio del borde del footer */
-    --social-icon-hover-scale: 1.2; /* Escala de íconos sociales al hacer hover */
-    --social-icon-hover-translate: -5px; /* Desplazamiento de los íconos sociales al hacer hover */
-    --font-size-footer-title: 1.25rem; /* Tamaño de los títulos */
-    --font-size-footer-text: 0.875rem; /* Tamaño de los textos */
-    --font-size-footer-icon: 1.2rem; /* Tamaño de los íconos */
-    --map-footer-width: 100%; /* Ancho del mapa en el footer */
-    --map-footer-height: 230px; /* Altura del mapa en el footer */
-
+  
 
 /* Estilos para el scrollbar en navegadores basados en Webkit (Chrome, Safari) */
 ::-webkit-scrollbar {
