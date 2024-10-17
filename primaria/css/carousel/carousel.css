@@ -31,6 +31,16 @@
 .carousel-item img {
     width: 100%;
     height: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* Evita que la imagen sea seleccionada */
+    -webkit-user-drag: none;
+    /* Evita que la imagen sea arrastrada en navegadores WebKit */
+    pointer-events: none;
+    /* Desactiva cualquier interacción con la imagen */
 }
 
 .carousel-controles {

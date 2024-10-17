@@ -10,7 +10,7 @@ Creado por: Jesus Alejandro Lara
 body {
   font-family: "Itim", cursive;
   /* font-weight: 400; */
-  background: url("./../img/bg_body.jpg");
+  background: url("./../img/bg_body.webp");
   cursor: url(./../img/image.png), auto;
   font-style: normal;
 }
@@ -20,7 +20,7 @@ body {
 
 :root {
   /* header */
-  --bg-header: url("./../img/bg_body.jpg"); /* Fondo del encabezado */
+  --bg-header: url("./../img/bg_body.webp"); /* Fondo del encabezado */
   --bg-animation: headerAnimation 5s infinite; /* Animación del encabezado */
   --logo-max-width: 300px; /* Ancho máximo del logo */
   --logo-height: 80px; /* Altura del logo */
@@ -32,7 +32,7 @@ body {
   --scrollbar-width: 24px;    /* Ancho del scrollbar */
 
   /* carousel */
-  --bg-contenido: url(./../img/bg_body.jpg); /* Fondo para el contenido */
+  --bg-contenido: url(./../img/bg_body.webp); /* Fondo para el contenido */
   --contenido-padding: 80px; /* Padding para el contenido */
   --contenido-margin-bottom: 80px auto; /* Margen inferior para el contenido */
   --contenido-transform: translateY(100px); /* Transformación del contenido */
@@ -78,7 +78,7 @@ body {
     --font-p-mediana: 22px;
     --font-p-pequena: 18px;
   /* container */
-  --bg-contenido: url(./../img/bg_body.jpg); /* Fondo para el contenido */
+  --bg-contenido: url(./../img/bg_body.webp); /* Fondo para el contenido */
   --contenido-padding: 80px; /* Padding para el contenido */
   --contenido-margin-bottom: 80px; /* Margen inferior para el contenido */
   --contenido-transform: translateY(100px); /* Transformación del contenido */

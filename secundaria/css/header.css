@@ -12,7 +12,7 @@ Creado por: Jesus Alejandro Lara
     height: 170px;
     top: 0;
     z-index: 1;
-    border-bottom: 5px solid #986CA9;
+    border-bottom: 7px solid #986CA9;
 
     
     -webkit-animation: var(--bg-animation); /* Safari y Chrome */
@@ -23,6 +23,7 @@ Creado por: Jesus Alejandro Lara
 
 /* Estilos para el contenedor del logo */
 .logo-container {
+    
     text-align: center;
     padding: 20px 0;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -39,7 +40,18 @@ Creado por: Jesus Alejandro Lara
     height: var(--logo-height);
     transition: transform 0.3s ease;
 
-    
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* Evita que la imagen sea seleccionada */
+    -webkit-user-drag: none;
+    /* Evita que la imagen sea arrastrada en navegadores WebKit */
+    pointer-events: none;
+    /* Desactiva cualquier interacción con la imagen */
+
+
     -webkit-transition: transform 0.3s ease; /* Safari y Chrome */
     -moz-transition: transform 0.3s ease; /* Firefox */
 
@@ -208,7 +220,7 @@ Creado por: Jesus Alejandro Lara
     padding: 5px;
     width: 220px;
     opacity: 0;
-    transform: translateX(-10px);
+    transform: translateX(-20px);
     transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
     left: 100px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -220,6 +232,7 @@ Creado por: Jesus Alejandro Lara
     
 
 }
+
 
 /* Mostrar submenús al hacer clic */
 .nav-list > li.active > .submenu,.submenu li.active > .submenu_2

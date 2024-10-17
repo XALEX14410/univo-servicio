@@ -6,7 +6,7 @@
     
   }
   .titulo-grado {
-    background-color: #40A0DA;
+    background-color: #7A468F;
     color: white;
     padding: 2px;
     text-align: center; /* Centra el contenido horizontalmente */
@@ -27,6 +27,7 @@
     background-color:  #f7f7f7;
     width: calc(120px + auto);
     font-size: 50px;
+    font-weight: bold;
     transform: translateY(5px);
     border:2px solid #f7f7f7;
     margin: auto; /* Centra el bloque horizontalmente dentro de su contenedor */

@@ -43,7 +43,7 @@
     background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para mejor legibilidad */
     color: #333;
     text-align: center;
-    opacity: 0; /* Invisible por defecto */
+    opacity: 1; /* Invisible por defecto */
     transition: opacity 0.3s ease;
 }
 
