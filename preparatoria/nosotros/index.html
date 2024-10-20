@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea del Tiempo</title>
+    <link rel="stylesheet" href="./../css/linea_del_tiempo_galery.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Incluimos jQuery -->
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+
+
+    <h1>Línea del Tiempo con Imágenes</h1>
+    <ul class="timeline">
+        <li style="--accent-color:#41516C">
+            <div class="date">2002</div>
+            <div class="title">Evento 1</div>
+            <div class="descr">
+                <a href="#lightbox1" class="galeria">
+                    <img src="./../img/galeria/1.jpg" alt="Imagen 1" class="timeline-img">
+                    <div class="texto-imagen">Descripción de la imagen 1</div>
+                </a>
+            </div>
+        </li>
+        <li style="--accent-color:#FBCA3E">
+            <div class="date">2007</div>
+            <div class="title">Evento 2</div>
+            <div class="descr">
+                <a href="#lightbox2" class="galeria">
+                    <img src="./../img/galeria/2.jpg" alt="Imagen 2" class="timeline-img">
+                    <div class="texto-imagen">Descripción de la imagen 2</div>
+                </a>
+            </div>
+        </li>
+        <!-- Más elementos li pueden ser añadidos aquí -->
+    </ul>
+
+    <!-- Lightbox para mostrar imágenes a tamaño completo -->
+    <div id="lightbox1" class="light-box">
+        <img src="./../img/galeria/1.jpg" alt="Imagen 1 en grande">
+        <a href="#" class="close">&times;</a>
+    </div>
+    <div id="lightbox2" class="light-box">
+        <img src="./../img/galeria/2.jpg" alt="Imagen 2 en grande">
+        <a href="#" class="close">&times;</a>
+    </div>
+    <!-- <h1>UL timeline cards with Images</h1>
+<ul>
+    <li style="--accent-color:#41516C">
+        <div class="date">2002</div>
+        <div class="title">Title 1</div>
+        <div class="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
+    </li>
+    <li style="--accent-color:#FBCA3E">
+        <div class="date">2007</div>
+        <div class="title">Title 2</div>
+        <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
+    </li>
+    <li style="--accent-color:#E24A68">
+        <div class="date">2012</div>
+        <div class="title">Title 3</div>
+        <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>
+    </li>
+    <li style="--accent-color:#1B5F8C">
+        <div class="date">2017</div>
+        <div class="title">Title 4</div>
+        <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+    </li>
+    <li style="--accent-color:#4CADAD">
+        <div class="date">2022</div>
+        <div class="title">Title 5</div>
+        <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+    </li>
+</ul> -->
+
+    <script>
+        $(document).ready(function () {
+            // Función para ajustar la altura de los conectores
+            function adjustConnectors() {
+                $('.timeline-item').each(function (index) {
+                    if ($(this).next('.timeline-item').length) {
+                        // Elemento actual
+                        var currentItem = $(this);
+                        // Elemento siguiente
+                        var nextItem = $(this).next('.timeline-item');
+                        // El conector de este elemento
+                        var connector = currentItem.find('.connector');
+
+                        // Calculamos la distancia entre el elemento actual y el siguiente
+                        var currentBottom = currentItem.offset().top + currentItem.outerHeight();
+                        var nextTop = nextItem.offset().top;
+                        var distance = nextTop - currentBottom;
+
+                        // Ajustamos la altura del conector
+                        connector.height(distance);
+                    }
+                });
+            }
+
+            // Ejecutar la función cuando la página esté lista
+            adjustConnectors();
+
+            // También ejecutar la función cuando se redimensione la ventana
+            $(window).resize(function () {
+                adjustConnectors();
+            });
+        });
+    </script>
+</body>
+
+</html>

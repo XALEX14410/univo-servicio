@@ -53,7 +53,27 @@ Creado por: Jesus Alejandro Lara
     -moz-transition: transform 0.3s ease; /* Firefox */
 
 }
+.logo-container_max .logo {
+    max-width: var(--logo-max-width);
+    height: var(--logo-height);
+    transition: transform 0.3s ease;
 
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* Evita que la imagen sea seleccionada */
+    -webkit-user-drag: none;
+    /* Evita que la imagen sea arrastrada en navegadores WebKit */
+    pointer-events: none;
+    /* Desactiva cualquier interacción con la imagen */
+
+
+    -webkit-transition: transform 0.3s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.3s ease; /* Firefox */
+
+}
 /* Barra de navegación */
 .barra-navegacion #nav_list {
     list-style: none;

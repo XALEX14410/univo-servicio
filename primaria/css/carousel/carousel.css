@@ -2,7 +2,7 @@
 .carousel {
     position: relative;
     width: var(--carousel-width);
-    margin: 10% auto;
+    margin: 0% auto;
 }
 
 .carousel-inner {
