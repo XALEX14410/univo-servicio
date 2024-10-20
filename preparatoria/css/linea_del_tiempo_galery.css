@@ -260,6 +260,9 @@ ul.timeline li .descr::before {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+  .contenido{
+    padding: 80px 0 80px 0;
+  }
     ul.timeline{
         width: 98%;
     }
