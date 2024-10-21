@@ -9,7 +9,7 @@ Creado por: Jesus Alejandro Lara
     animation: var(--bg-animation);
     position: fixed;
     width: 100%;
-    height: 170px;
+    min-height: 200px;
     top: 0;
     z-index: 1;
     border-bottom: 7px solid #986CA9;
@@ -86,7 +86,7 @@ Creado por: Jesus Alejandro Lara
 /* Barra de navegación */
 .barra-navegacion #nav_list {
     list-style: none;
-    padding-top: 90px;
+    padding-top: 120px;
     text-align: center;
 }
 
@@ -291,6 +291,7 @@ Creado por: Jesus Alejandro Lara
         display: none;
 
     }
+
     .logo-container_max {
         position: absolute;
         width: 100%;
@@ -411,7 +412,7 @@ Creado por: Jesus Alejandro Lara
 /* Pantallas pequeñas (sin altura definida) */
 @media screen and (max-width: 700px) {
     .encabezado {
-        height: 110px;
+        min-height: 110px;
     }
 
     .logo {
