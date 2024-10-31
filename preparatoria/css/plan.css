@@ -1,6 +1,6 @@
 .grid-container-escolar {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 20px;
     padding: 20px 100px 20px 100px;
     
@@ -38,7 +38,7 @@
 
 .grado-escolar {
     background-color: #f7f7f7;
-    padding: 20px;
+    padding: 0px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -75,7 +75,11 @@
     padding: 10px;
     border-radius: 4px;
 }
-  
+.inicial_titulo{
+    padding-top: 60px;
+    text-align: center;
+}
+ 
 @media (max-width: 768px) {
     .inicial_titulo{
         padding-top: 60px;
