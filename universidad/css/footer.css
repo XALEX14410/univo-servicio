@@ -1,0 +1,130 @@
+footer {
+    background-color: #f1f1f1;
+    padding: 40px 500px; /* Ajustado para móvil */
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-logo-img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social-icon {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px; /* Menor padding para pantallas pequeñas */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        text-align: center;
+        padding: 15px; /* Ajuste de padding */
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .footer-logo-img {
+        width: 120px;
+    }
+
+    .footer-social-icon {
+        width: 25px;
+        margin: 0 8px; /* Reducir el margen */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 15px; /* Aún menos padding en pantallas más pequeñas */
+    }
+
+    .footer-container {
+        padding: 0; /* Quitar el padding del contenedor */
+    }
+
+    .footer-section {
+        padding: 10px; /* Reducir el padding de las secciones */
+    }
+
+    .footer-logo-img {
+        width: 100px; /* Reducción aún mayor para el logo */
+    }
+
+    .footer-social-icon {
+        width: 20px; /* Iconos de redes sociales más pequeños */
+        margin: 0 6px; /* Espaciado reducido */
+    }
+
+    .footer-bottom {
+        font-size: 10px; /* Texto más pequeño en dispositivos muy pequeños */
+    }
+}
