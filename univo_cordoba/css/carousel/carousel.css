@@ -1,0 +1,88 @@
+.carousel {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    max-height: 70vh; /* Altura relativa al viewport */
+    overflow: hidden;
+    /* Establece la posición como relativa para los elementos absolutos dentro */
+}
+
+.carousel-item {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 2s ease-in-out; /* Transición suave */
+    
+}
+
+.carousel-item.active {
+    opacity: 1; /* Visible cuando está activo */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+    
+}
+
+.carousel-controles {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Ajusta el espacio entre controles */
+    padding: 0 10px; /* Añade espacio horizontal */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.carousel-anterior, .carousel-siguiente {
+    background-color: #333;
+    border-radius: 25%;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-anterior:hover, .carousel-siguiente:hover {
+    background-color: #444;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-inner {
+        height: 30vh; /* Menor altura en pantallas pequeñas */
+    }
+
+    .carousel-anterior, .carousel-siguiente {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-anterior, .carousel-siguiente {
+        font-size: 12px;
+        height: 20vh;
+        padding: 6px 12px;
+    }
+}
