@@ -8,9 +8,9 @@
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
-    backdrop-filter: blur(8px); /* Aplica un desenfoque al fondo para mejor legibilidad */
-    border-left: 6px solid #003366; /* Azul oscuro para mayor sobriedad */
-    border-right: 6px solid #003366; /* Azul oscuro para mayor sobriedad */
+    backdrop-filter: blur(8px);
+    border-left: 6px solid #003366;
+    border-right: 6px solid #003366;
     position: relative;
     z-index: 1;
 }
@@ -18,68 +18,128 @@
 .bienvenida-title {
     text-align: center;
     font-size: 2.6rem;
-    color: #002f4b; /* Azul oscuro */
+    color: #002f4b;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
     padding-bottom: 10px;
-    border-bottom: 2px solid #002f4b; /* Azul oscuro */
+    border-bottom: 2px solid #002f4b;
 }
 
 .bienvenida-content p {
     font-size: 1.1rem;
     margin-bottom: 20px;
-    color: #333333; /* Gris oscuro para el texto */
-    text-shadow: none; /* Sin sombra para un look más limpio */
+    color: #333333;
 }
 
 .quote {
     font-size: 1.4rem;
     font-style: italic;
     text-align: center;
-    color: #002f4b; /* Azul oscuro */
+    color: #002f4b;
     margin: 30px 0;
-    border-left: 4px solid #002f4b; /* Azul oscuro */
+    border-left: 4px solid #002f4b;
     padding-left: 20px;
-    text-shadow: none; /* Sin sombra para un look más limpio */
 }
 
 .signature {
     font-size: 1.1rem;
     text-align: right;
-    color: #002f4b; /* Azul oscuro */
+    color: #002f4b;
     font-weight: bold;
     margin-top: 40px;
     font-family: 'Georgia', serif;
-    text-shadow: none; /* Sin sombra para un look más limpio */
 }
 
-/* Agregar interlineado y márgenes */
 .bienvenida-container p {
     margin-bottom: 25px;
     line-height: 1.8;
 }
 
-/* Estilos para listas (ul, li) */
 .bienvenida-container ul {
-    list-style-type: none; /* Elimina los puntos de las listas */
-    padding-left: 0; /* Elimina el espacio antes de los elementos */
+    list-style-type: none;
+    padding-left: 0;
     margin-bottom: 20px;
 }
 
 .bienvenida-container li {
     font-size: 1.1rem;
-    color: #333333; /* Gris oscuro para los elementos de lista */
+    color: #333333;
     margin-bottom: 10px;
-    padding-left: 20px; /* Espacio a la izquierda de cada ítem */
+    padding-left: 20px;
     position: relative;
 }
 
 .bienvenida-container li::before {
-    content: "•"; /* Añade un punto personalizado */
-    color: #003366; /* Azul oscuro para el punto */
-    font-size: 1.6rem; /* Tamaño del punto */
+    content: "•";
+    color: #003366;
+    font-size: 1.6rem;
     position: absolute;
     left: 0;
     top: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    .bienvenida-container {
+        padding: 30px;
+    }
+    .bienvenida-title {
+        font-size: 2.2rem;
+    }
+    .quote {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .bienvenida-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+    .bienvenida-title {
+        font-size: 2rem;
+    }
+    .bienvenida-content p,
+    .bienvenida-container li {
+        font-size: 1rem;
+    }
+    .quote {
+        font-size: 1.2rem;
+    }
+    .signature {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bienvenida-title {
+        font-size: 1.8rem;
+    }
+    .bienvenida-content p,
+    .bienvenida-container li,
+    .quote {
+        font-size: 1rem;
+    }
+    .bienvenida-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bienvenida-container {
+        padding: 10px;
+        border-left: none;
+        border-right: none;
+    }
+    .bienvenida-title {
+        font-size: 1.6rem;
+    }
+    .quote {
+        font-size: 1rem;
+        padding-left: 15px;
+    }
+    .signature {
+        font-size: 0.9rem;
+    }
 }

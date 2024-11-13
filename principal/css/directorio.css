@@ -2,7 +2,6 @@
 .univo-titulo-seccion {
     text-align: center;
     padding: 40px 20px;
-    /* background-color: #ffffff; */
     border-bottom: 2px solid #ddd;
     color: #333;
 }
@@ -12,6 +11,7 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px;
+    color: #392E72;
 }
 
 .univo-titulo-seccion p {
@@ -19,6 +19,52 @@
     color: #666;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Contenedor de Bienvenida */
+.bienvenida-container {
+    padding: 20px;
+}
+
+.bienvenida-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #392E72;
+    margin-bottom: 20px;
+}
+
+/* Radio Buttons */
+.radio-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-container .radio-label {
+    padding: 10px 20px;
+    background-color: #737373;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.radio-container input[type="radio"]:checked + .radio-label {
+    background-color: #392E72;
+}
+
+.radio-container .radio-label:hover {
+    background-color: #392E72;
+    transform: scale(1.1);
 }
 
 /* Contenido de la Oferta Académica */
@@ -62,13 +108,13 @@
 
 /* Programas */
 .univo-programa {
-    background-color: #ffff;
+    background-color: #fff;
     border-radius: 12px;
-    padding: 50px 0 50px 0;
+    padding: 50px 0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    margin: 20px 20px 0 0px;
+    margin: 20px;
     width: 100%;
     max-width: 400px;
     min-height: 300px;
@@ -115,26 +161,25 @@
 
 /* Responsividad */
 @media (max-width: 1024px) {
-    .radio-container ul label{
+    .radio-container ul label {
         display: inline-flex;
         margin: 10px;
     }
     .univo-facultad {
         width: 48%;
-        display: block;
     }
 }
 
 @media (max-width: 768px) {
-    .univo-facultad {
-        width: 100%;
-    }
-
     .univo-titulo-seccion h2 {
         font-size: 2rem;
     }
 
     .univo-programa {
+        width: 100%;
+    }
+
+    .univo-facultad {
         width: 100%;
     }
 }
@@ -148,40 +193,16 @@
         font-size: 1rem;
     }
 }
+
 /* Estilo para el contenedor de los radio buttons */
 .radio-container {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
-    
-}
-
-/* Estilo para los radio buttons */
-.radio-btn {
-    display: none; /* Ocultamos el radio button real */
-}
-
-/* Estilo para las etiquetas de los radio buttons */
-.radio-label {
-    padding: 10px 20px;
-    background-color: #392E72;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-/* Efecto de hover para las etiquetas */
-.radio-label:hover {
-    background-color: #3b22b8;
-    transform:scale(1.1);
 }
 
 /* Estilo para las secciones */
 .section-content {
-    display: none; /* Ocultamos las secciones por defecto */
+    display: none;
     margin-top: 20px;
-    
 }
