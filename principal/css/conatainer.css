@@ -1,0 +1,135 @@
+/* Contenedor principal con ancho completo */
+.contenido {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos para la presentación de información */
+.info_presentation {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Estructura básica para cada sección */
+.seccion {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+/* Contenido de imagen y texto */
+.seccion .contenido_texto_imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Estilo para la imagen */
+.seccion .contenido_texto_imagen .imagen {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el texto */
+.seccion .contenido_texto_imagen .texto {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+/* Estilos para enlaces y botones */
+.seccion .contenido_texto_imagen .boton,
+.seccion .contenido_texto_imagen .enlace {
+    padding: 12px 25px;
+    background-color: #5a9bd3;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.seccion .contenido_texto_imagen .boton:hover,
+.seccion .contenido_texto_imagen .enlace:hover {
+    background-color: #478ac9;
+}
+
+/* Flexbox para secciones con alineación de texto */
+.seccion.izquierda .contenido_texto_imagen {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.seccion.izquierda .contenido_texto_imagen .texto {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.seccion.derecha .contenido_texto_imagen {
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.seccion.derecha .contenido_texto_imagen .texto {
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 1000px) {
+    .seccion {
+        padding: 30px 0;
+    }
+
+    .seccion .contenido_texto_imagen {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .seccion .contenido_texto_imagen .imagen {
+        max-width: 30%; /* Ocupa el ancho completo en pantallas pequeñas */
+    }
+
+    .seccion .contenido_texto_imagen .texto {
+        text-align: center;
+        margin: 15px 0;
+        max-width: 100%;
+    }
+
+    .seccion.izquierda .contenido_texto_imagen,
+    .seccion.derecha .contenido_texto_imagen {
+        flex-direction: column;
+    }
+
+    .seccion.izquierda .contenido_texto_imagen .texto,
+    .seccion.derecha .contenido_texto_imagen .texto {
+        text-align: center;
+        margin: 15px 0;
+    }
+}

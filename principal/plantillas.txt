@@ -1,0 +1,104 @@
+<section class="univo-titulo-seccion">
+                <h2 class="univo-titulo-seccion">Oferta Académica</h2>
+                <p>Descubre nuestras facultades y programas de estudio diseñados para impulsar tu desarrollo
+                    profesional.</p>
+
+            </section>
+
+            <section class="univo-contenido">
+                <!-- Facultad Económico-Administrativa -->
+                <div class="univo-titulo-facultad">
+                    <h3>Facultad Económico-Administrativa</h3>
+                </div>
+
+                <div class="univo-facultad">
+
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Administración</h4>
+                        <!-- Icono de administración -->
+                        <i class="bi bi-briefcase" style="font-size: 3rem;"></i>
+                        <p>Prepárate para liderar y gestionar organizaciones en el ámbito empresarial.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Contaduría</h4>
+                        <!-- Icono de contaduría -->
+                        <i class="bi bi-calculator" style="font-size: 3rem;"></i>
+                        <p>Adquiere las habilidades necesarias para el análisis y la gestión contable.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Mercadotecnia</h4>
+                        <!-- Icono de mercadotecnia -->
+                        <i class="bi bi-bar-chart" style="font-size: 3rem;"></i>
+                        <p>Explora estrategias y técnicas para destacar en el mercado global.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Negocios y Comercio Internacional</h4>
+                        <!-- Icono de negocios internacionales -->
+                        <i class="bi bi-globe2" style="font-size: 3rem;"></i>
+                        <p>Enfócate en el comercio global y las relaciones económicas internacionales.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+                </div>
+                <!-- Facultad Humanidades -->
+                <div class="univo-titulo-facultad">
+                    <h3>Facultad Humanidades</h3>
+                </div>
+                <div class="univo-facultad">
+
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Ciencias de la Comunicación</h4>
+                        <!-- Icono de comunicación -->
+                        <i class="bi bi-chat-left-text" style="font-size: 3rem;"></i>
+                        <p>Desarrolla habilidades en comunicación social y medios digitales.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Educación</h4>
+                        <!-- Icono de educación -->
+                        <i class="bi bi-pencil-square" style="font-size: 3rem;"></i>
+                        <p>Forma parte del cambio en la educación a través de prácticas innovadoras.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Derecho</h4>
+                        <!-- Icono de derecho -->
+                        <i class="bi bi-briefcase" style="font-size: 3rem;"></i>
+                        <p>Estudia el sistema legal y contribuye a una sociedad más justa.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+                </div>
+                <!-- Facultad Ingeniería -->
+                <div class="univo-titulo-facultad">
+                    <h3>Facultad Ingeniería</h3>
+                </div>
+
+                <div class="univo-facultad">
+
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Ingeniería en Sistemas Computacionales</h4>
+                        <!-- Icono de ingeniería -->
+                        <i class="bi bi-laptop" style="font-size: 3rem;"></i>
+                        <p>Desarrolla competencias en tecnología y programación de vanguardia.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+
+                    <div class="univo-programa">
+                        <h4>Licenciatura en Gestión Ambiental</h4>
+                        <!-- Icono de gestión ambiental -->
+                        <i class="bi bi-tree" style="font-size: 3rem;"></i>
+                        <p>Contribuye a la protección del medio ambiente a través de la gestión y sostenibilidad.</p>
+                        <a class="enlace" href="#">Saber más</a>
+                    </div>
+                </div>
+            </section>
