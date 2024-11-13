@@ -15,6 +15,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/bg_img.css">
@@ -22,6 +24,8 @@
     <link rel="stylesheet" href="./css/conatainer.css">
     <link rel="stylesheet" href="./css/p_conatainer.css">
     <link rel="stylesheet" href="./css/p_conatainer2.css">
+    <link rel="stylesheet" href="./css/carousel/carousel.css">
+    <link rel="stylesheet" href="./css/scroll.css">
 </head>
 
 <body>
@@ -49,28 +53,31 @@
                 <li>
                     <a href="#">Nosotros <!--  <i class="bi bi-caret-down-fill"></i>--></i></a>
                     <ul class="submenu">
-                        <li><a href="#">Bienvenida</a></li>
-                        <li><a href="#">Misión − Visión</a></li>
-                        <li><a href="#">Valores</a></li>
-                        <li><a href="#">Directorio</a></li>
+                        <li><a href="/univo-servicio/principal/nosotros/bienvenida.html">Bienvenida</a></li>
+                        <li><a href="/univo-servicio/principal/nosotros/mision.html">Misión − Visión</a></li>
+                        <li><a href="/univo-servicio/principal/nosotros/valores.html">Valores</a></li>
+                        <li><a href="/univo-servicio/principal/nosotros/directorio.html">Directorio</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Oferta educativa <!--  <i class="bi bi-caret-down-fill"></i>--></i></i></a>
                     <ul class="submenu">
-                        <li><a href="#">Primaria Particular Valle de Orizaba</a></li>
+                        <!-- <li><a href="#">Primaria Particular Valle de Orizaba</a></li>
                         <li><a href="#">Secundaria Valle de Orizaba</a></li>
                         <li><a href="#">Bachilleres Valle de Orizaba</a></li>
                         <li><a href="#">Licenciatura</a></li>
                         <li><a href="#">Posgrado</a></li>
                         <li><a href="#">Educación continua</a></li>
                         <li><a href="#">Centro de idiomas extranjeros</a></li>
-                        <li><a href="#">Univo con el adulto mayor</a></li>
+                        <li><a href="#">Univo con el adulto mayor</a></li> -->
+
+                        <li><a href="/univo-servicio/principal/oferta_edu/planteles.html">Planteles</a></li>
+                        <!-- <li><a href="#">Plantel de Córdoba</a></li> -->
                     </ul>
                 </li>
 
-                <li>
-                    <a href="#">Servicios Estudiantiles <!--  <i class="bi bi-caret-down-fill"></i>--></i></i></a>
+                <!-- <li>
+                    <a href="#">Servicios Estudiantiles </i></i></a>
                     <ul class="submenu">
                         <li><a href="#">Becas</a></li>
                         <li><a href="#">Servicio social</a></li>
@@ -81,7 +88,7 @@
                         <li><a href="#">Sistema médico</a></li>
 
                     </ul>
-                </li>
+                </li> -->
                 <!-- <li><a href="#">VO Radio</a></li> -->
                 <!-- <li>
                     <a href="#">Sise </i></i></a>
@@ -99,7 +106,7 @@
                 </li> -->
                 <!-- <li><a href="#">UniVo Córdoba</a></li> -->
                 <li><a href="#">Foro UniVO</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="/univo-servicio/principal/contacto/index.html">Contacto</a></li>
 
             </ul>
         </nav>
@@ -132,14 +139,14 @@
             <!-- Sección de Título -->
             <section class="univo-titulo-seccion">
                 <h1>Grupo Educativo UniVO</h1>
-                <p>Te dá la bienvenida</p>
+                <p> Te dá la bienvenida</p>
 
 
             </section>
             <div class="seccion centrada">
                 <div class="contenido_texto_imagen">
                     <img class="imagen" src="./img/GEU2030-50.png" alt="Imagen centrada">
-                    <div class="texto">
+                    <div>
                         <h2>Impulsando tus sueños, construyendo tu futuro</h2>
                         <p>Explora una experiencia educativa que te lleva más allá. Descubre un mundo de posibilidades y
                             acompáñanos en el camino hacia tu éxito profesional.</p>
@@ -147,14 +154,34 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <div class="fondo-presentacion-no-bg">
+            <div id="contenedorCarruselConAnimacion">
+                <div id="contenedorImagenesCarrusel">
+                    <img src="https://via.placeholder.com/800x400?text=Imagen+1" alt="Imagen 1" class="imagenCarrusel">
+                    <img src="https://via.placeholder.com/800x400?text=Imagen+2" alt="Imagen 2" class="imagenCarrusel">
+                    <img src="https://via.placeholder.com/800x400?text=Imagen+3" alt="Imagen 3" class="imagenCarrusel">
+                </div>
+                <div id="botonesCarruselContenedor">
+                    <button id="botonIzquierdaCarrusel">&#10094;</button>
+                    <button id="botonDerechaCarrusel">&#10095;</button>
+                </div>
+                <div id="indicadoresCarruselContenedor">
+                    <span class="indicadorCarrusel"></span>
+                    <span class="indicadorCarrusel"></span>
+                    <span class="indicadorCarrusel"></span>
+                </div>
+            </div>
 
 
 
-
-
+        </div>
+        </div>
+        <section class="info_presentation">
             <section class="univo-titulo-seccion">
                 <h2 class="univo-titulo-seccion">Oferta Académica</h2>
-                <p>Descubre nuestras facultades y programas de estudio de nivel superior diseñados para impulsar tu desarrollo
+                <p>Descubre nuestras facultades y programas de estudio de nivel
+                    superior diseñados para impulsar tu desarrollo
                     profesional.</p>
             </section>
 
@@ -362,14 +389,14 @@
         </section>
 
         <!-- <section class="info_presentation"> -->
-            <!-- Sección de Título -->
-            <!-- <section class="titulo-principal-seccion">
+        <!-- Sección de Título -->
+        <!-- <section class="titulo-principal-seccion">
                 <h1>Grupo Educativo UniVO</h1>
                 <p>Oferta Educativa</p>
             </section>
          -->
-            <!-- Sección de Imágenes e Información -->
-            <!-- <section class="contenedor-de-contenido-seleccionado">
+        <!-- Sección de Imágenes e Información -->
+        <!-- <section class="contenedor-de-contenido-seleccionado">
                 <div class="redes-sociales-enlaces">
                     <h3>Realiza el test vocacional</h3>
                     <img src="./img/index/test_vocacional.jpg" alt="Imagen test" class="imagen-principal-tarjetas">
@@ -418,74 +445,77 @@
                 </div>
             </section>
          -->
-            <!-- Sección de Radio -->
-            <!-- <section class="seccion-radio-universitaria">
+        <!-- Sección de Radio -->
+        <!-- <section class="seccion-radio-universitaria">
                 <h2>VO Radio</h2>
                 <p>Tu espacio de expresión en UniVO</p>
             </section>
         </section>
-        
+        -->
 
-    </main> -->
+    </main> 
 
 
 
-    <!-- End main -->
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Logo y Derechos de Autor -->
-            <div class="footer-logo">
-                <img src="./img/GEU2030-50.png" alt="Instituto Logo">
-                <p>© 2024 Grupo Educativo Univo 2030</p>
-                <p>Instituto de Estudios Superiores del Valle de Orizaba</p>
-            </div>
+        <!-- End main -->
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Logo y Derechos de Autor -->
+                <div class="footer-logo">
+                    <img src="./img/GEU2030-50.png" alt="Instituto Logo">
+                    <p>© 2024 Grupo Educativo Univo 2030</p>
+                    <p>Instituto de Estudios Superiores del Valle de Orizaba</p>
+                    <a href="#"> Aviso de privacidad</a>
+                </div>
 
-            <!-- Información de Contacto -->
-            <div class="footer-contact">
-                <h3>Contacto</h3>
-                <p>VICENTE M. CORONA ENTRE PRIVADA CORONA Y AV. DE LOS CENSOS, COL. EL ESPINAL</p>
-                <p>C.P. 94330 | ORIZABA, VERACRUZ, MÉXICO</p>
-                <p>Tels: (272) 726-14-36, 726-14-01</p>
-                <p>LADA: (800) 7189439</p>
-            </div>
+                <!-- Información de Contacto -->
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p>VICENTE M. CORONA ENTRE PRIVADA CORONA Y AV. DE LOS CENSOS, COL. EL ESPINAL</p>
+                    <p>C.P. 94330 | ORIZABA, VERACRUZ, MÉXICO</p>
+                    <p>Tels: (272) 726-14-36, 726-14-01</p>
+                    <p>LADA: (800) 7189439</p>
+                </div>
 
-            <!-- Redes Sociales -->
-            <div class="footer-social">
-                <h3>Síguenos</h3>
-                <div class="social-icons">
-                    <a href="#"><img src="./logo_redes_sociales/instagram.svg" alt="Instagram"></a>
-                    <a href="#"><img src="./logo_redes_sociales/tiktok.svg" alt="TikTok"></a>
-                    <a href="#"><img src="./logo_redes_sociales/twitter-x.svg" alt="Twitter"></a>
-                    <a href="#"><img src="./logo_redes_sociales/facebook.svg" alt="Facebook"></a>
-                    <a href="#"><img src="./logo_redes_sociales/youtube.svg" alt="YouTube"></a>
+                <!-- Redes Sociales -->
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="./logo_redes_sociales/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="./logo_redes_sociales/tiktok.svg" alt="TikTok"></a>
+                        <a href="#"><img src="./logo_redes_sociales/twitter-x.svg" alt="Twitter"></a>
+                        <a href="#"><img src="./logo_redes_sociales/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="./logo_redes_sociales/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+
+                <!-- Mapa de Ubicación -->
+                <div class="footer-map">
+                    <h3>Encuéntranos</h3>
+                    <iframe class="mapita"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.693648341682!2d-97.09916997560359!3d18.869261790339632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c51d514cdc60e9%3A0xb805a5a857fbf564!2sUniversidad%20del%20Valle%20de%20Orizaba!5e0!3m2!1ses-419!2smx!4v1730881098364!5m2!1ses-419!2smx"
+                        allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
+        </footer>
 
-            <!-- Mapa de Ubicación -->
-            <div class="footer-map">
-                <h3>Encuéntranos</h3>
-                <iframe class="mapita"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.693648341682!2d-97.09916997560359!3d18.869261790339632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c51d514cdc60e9%3A0xb805a5a857fbf564!2sUniversidad%20del%20Valle%20de%20Orizaba!5e0!3m2!1ses-419!2smx!4v1730881098364!5m2!1ses-419!2smx"
-                    allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </footer>
+        <script src="./js/header.js"></script>
+        <script src="./js/loader.js"></script>
+        <script src="./js/nav-toggle.js"></script>
 
-    <script src="./js/header.js"></script>
-    <script src="./js/loader.js"></script>
-    <script src="./js/nav-toggle.js"></script>
-
-    <script src="./js/jquery-3.5.1.slim.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bosstrap/bootstrap.min.js"></script>
-    <script src="./js/carousel/carousel.js"></script>
-    <!-- <script src="js/bosstrap/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery-3.5.1.slim.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bosstrap/bootstrap.min.js"></script>
+        <script src="./js/carousel/carousel.js"></script>
+        <!-- <script src="js/bosstrap/bootstrap.bundle.min.js"></script>
     <script src="js/bosstrap/bootstrap.bundle.min.js.map"></script> -->
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="./js/scroll.js"></script>
-    <script src="./js/script_univo.js"></script>
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="./js/scroll.js"></script>
+        <script src="./js/script_univo.js"></script>
+        <script src="./js/aos.js"></script>
+        <script src="./js/animacion_apple.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 .univo-titulo-seccion {
     text-align: center;
     padding: 40px 20px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-bottom: 2px solid #ddd;
     color: #333;
 }
@@ -64,14 +64,14 @@
 .univo-programa {
     background-color: #ffff;
     border-radius: 12px;
-    padding: 50px;
+    padding: 50px 0 50px 0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     margin: 20px 20px 0 0px;
     width: 100%;
     max-width: 400px;
-    min-height: 400px;
+    min-height: 300px;
     max-height: 500px;
 }
 
@@ -115,6 +115,10 @@
 
 /* Responsividad */
 @media (max-width: 1024px) {
+    .radio-container ul label{
+        display: inline-block;
+        margin: 10px;
+    }
     .univo-facultad {
         width: 48%;
         display: block;
@@ -149,6 +153,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    
 }
 
 /* Estilo para los radio buttons */
@@ -161,7 +166,7 @@
     padding: 10px 20px;
     background-color: #392E72;
     color: white;
-    border-radius: 25px;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
@@ -170,11 +175,13 @@
 
 /* Efecto de hover para las etiquetas */
 .radio-label:hover {
-    background-color: #392E72;
+    background-color: #3b22b8;
+    transform:scale(1.1);
 }
 
 /* Estilo para las secciones */
 .section-content {
     display: none; /* Ocultamos las secciones por defecto */
     margin-top: 20px;
+    
 }

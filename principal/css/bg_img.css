@@ -6,7 +6,20 @@
     background-size: cover; /* Hace que la imagen cubra todo el área */
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+    display: block;
+
 }
+
+.fondo-presentacion-no-bg {
+    position: relative;
+    width: 100%;
+    height: auto; /* Altura completa de la pantalla */
+    margin: 80px 0 80px 0;
+    display: block;
+
+}
+
 
 /* Estilo para el contenido encima del fondo */
 .contenido-presentacion {

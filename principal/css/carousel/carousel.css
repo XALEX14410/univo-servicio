@@ -1,88 +1,67 @@
-.carousel {
-    position: relative;
-    width: 90%;
-    margin: 10px auto;
-}
-
-.carousel-inner {
-    position: relative;
+/* Estilos para el contenedor principal del carrusel */
+#contenedorCarruselConAnimacion {
     width: 100%;
-    height: 70vh;
-    max-height: 70vh; /* Altura relativa al viewport */
+    max-width: 800px;
+    margin: auto;
     overflow: hidden;
-    /* Establece la posición como relativa para los elementos absolutos dentro */
-}
+    position: relative;
+  }
 
-.carousel-item {
-    position: absolute;
-    
-    top: 0;
-    left: 0;
+  /* Estilos para el contenedor de las imágenes */
+  #contenedorImagenesCarrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* Estilos para cada imagen */
+  .imagenCarrusel {
     width: 100%;
-    height: 100%;
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 2s ease-in-out; /* Transición suave */
-    
-}
+    height: auto;
+    display: block;
+  }
 
-.carousel-item.active {
-    opacity: 1; /* Visible cuando está activo */
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 2%;
-    
-}
-
-.carousel-controles {
+  /* Estilos para los controles del carrusel (botones) */
+  #botonesCarruselContenedor {
     position: absolute;
     top: 50%;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Ajusta el espacio entre controles */
-    padding: 0 10px; /* Añade espacio horizontal */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-}
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
 
-.carousel-anterior, .carousel-siguiente {
-    background-color: #333;
-    border-radius: 25%;
-    color: #fff;
+  #botonIzquierdaCarrusel, #botonDerechaCarrusel {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 10px;
     cursor: pointer;
-    z-index: 1;
-}
+    transition: background-color 0.3s;
+  }
 
-.carousel-anterior:hover, .carousel-siguiente:hover {
-    background-color: #444;
-}
+  #botonIzquierdaCarrusel:hover, #botonDerechaCarrusel:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
+  /* Estilos para los indicadores de imagen */
+  #indicadoresCarruselContenedor {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
 
+  .indicadorCarrusel {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .carousel {
-        width: 100%;
-    }
-
-    .carousel-inner {
-        height: 30vh; /* Menor altura en pantallas pequeñas */
-    }
-
-    .carousel-anterior, .carousel-siguiente {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-anterior, .carousel-siguiente {
-        font-size: 12px;
-        height: 20vh;
-        padding: 6px 12px;
-    }
-}
+  .indicadorCarruselActivo {
+    background-color: white;
+  }
