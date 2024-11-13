@@ -148,40 +148,31 @@
         font-size: 1rem;
     }
 }
-/* Estilo para el contenedor de los radio buttons */
-.radio-container {
+
+/* Radio Buttons */
+.radio-container ul {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
     margin-bottom: 20px;
-    
 }
 
-/* Estilo para los radio buttons */
-.radio-btn {
-    display: none; /* Ocultamos el radio button real */
+.radio-container input[type="radio"] {
+    display: none;
 }
 
-/* Estilo para las etiquetas de los radio buttons */
-.radio-label {
+.radio-container .radio-label {
     padding: 10px 20px;
-    background-color: #392E72;
-    color: white;
-    border-radius: 10px;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 20px;
     cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-/* Efecto de hover para las etiquetas */
-.radio-label:hover {
-    background-color: #3b22b8;
-    transform:scale(1.1);
-}
-
-/* Estilo para las secciones */
-.section-content {
-    display: none; /* Ocultamos las secciones por defecto */
-    margin-top: 20px;
-    
+.radio-container input[type="radio"]:checked + .radio-label {
+    background-color: #392E72;
+    color: #fff;
 }

@@ -1,36 +1,55 @@
-/* Hero Section */
-.univo-titulo-seccion {
+/* Programas */
+.univo-programa {
+    background-color: #fff;
+    place-self: center;
+    border-radius: 8px; /* Reduje el radio de borde para un diseño más compacto */
+    padding: 8px; /* Reducido el padding para que ocupe menos espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    padding: 40px 20px;
-    border-bottom: 2px solid #ddd;
+    margin: 10px;
+    width: 100%;
+    max-width: 300px; /* Ancho más pequeño */
+    min-height: 120px; /* Menor altura mínima */
+    max-height: 400px; /* Limité la altura máxima */
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.univo-programa h4 {
+    font-size: 1.4rem; /* Reduje el tamaño de la fuente */
     color: #333;
-}
-
-.univo-titulo-seccion h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
     margin-bottom: 10px;
-    color: #392E72;
+    font-weight: 600;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 8px;
 }
 
-.univo-titulo-seccion p {
-    font-size: 1.1rem;
+.univo-programa i {
+    color: #392E72;
+    margin-bottom: 10px;
+    font-size: 2.5rem; /* Reducido el tamaño del ícono */
+    transition: transform 0.3s ease;
+}
+
+.univo-programa i:hover {
+    transform: scale(1.1);
+}
+
+.univo-programa p {
     color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Contenedor de Bienvenida */
-.bienvenida-container {
-    padding: 20px;
-}
-
-.bienvenida-title {
-    font-size: 2rem;
+    margin-bottom: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 8px;
     text-align: center;
-    color: #392E72;
-    margin-bottom: 20px;
+    font-size: 0.9rem; /* Fuente más pequeña */
+    flex-grow: 1;
 }
 
 /* Radio Buttons */
@@ -49,165 +68,56 @@
 
 .radio-container .radio-label {
     padding: 10px 20px;
-    background-color: #737373;
-    color: white;
+    background-color: #ddd;
+    color: #333;
     border-radius: 20px;
     cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .radio-container input[type="radio"]:checked + .radio-label {
     background-color: #392E72;
+    color: #fff;
 }
-
-.radio-container .radio-label:hover {
-    background-color: #392E72;
-    transform: scale(1.1);
-}
-
-/* Contenido de la Oferta Académica */
-.univo-contenido {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 40px 20px;
-    box-sizing: border-box;
-}
-
-/* Facultades */
-.univo-facultad {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin: 30px auto;
-}
-
-.univo-titulo-facultad {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin: 30px auto;
-}
-
-.univo-titulo-facultad h3 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-bottom: 2px solid #392E72;
-    padding-bottom: 10px;
-}
-
-/* Programas */
-.univo-programa {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 50px 0;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    margin: 20px;
-    width: 100%;
-    max-width: 400px;
-    min-height: 300px;
-    max-height: 500px;
-}
-
-.univo-programa:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.univo-programa h4 {
-    font-size: 1.6rem;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.univo-programa i {
-    color: #392E72;
-    margin-bottom: 15px;
-    font-size: 3rem;
-    transition: transform 0.3s ease;
-}
-
-.univo-programa i:hover {
-    transform: scale(1.1);
-}
-
-.univo-programa p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.univo-programa a.enlace {
-    color: #392E72;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-.univo-programa a.enlace:hover {
-    text-decoration: underline;
-}
-
 /* Responsividad */
-@media (max-width: 1024px) {
-    .radio-container ul label {
+@media (min-width: 1500px){
+    .univo-facultad{
         display: flex;
-        margin: 10px;
-    }
-    .univo-facultad {
-        width: 48%;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 @media (max-width: 768px) {
-    .univo-titulo-seccion h2 {
-        font-size: 2rem;
-    }
-
     .univo-programa {
         width: 100%;
-        place-self: center; 
+        max-width: 90%; /* Ocupa el 90% del ancho disponible */
+        min-height: auto;
+        padding: 6px;
     }
 
-    .univo-facultad {
-        display: block;
-        
-        justify-content: center;
+    .univo-programa h4 {
+        font-size: 1.2rem; /* Ajusta el tamaño del título */
+    }
+
+    .univo-programa p {
+        font-size: 0.85rem; /* Fuente más pequeña para dispositivos pequeños */
+    }
+}
+
+@media (max-width: 333px) {
+    .univo-programa {
         width: 100%;
+        padding: 5px;
+        max-width: 100%;
+        min-height: auto;
     }
 
-}
-
-@media (max-width: 480px) {
-    .univo-titulo-seccion h2 {
-        font-size: 1.6rem;
+    .univo-programa h4 {
+        font-size: 1rem; /* Más pequeño en pantallas ultra pequeñas */
     }
 
-    .univo-titulo-seccion p {
-        font-size: 1rem;
+    .univo-programa p {
+        font-size: 0.8rem; /* Más pequeño */
     }
-}
-
-/* Estilo para el contenedor de los radio buttons */
-.radio-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-/* Estilo para las secciones */
-.section-content {
-    display: none;
-    margin-top: 20px;
 }
