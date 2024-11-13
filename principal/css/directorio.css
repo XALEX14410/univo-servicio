@@ -162,7 +162,7 @@
 /* Responsividad */
 @media (max-width: 1024px) {
     .radio-container ul label {
-        display: inline-flex;
+        display: flex;
         margin: 10px;
     }
     .univo-facultad {
@@ -177,11 +177,16 @@
 
     .univo-programa {
         width: 100%;
+        place-self: center; 
     }
 
     .univo-facultad {
+        display: block;
+        
+        justify-content: center;
         width: 100%;
     }
+
 }
 
 @media (max-width: 480px) {
