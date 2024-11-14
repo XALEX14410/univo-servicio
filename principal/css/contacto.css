@@ -1,7 +1,7 @@
 .section-email{
-    width: 100%;
-    padding: 40px;
-    border: 1px solid black;
+    /* width: 100%; */
+    padding: 100px 60px 60px 60px;
+    /* border: 1px solid black; */
 }
 .contact-form {
     margin: 20px auto;
@@ -12,13 +12,14 @@
 
 .contact-section {
     background: #fff;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 10px;
+    margin: 10px;
     border-radius: 5px;
     margin: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    width: 100%;
     display: flex;
+    place-self: center;
     gap: 30px;
 }
 
@@ -80,7 +81,13 @@
 .contact-form button:hover {
     background: #0056b3;
 }
-
+@media (max-width:1250px){
+    .section-email{
+        /* width: 100%; */
+        padding: 130px 10px 60px 10px;
+        /* border: 1px solid black; */
+    }
+}
 
 
 /* iPhone SE */
