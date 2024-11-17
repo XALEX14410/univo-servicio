@@ -1,4 +1,8 @@
 /* Programas */
+.univo-titulo-seccion{
+    margin-top: 100px;
+}
+
 .univo-programa {
     background-color: #fff;
     place-self: center;
@@ -8,13 +12,16 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    justify-content: center;
+
+
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     margin: 10px;
     width: 100%;
     max-width: 300px; /* Ancho más pequeño */
-    min-height: 120px; /* Menor altura mínima */
+    min-height: 300px; /* Menor altura mínima */
     max-height: 400px; /* Limité la altura máxima */
     overflow: hidden;
     box-sizing: border-box;
@@ -43,13 +50,11 @@
 
 .univo-programa p {
     color: #666;
-    margin-bottom: 0;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    padding: 0 8px;
+    word-wrap:normal;
+    overflow-wrap:anywhere;
     text-align: center;
     font-size: 0.9rem; /* Fuente más pequeña */
-    flex-grow: 1;
+
 }
 
 /* Radio Buttons */
