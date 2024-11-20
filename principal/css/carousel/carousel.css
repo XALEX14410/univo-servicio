@@ -1,67 +1,73 @@
-/* Estilos para el contenedor principal del carrusel */
+/* Contenedor principal del carrusel */
 #contenedorCarruselConAnimacion {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-  }
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
 
-  /* Estilos para el contenedor de las imágenes */
-  #contenedorImagenesCarrusel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
+/* Contenedor de las imágenes */
+#contenedorImagenesCarrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform; /* Mejora el rendimiento */
+}
 
-  /* Estilos para cada imagen */
-  .imagenCarrusel {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+/* Estilo de las imágenes */
+.imagenCarrusel {
+  flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
+  width: 100%;
+  height: auto; /* Mantiene la proporción */
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+}
 
-  /* Estilos para los controles del carrusel (botones) */
-  #botonesCarruselContenedor {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-  }
+/* Controles del carrusel (botones) */
+#botonesCarruselContenedor {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* Para evitar interferencias no deseadas */
+}
 
-  #botonIzquierdaCarrusel, #botonDerechaCarrusel {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 24px;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+#botonIzquierdaCarrusel,
+#botonDerechaCarrusel {
+  pointer-events: all;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  #botonIzquierdaCarrusel:hover, #botonDerechaCarrusel:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+#botonIzquierdaCarrusel:hover,
+#botonDerechaCarrusel:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-  /* Estilos para los indicadores de imagen */
-  #indicadoresCarruselContenedor {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-  }
+/* Indicadores */
+#indicadoresCarruselContenedor {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
 
-  .indicadorCarrusel {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-  }
+.indicadorCarrusel {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
 
-  .indicadorCarruselActivo {
-    background-color: white;
-  }
+.indicadorCarruselActivo {
+  background-color: white;
+}
