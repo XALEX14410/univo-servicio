@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-    <!-- Creador: Jesus Alejandro Lara Castro -->
+<link rel="stylesheet" media="screen" href="css/style.css">
+<!-- Creador: Jesus Alejandro Lara Castro -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitios web univo</title>
     <style>
-        :root{
+        :root {
             --color_boton: #dd00ff;
         }
 
@@ -21,43 +23,99 @@
             align-items: center;
             height: 90vh;
         }
+
         .container {
+            position: absolute;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
         }
+
         .container a {
             display: block;
             margin: 10px 0;
-            padding: 10px;
+            padding: 30px;
             text-decoration: none;
             color: var(--color_boton);
             border: 1px solid var(--color_boton);
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
+
+        .container main {
+            display: flex;
+            margin: 40px;
+        }
+
+        .container main section {
+            margin: 0 20px;
+        }
+
         .container a:hover {
             background-color: var(--color_boton);
             color: #fff;
         }
     </style>
 </head>
+
 <body>
+    <!-- scripts -->
+    <div class="particles" id="particles-js" id="js/app.js"> </div>
+
+
+    <script src="particles.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- count particles -->
+    <div class="count-particles">
+        <span class="js-count-particles">--</span>
+    </div>
     <div class="container">
-        
+
         <h1>Sitios web univo</h1>
         <img src="GEU2030-50.png" width="100px" height="100px" alt="Logo univo">
         <!-- <a href="./apartado de ideas/index.html">Apartado de ideas</a> -->
-        <a href="./primaria/index.html">Primaria</a>
-        <a href="./secundaria/index.html">Secundaria</a>
-        <a href="./preparatoria/index.html">Preparatoria</a>
-        <a href="./principal/index.html">Unvio principal</a>
-        <a href="./univo/index.html">Univo Orizaba</a>
-        <a href="./univo_cordoba/index.html">Univo Córdoba</a>
-        
+        <main>
+            <section class="section1">
+                <h1>Orizaba</h1>
+                <a href="./primaria/index.html">Primaria</a>
+                <a href="./secundaria/index.html">Secundaria</a>
+                <a href="./preparatoria/index.html">Preparatoria</a>
+                <a href="./principal/index.html">Unvio principal</a>
+                <a href="./univo/index.html">Univo Orizaba</a>
+            </section>
+            <section class="section2">
+                <h2>Córdoba</h2>
+                <a href="./secundaria/index.html">Secundaria</a>
+                <a href="./preparatoria/index.html">Preparatoria</a>
+                <a href="./univo_cordoba/index.html">Univo Córdoba</a>
+            </section>
+        </main>
     </div>
+    <script src="js/lib/stats.js"></script>
+    <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
+    <div id="particles-js" id="js/app.js"></div>
 </body>
-</html>
 
+
+</html>
