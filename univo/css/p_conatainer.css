@@ -72,7 +72,11 @@
 .univo-redes-sociales h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #333;
+    padding: 10px;
+    /* color: #333; */
+    color: white;
+
+    background: #e91e63;
 }
 
 /* Imágenes */

@@ -1,0 +1,174 @@
+.header_v {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.header_v h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #203B5F;
+}
+
+.header_v h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #666;
+}
+
+.divider {
+    border: 1px solid #203B5F;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.main_v {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.side-menu {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    position: sticky;
+    top: 120px;
+}
+
+.menu-item {
+    padding: 15px;
+    background-color: #203B5F;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    background-color: #f454a7;
+    color: #fff;
+}
+
+.content {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: calc(100% - 270px);
+    box-sizing: border-box;
+}
+
+.info-section {
+    display: none;
+    width: 100%;
+}
+
+.info-section:not(.hidden) {
+    display: block;
+}
+
+.info-section img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+.info-section p {
+    text-align: left;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.egresados:hover {    
+    background-color: #ffd146;
+}
+
+.educacion:hover {    
+    background-color: #f454a7;
+}
+
+.convenios:hover {   
+    background-color: #6fa8d7;
+}
+
+.contacto:hover {    
+    background-color: #a1b9c1;
+}
+
+.egresados {    
+    background-color: #ff7f50;
+}
+
+.educacion {    
+    background-color: #f454a7;
+}
+
+.convenios {    
+    background-color: #6fa8d7;
+}
+
+.contacto {    
+    background-color: #a1b9c1;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .main_v {
+        display: block;
+        padding: 10px;
+    }
+
+    .side-menu {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .header_v h1 {
+        font-size: 22px;
+    }
+
+    .header_v h2 {
+        font-size: 16px;
+    }
+}
+
+/* Media Queries para pantallas extra pequeñas */
+@media (max-width: 480px) {
+    .content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .header_v h1 {
+        font-size: 18px;
+    }
+
+    .header_v h2 {
+        font-size: 14px;
+    }
+
+    .menu-item {
+        font-size: 14px;
+    }
+}
