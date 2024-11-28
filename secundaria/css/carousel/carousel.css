@@ -12,6 +12,8 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     will-change: transform; /* Mejora el rendimiento */
+
+    min-height: 250px;
   }
   
   /* Estilo de las imágenes */
@@ -19,7 +21,7 @@
     flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
     width: 100%;
     height: auto; /* Mantiene la proporción */
-    object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+    object-fit: fill; /* Ajusta la imagen dentro del contenedor */
   }
   
   /* Controles del carrusel (botones) */
