@@ -1,5 +1,5 @@
 // Función para agregar elementos al menú de navegación
-function agregarElementoMenu(icono, texto, enlace, submenus = []) {
+function agregarElementoMenu(icono, texto, enlace, submenus = [], target = null) {
     const navList = document.getElementById("nav_list");
 
     // Crear un nuevo elemento <li>
@@ -9,6 +9,7 @@ function agregarElementoMenu(icono, texto, enlace, submenus = []) {
     const a = document.createElement("a");
     a.href = enlace || "#";
     a.innerHTML = `<i class='${icono}'></i> ${texto}`;
+    if (target) a.target = target; // Asignar target si está definido
     li.appendChild(a);
 
     // Si hay submenús, crear y agregar
@@ -22,6 +23,7 @@ function agregarElementoMenu(icono, texto, enlace, submenus = []) {
 
             aSubmenu.href = submenu.enlace || "#";
             aSubmenu.textContent = submenu.texto;
+            if (submenu.target) aSubmenu.target = submenu.target; // Asignar target si está definido para submenús
 
             liSubmenu.appendChild(aSubmenu);
 
@@ -36,6 +38,7 @@ function agregarElementoMenu(icono, texto, enlace, submenus = []) {
 
                     aSubmenu2.href = submenu2.enlace || "#";
                     aSubmenu2.textContent = submenu2.texto;
+                    if (submenu2.target) aSubmenu2.target = submenu2.target; // Asignar target si está definido para submenú 2
 
                     liSubmenu2.appendChild(aSubmenu2);
                     ulSubmenu2.appendChild(liSubmenu2);
@@ -54,12 +57,36 @@ function agregarElementoMenu(icono, texto, enlace, submenus = []) {
     navList.appendChild(li);
 }
 
+// Base para las rutas
+const inicio = "/univo-servicio/secundaria";
+
+const basePath = "/univo-servicio/secundaria/src";
+
+
+
+// Debes usar las comillas invertidas (`` también llamadas backticks) en lugar de las comillas simples (') o dobles (") 
+// en ciertas situaciones porque estas te permiten utilizar una característica de JavaScript llamada interpolación de cadenas. 
+// Esto es especialmente útil cuando necesitas incluir variables o expresiones dentro de un texto.
+// Diferencia principal
+
+//     Comillas simples (') y comillas dobles (") solo permiten cadenas de texto planas:
+
+            // const nombre = "Juan";
+            // const saludo = "Hola, nombre"; // Esto no funciona como esperas
+            // console.log(saludo); // "Hola, nombre"
+
+// Comillas invertidas (``) te permiten usar plantillas de texto dinámicas con variables o expresiones:
+
+            // const nombre = "Juan";
+            // const saludo = `Hola, ${nombre}`; // Esto inserta la variable "nombre" en la cadena
+            // console.log(saludo); // "Hola, Juan"
+
 
 // Opciones del menú
 agregarElementoMenu(
     "bi bi-house-fill", // Ícono
     "Inicio", // Texto
-    "/univo-servicio/secundaria/"
+    `${inicio}`
 );
 
 agregarElementoMenu(
@@ -67,12 +94,12 @@ agregarElementoMenu(
     "Nosotros",
     "#",
     [
-        { texto: "Historia", enlace: "/univo-servicio/secundaria/nosotros/historia.html" },
-        { texto: "Misión − Visión", enlace: "/univo-servicio/secundaria/nosotros/mision.html" },
-        { texto: "Objetivo", enlace: "/univo-servicio/secundaria/nosotros/objetivos.html" },
-        { texto: "Decálogo de Valores", enlace: "/univo-servicio/secundaria/nosotros/valores.html" },
-        { texto: "Directorio", enlace: "/univo-servicio/secundaria/nosotros/directorio.html" },
-        { texto: "Galería", enlace: "/univo-servicio/secundaria/nosotros/galeria.html" }
+        { texto: "Historia", enlace: `${basePath}/nosotros/historia.html` },
+        { texto: "Misión − Visión", enlace: `${basePath}/nosotros/mision.html` },
+        { texto: "Objetivo", enlace: `${basePath}/nosotros/objetivos.html` },
+        { texto: "Decálogo de Valores", enlace: `${basePath}/nosotros/valores.html` },
+        { texto: "Directorio", enlace: `${basePath}/nosotros/directorio.html` },
+        { texto: "Galería", enlace: `${basePath}/nosotros/galeria.html` }
     ]
 );
 
@@ -81,9 +108,9 @@ agregarElementoMenu(
     "Área Académica",
     "#",
     [
-        { texto: "Plan de Estudios", enlace: "/univo-servicio/secundaria/area_academica/plan.html" },
-        { texto: "Club's", enlace: "/univo-servicio/secundaria/area_academica/clubs.html" },
-        { texto: "Admisión", enlace: "/univo-servicio/secundaria/mantenimiento.html" }
+        { texto: "Plan de Estudios", enlace: `${basePath}/area_academica/plan.html` },
+        { texto: "Club's", enlace: `${basePath}/area_academica/clubs.html` },
+        { texto: "Admisión", enlace: `${basePath}/mantenimiento.html` }
     ]
 );
 
@@ -97,8 +124,8 @@ agregarElementoMenu(
             texto: "Becas",
             enlace: "#",
             submenus: [
-                { texto: "Tipos de Becas", enlace: "/univo-servicio/secundaria/becas/Convocatoria Beca secundaria.pdf" },
-                { texto: "Convocatoria", enlace: "/univo-servicio/secundaria/becas/Convocatoria Beca secundaria.pdf" }
+                { texto: "Tipos de Becas", enlace: `${basePath}/becas/Convocatoria Beca secundaria.pdf` },
+                { texto: "Convocatoria", enlace: `${basePath}/becas/Convocatoria Beca secundaria.pdf` }
             ]
         },
         {
@@ -121,8 +148,8 @@ agregarElementoMenu(
             texto: "Sise",
             enlace: "#",
             submenus: [
-                { texto: "Alumnos", enlace: "https://sise.univo.edu.mx/SISEWEB/WebSecundaria/SiseSecundaria/Autenticacion.php" },
-                { texto: "Docentes UniVO", enlace: "https://sise.univo.edu.mx/WEB2/SISE/DocentesSecundaria/Autenticacion.php" }
+                { texto: "Alumnos", enlace: "https://sise.univo.edu.mx/SISEWEB/WebSecundaria/SiseSecundaria/Autenticacion.php", target: "_blank" },
+                { texto: "Docentes UniVO", enlace: "https://sise.univo.edu.mx/WEB2/SISE/DocentesSecundaria/Autenticacion.php", target: "_blank" }
             ]
         },
         { texto: "Correo", enlace: "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&hl=es-419&ifkv=ARpgrqdu_oyirLljRt2jAs9hNjxwoW1B0TxQzvnbT1fRPPCsFtySg7BTKvvnYH782GSqegXSWY0o&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S555486071%3A1726589019011114&ddm=0" }
@@ -132,8 +159,5 @@ agregarElementoMenu(
 agregarElementoMenu(
     "bi bi-telephone-forward-fill",
     "Contacto",
-    "/univo-servicio/secundaria/contactos/index.html"
+    `${basePath}/contactos/index.html`
 );
-
-// console.log("Elementos agregados al menú.");
-

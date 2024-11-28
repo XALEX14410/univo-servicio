@@ -266,13 +266,9 @@ Creado por: Jesus Alejandro Lara
 
 }
 @-moz-document url-prefix() {
-    /* .submenu_2
-    {
-        transform: translateX(-20px);
-    } */
-    .submenu li.active > .submenu_2{
-        transform: translateX(-20px);
-        transform: translateY(-78px); 
+    .submenu  > .submenu_2 {
+        transform: translateX(0px);
+        transform: translateY(0px); 
         
     }
 }

@@ -87,6 +87,12 @@
     display: inline;
 }
 
+@media (min-width: 1500px){
+    .libreta{
+        width: 70%;
+    }
+}
+
 /* Media queries para responsividad */
 @media (max-width: 1094px) {
     .libreta {
