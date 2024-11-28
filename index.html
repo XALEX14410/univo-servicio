@@ -7,11 +7,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitios web univo</title>
+    <link rel="icon" href="./GEU2030-50.png" type="image/icon">
     <style>
-        :root {
-            --color_boton: #dd00ff;
-        }
-
+    :root {
+        --color_boton: #dd00ff;
+        --color_fondo: #f0f0f0;
+        --color_blanco: #fff;
+        --color_texto: #333;
+        --color_boton_hover: #a500cc;
+        --color_borde: #dd00ff;
+        --color_boton_active: #8e00b3;
+    }
 
         body {
             font-family: Arial, sans-serif;
@@ -26,6 +32,7 @@
 
         .container {
             position: absolute;
+
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,17 +40,7 @@
             text-align: center;
         }
 
-        .container a {
-            display: block;
-            margin: 10px 0;
-            padding: 30px;
-            text-decoration: none;
-            color: var(--color_boton);
-            border: 1px solid var(--color_boton);
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
+        
         .container main {
             display: flex;
             margin: 40px;
@@ -53,10 +50,53 @@
             margin: 0 20px;
         }
 
-        .container a:hover {
-            background-color: var(--color_boton);
-            color: #fff;
+
+        .container a {
+        display: block;
+        margin: 15px 0;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: var(--color_blanco);
+        background-color: var(--color_boton);
+        border: 2px solid var(--color_boton);
+        /* border-radius: 30px; */
+        font-size: 18px;
+        font-weight: bold;
+        /* text-transform: uppercase; */
+        letter-spacing: 1px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container a:hover {
+        background-color: var(--color_boton_hover);
+        color: var(--color_blanco);
+        border-color: var(--color_boton_hover);
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .container a:active {
+        background-color: var(--color_boton_active);
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .container{
+            margin-top: 100%;
         }
+
+        .container main {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container main section {
+            margin-bottom: 15px;
+            flex-basis: 100%;
+        }
+    }
     </style>
 </head>
 
@@ -83,7 +123,7 @@
                 <a href="./primaria/index.html">Primaria</a>
                 <a href="./secundaria/index.html">Secundaria</a>
                 <a href="./preparatoria/index.html">Preparatoria</a>
-                <a href="./principal/index.html">Unvio principal</a>
+                <a href="./principal/index.html">Univo principal</a>
                 <a href="./univo/index.html">Univo Orizaba</a>
             </section>
             <section class="section2">
