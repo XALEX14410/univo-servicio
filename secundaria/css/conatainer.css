@@ -6,7 +6,7 @@
     /* border: 10px solid black; */
     background: white;
     /* background: #4e54c8; */
-    padding: 80px;
+    padding: 100px 0;
     margin-bottom: 80px;
 
     transform: translateY(100px);
@@ -155,6 +155,13 @@
 }
 
 @media (max-width: 768px) {
+    
+.contenido {
+
+    padding: 60px;
+    margin-bottom: 80px;
+
+}
     .correos {
         grid-template-columns: 1fr;
         padding: 10px;
