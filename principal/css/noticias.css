@@ -1,0 +1,114 @@
+/* General container styling */
+
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #34495e;
+    font-weight: bold;
+  }
+  
+  /* Events grid */
+  .news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+  }
+  
+  .news-card {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(33.333% - 25px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Event image */
+  .news-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Event content */
+  .news-content {
+    padding: 20px;
+  }
+  
+  .news-category {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #3498db;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .news-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .news-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .news-link:hover {
+    text-decoration: underline;
+    color: #c0392b;
+  }
+  
+  /* View all link */
+  .view-all {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .view-all-link {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .view-all-link:hover {
+    text-decoration: underline;
+    color: #34495e;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .news-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .news-card {
+      width: 100%;
+    }
+    .news-content {
+      padding: 15px;
+    }
+  }
+  

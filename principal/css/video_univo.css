@@ -1,0 +1,28 @@
+#videos-universidad {
+    padding: 80px;
+    background-color: #f9f9f9;
+}
+
+#videos-universidad h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#videos-universidad .container_video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#videos-universidad .container_video div {
+    flex: 1;
+    max-width: 500px;
+}
+
+#videos-universidad .container_video div h3 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
