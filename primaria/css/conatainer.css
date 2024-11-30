@@ -6,11 +6,19 @@
     /* border: 10px solid black; */
     background: white;
     /* background: #4e54c8; */
-    padding: 80px;
+    padding: 60px;
     margin-bottom: 80px;
 
     transform: translateY(100px);
     height: auto;
+}
+
+.padding--100-0{
+    padding: 100px 0;
+}
+
+.padding--100-80{
+    padding: 100px 80px;
 }
 
 /* Estilos generales */

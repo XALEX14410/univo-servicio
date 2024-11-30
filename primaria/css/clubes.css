@@ -1,0 +1,103 @@
+:root {
+    --primary-bg: #f4f4f4;
+    --header-bg: linear-gradient(to right, #673AB7, #2196F3);
+    --header-text: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-text: #ffffff; 
+    --transition-time: 0.3s;
+
+    /* Colores específicos por taller */
+    --soccer-color: #17A2B8;
+    --basketball-color: #FFC107;
+    --taekwondo-color: #FF5722;
+    --dance-color: #FD7E14;
+    --computer-lab-color: #007BFF;
+    --reading-color: #6A0572;
+    --garden-color: #28A745;
+}
+
+.container_club {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container_club .header h1 {
+    font-size: 2.5rem;
+    color: var(--header-text);
+    background: var(--header-bg);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.container_club .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.container_club .card {
+    width: 350px;
+    height: 180px;
+    border-radius: 15px;
+    color: var(--card-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 10px var(--card-shadow);
+    transition: transform var(--transition-time) ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 0.75rem  rgba(0, 0, 0, 0.955));
+
+}
+
+.card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    filter: drop-shadow(0 0 0.75rem  rgba(0, 0, 0, 0.955));
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Colores específicos por taller */
+.soccer {
+    background-color: var(--soccer-color);
+}
+
+.basketball {
+    background-color: var(--basketball-color);
+}
+
+.taekwondo {
+    background-color: var(--taekwondo-color);
+}
+
+.dance {
+    background-color: var(--dance-color);
+}
+
+.computer-lab {
+    background-color: var(--computer-lab-color);
+}
+
+.reading {
+    background-color: var(--reading-color);
+}
+
+.garden {
+    background-color: var(--garden-color);
+}
