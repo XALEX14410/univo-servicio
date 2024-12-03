@@ -53,6 +53,10 @@ Creado por: Jesus Alejandro Lara
     -moz-transition: transform 0.3s ease; /* Firefox */
 
 }
+.barra-navegacion > .logo-container_max{
+    display: flex;
+    justify-content: center;
+}
 .logo-container_max .logo {
     max-width: var(--logo-max-width);
     height: var(--logo-height);
@@ -83,8 +87,7 @@ Creado por: Jesus Alejandro Lara
 
 .barra-navegacion ul li {
     z-index: 2;
-    display: inline;
-    margin: 0 15px;
+    margin: 0 1px;
     position: relative;
 }
 
@@ -161,6 +164,8 @@ Creado por: Jesus Alejandro Lara
     list-style-type: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
@@ -169,9 +174,10 @@ Creado por: Jesus Alejandro Lara
 
 .nav-list li {
     list-style: none;
-    position: relative;
+    position: absolute;
+       
     margin: 0;
-    padding: 10px 0;
+    
 }
 
 .nav-list li a {
@@ -193,7 +199,7 @@ Creado por: Jesus Alejandro Lara
 
 .nav-list li a:hover {
     color: var(--nav-link-hover-color);
-    background-color: #f0f0f0;
+    
     transform: scale(1.08);
 
     
@@ -206,23 +212,20 @@ Creado por: Jesus Alejandro Lara
 .submenu {
     display: none;
     position: absolute;
-    background-color: #ffff;
+    
     z-index: 1;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 5px;
     width: 220px;
     opacity: 0;
-    transform: translateY(-10px);
+
     transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
 
     
     -webkit-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Safari y Chrome */
     -moz-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Firefox */
 
-    
-    -webkit-transform: translateY(-10px); /* Safari y Chrome */
-    -moz-transform: translateY(-10px); /* Firefox */
 
 }
 
@@ -231,13 +234,13 @@ Creado por: Jesus Alejandro Lara
     position: absolute;
     left: 100%;
     top: 0;
-    background-color: #ffff;
+    
     z-index: 2;
     border-radius: 5px;
     padding: 5px;
     width: 220px;
     opacity: 0;
-    transform: translateX(-10px);
+    transform: translateX(0px);
     transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
     left: 100px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -251,15 +254,21 @@ Creado por: Jesus Alejandro Lara
 }
 
 /* Mostrar submenús al hacer clic */
-.nav-list > li.active > .submenu,.submenu li.active > .submenu_2
+.nav-list > li.active > .submenu
  {
     display: block;
     opacity: 1;
     transform: translateY(0);
-    transform: translateX(-5px);
+    transform: translateX(0px);
     background-color: #f9f9f9; /* Fondo del submenú */
     transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.4s ease;
 
+}
+.submenu li.active > .submenu_2{
+    display: block;
+    opacity: 1;
+    
+    transform: translateX(100px);background-color: #f9f9f9; /* Fondo del submenú */
 }
 @-moz-document url-prefix() {
     .submenu  > .submenu_2 {
@@ -275,7 +284,6 @@ Creado por: Jesus Alejandro Lara
 @media (min-width: 1120px) {
     #container-logo-mini {
         display: none;
-
     }
     .logo-container_max {
         position: absolute;
@@ -283,54 +291,54 @@ Creado por: Jesus Alejandro Lara
         padding-top: 20px;
         padding-left: 100px;
         padding-right: 200px;
-        justify-content: center;
-        column-gap: 70%;
         display: flex;
+        justify-content: flex-start; /* Alineación al inicio (techo) */
+        column-gap: 70%;
         z-index: 1;
     }
 }
 
 /* Estilos para dispositivos medianos */
 @media (max-width: 1120px) {
-    .encabezado{
+    .encabezado {
         height: 130px;
     }
-    .logo-container_max {
+    .barra-navegacion .logo-container_max {
         display: none;
     }
-    
+    .barra-navegacion ul li {
+        position: relative;
+        display: block;
+        background-color: #ffffff;
+        max-height: 100vh;
+    }
     .nav-list {
-        display: none;
-        flex-direction: column;
-        align-items: center;
         background-color: #ffffff;
         position: absolute;
-        top: 0%;
+        top: 10px;
         left: 0;
-
         width: 100%;
-        margin: 0px 0px 20px 0px;
-        
+        max-height: 100vh;
+        overflow: scroll;
         border-radius: 5px;
         padding: 5px 0;
-        
-        
-
+        display: none; /* Se muestra solo cuando es activado */
     }
 
     .nav-list.active {
-        display: flex;
-        
+        display: flex; /* Solo se activa cuando se añade la clase 'active' */
+        flex-direction: row; /* Asegura que los elementos estén alineados verticalmente */
+        justify-content: flex-start; /* Alineación al inicio (techo) */
     }
 
     .nav-list li {
-        display: none;
-        margin: 0;
+        display: block; /* Cambiado a block para mejor compatibilidad */
         width: 100%;
-        padding-right: 30px;
-        padding-top: 15px;
+        padding: 10px 0; /* Reducido el padding para hacer los elementos más pegados */
+        margin: 0 5px; /* Reducido el margen entre los elementos */
     }
-    .barra-navegacion ul li a:hover{
+
+    .barra-navegacion ul li a:hover {
         transform: none;
     }
 
@@ -339,7 +347,6 @@ Creado por: Jesus Alejandro Lara
         position: relative;
         z-index: 2;
         font-size: 50px;
-        
     }
 
     .logo-container {
@@ -361,8 +368,9 @@ Creado por: Jesus Alejandro Lara
         z-index: 1;
         opacity: 0;
         max-height: 350px;
+        
         height: auto;
-        overflow: auto;
+        overflow-y: auto;
         transition: max-height 0.5s ease, opacity 0.5s ease;
     }
 
@@ -373,26 +381,15 @@ Creado por: Jesus Alejandro Lara
         left: 0;
         text-align: center;
     }
-
-    .nav-list li.active {
-        opacity: 1;
-        overflow: auto;
-        height: 70%;
-        max-height:70%;
-    }
 }
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 700px) {
+    
     #logo2 {
-        width: 700px;
-        max-width: 700px;
         display: none;
     }
-
 }
-
-
 
 /* Pantallas pequeñas (sin altura definida) */
 @media screen and (max-width: 700px) {
@@ -407,9 +404,9 @@ Creado por: Jesus Alejandro Lara
     .nav-list li a {
         font-size: 16px;
     }
-    .submenu_2
-    {
-        padding:5px 5px 100% 5px ;
+
+    .submenu_2 {
+        padding: 5px 5px 100% 5px;
     }
 }
 
@@ -421,6 +418,7 @@ Creado por: Jesus Alejandro Lara
 
     .logo {
         max-width: 200px;
+        
     }
 
     .nav-list li a {
