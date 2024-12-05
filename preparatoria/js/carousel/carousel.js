@@ -1,63 +1,66 @@
-// Seleccionamos los elementos del carousel
-const carouselInner = document.querySelector('.carousel-inner');
-const carouselItems = document.querySelectorAll('.carousel-item');
-const btnAnterior = document.querySelector('.carousel-anterior');
-const btnSiguiente = document.querySelector('.carousel-siguiente');
+// Variables específicas para el carrusel
+const contenedorCarruselConAnimacion = document.getElementById('contenedorCarruselConAnimacion');
+const contenedorImagenesCarrusel = document.getElementById('contenedorImagenesCarrusel');
+const imagenesCarrusel = document.querySelectorAll('.imagenCarrusel');
+const botonIzquierdaCarrusel = document.getElementById('botonIzquierdaCarrusel');
+const botonDerechaCarrusel = document.getElementById('botonDerechaCarrusel');
+const indicadoresCarrusel = document.querySelectorAll('.indicadorCarrusel');
+let indiceImagenActual = 0;
+const intervaloCarruselTiempo = 5000; // 5 segundos
+let intervaloCarrusel; // Variable para guardar el intervalo
 
-// Establecemos el índice del item actual
-let itemActual = 0;
+// Función para actualizar el carrusel
+function actualizarCarrusel() {
+  const desplazamientoCarrusel = -indiceImagenActual * 100;
+  contenedorImagenesCarrusel.style.transform = `translateX(${desplazamientoCarrusel}%)`;
 
-// Tiempo en milisegundos entre los cambios automáticos
-const intervaloAutomatico = 3000; // 3 segundos
-
-// Función para mostrar el item actual
-function mostrarItemActual() {
-    // Ocultamos todos los items
-    carouselItems.forEach(item => item.classList.remove('active'));
-
-    // Mostramos el item actual
-    carouselItems[itemActual].classList.add('active');
-}
-
-// Función para avanzar al siguiente item
-function avanzarItem() {
-    // Incrementamos el índice del item actual
-    itemActual++;
-
-    // Si llegamos al final, volvemos al principio
-    if (itemActual >= carouselItems.length) {
-        itemActual = 0;
+  // Actualizar los indicadores
+  indicadoresCarrusel.forEach((indicador, index) => {
+    if (index === indiceImagenActual) {
+      indicador.classList.add('indicadorCarruselActivo');
+    } else {
+      indicador.classList.remove('indicadorCarruselActivo');
     }
-
-    // Mostramos el item actual
-    mostrarItemActual();
+  });
 }
 
-// Función para retroceder al item anterior
-function retrocederItem() {
-    // Decrementamos el índice del item actual
-    itemActual--;
-
-    // Si llegamos al principio, volvemos al final
-    if (itemActual < 0) {
-        itemActual = carouselItems.length - 1;
-    }
-
-    // Mostramos el item actual
-    mostrarItemActual();
+// Función para iniciar el intervalo del carrusel
+function iniciarIntervalo() {
+  intervaloCarrusel = setInterval(() => {
+    indiceImagenActual = (indiceImagenActual === imagenesCarrusel.length - 1) ? 0 : indiceImagenActual + 1;
+    actualizarCarrusel();
+  }, intervaloCarruselTiempo);
 }
 
-// Agregamos eventos a los botones
-btnAnterior.addEventListener('click', retrocederItem);
-btnSiguiente.addEventListener('click', avanzarItem);
-
-// Mostramos el item actual al cargar la página
-mostrarItemActual();
-
-// Función para iniciar el carrusel automático
-function iniciarCarruselAutomatico() {
-    setInterval(avanzarItem, intervaloAutomatico);
+// Función para reiniciar el intervalo del carrusel (sin avanzar automáticamente)
+function reiniciarIntervalo() {
+  clearInterval(intervaloCarrusel); // Limpiar el intervalo existente
+  iniciarIntervalo(); // Reiniciarlo desde cero
 }
 
-// Iniciamos el carrusel automático
-iniciarCarruselAutomatico();
+// Función para mover a la imagen anterior
+botonIzquierdaCarrusel.addEventListener('click', () => {
+  indiceImagenActual = (indiceImagenActual === 0) ? imagenesCarrusel.length - 1 : indiceImagenActual - 1;
+  actualizarCarrusel();
+  reiniciarIntervalo(); // Reiniciar el tiempo
+});
+
+// Función para mover a la imagen siguiente
+botonDerechaCarrusel.addEventListener('click', () => {
+  indiceImagenActual = (indiceImagenActual === imagenesCarrusel.length - 1) ? 0 : indiceImagenActual + 1;
+  actualizarCarrusel();
+  reiniciarIntervalo(); // Reiniciar el tiempo
+});
+
+// Función para manejar clics en los indicadores
+indicadoresCarrusel.forEach((indicador, index) => {
+  indicador.addEventListener('click', () => {
+    indiceImagenActual = index;
+    actualizarCarrusel();
+    reiniciarIntervalo(); // Reiniciar el tiempo
+  });
+});
+
+// Inicializar el carrusel
+actualizarCarrusel();
+iniciarIntervalo(); // Comenzar el intervalo al cargar la página

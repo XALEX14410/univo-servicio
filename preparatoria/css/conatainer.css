@@ -12,7 +12,13 @@
     transform: translateY(140px);
     height: auto;
 }
+.padding--100-0{
+    padding: 100px 0;
+}
 
+.padding--100-80{
+    padding: 100px 80px;
+}
 /* Estilos generales */
 .hero {
     background: var(--hero-bg-gradient);
