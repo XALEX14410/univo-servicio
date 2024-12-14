@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Seleccionar todos los elementos de menú principal que tienen un submenú
     var menuItems = document.querySelectorAll('.nav-list > li');
     var submenuItems = document.querySelectorAll('.submenu > li');
     var navToggle = document.querySelector('.nav-toggle');
@@ -82,9 +81,22 @@ document.addEventListener('DOMContentLoaded', function () {
         this.classList.toggle('active');
         // Mostrar u ocultar el submenú
         var submenu = this.querySelector('.submenu');
+
+        // Alternar clase activa
         if (submenu) {
             submenu.classList.toggle('active');
             submenu.style.display = submenu.classList.contains('active') ? 'block' : 'none';
+
+            // Cerrar otros menús principales abiertos
+            menuItems.forEach(function (otherItem) {
+                if (otherItem !== this) {
+                    var otherSubmenu = otherItem.querySelector('.submenu');
+                    if (otherSubmenu) {
+                        otherSubmenu.classList.remove('active');
+                        otherSubmenu.style.display = 'none';
+                    }
+                }
+            }.bind(this));
         }
     }
 
@@ -97,29 +109,39 @@ document.addEventListener('DOMContentLoaded', function () {
         if (submenu) {
             submenu.classList.toggle('active');
             submenu.style.display = submenu.classList.contains('active') ? 'block' : 'none';
+
+            // Cerrar otros submenús abiertos en el mismo nivel
+            submenuItems.forEach(function (otherSubItem) {
+                if (otherSubItem !== this) {
+                    var otherSubmenu = otherSubItem.querySelector('.submenu');
+                    if (otherSubmenu) {
+                        otherSubmenu.classList.remove('active');
+                        otherSubmenu.style.display = 'none';
+                    }
+                }
+            }.bind(this));
         }
     }
 
-   // Función para manejar el comportamiento del menú según el tamaño de la pantalla
-function handleMenuBehavior() {
-    if (window.innerWidth >= 1095) {
-        // Eliminar todas las clases "active" antes de agregar los eventos de hover
-        menuItems.forEach(function (item) {
-            item.classList.remove('active');
-        });
+    // Función para manejar el comportamiento del menú según el tamaño de la pantalla
+    function handleMenuBehavior() {
+        if (window.innerWidth >= 1095) {
+            // Eliminar todas las clases "active" antes de agregar los eventos de hover
+            menuItems.forEach(function (item) {
+                item.classList.remove('active');
+            });
 
-        submenuItems.forEach(function (subItem) {
-            subItem.classList.remove('active');
-        });
+            submenuItems.forEach(function (subItem) {
+                subItem.classList.remove('active');
+            });
 
-        removeClickEvents();
-        addHoverEvents();
-    } else {
-        removeHoverEvents();
-        // addClickEvents();
+            removeClickEvents();
+            addHoverEvents();
+        } else {
+            removeHoverEvents();
+            addClickEvents();
+        }
     }
-}
-
 
     // Ejecutar la función al cargar la página y al redimensionar la ventana
     handleMenuBehavior();
@@ -127,7 +149,16 @@ function handleMenuBehavior() {
 
     // Para el botón de menú en pantallas pequeñas
     navToggle.addEventListener('click', function () {
+        var isActive = navList.classList.contains('active');
         navList.classList.toggle('active');
         navToggle.classList.toggle('is-active');
+
+        // Cerrar el menú si ya está activo
+        if (isActive) {
+            navList.querySelectorAll('.submenu').forEach(function (submenu) {
+                submenu.classList.remove('active');
+                submenu.style.display = 'none';
+            });
+        }
     });
 });

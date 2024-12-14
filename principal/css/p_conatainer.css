@@ -83,7 +83,7 @@
 .univo-programa h4 {
     font-size: 1.6rem;
     color: #333;
-    margin-bottom: 15px;
+    margin:0 15px;
     font-weight: 600;
 }
 
@@ -100,7 +100,7 @@
 
 .univo-programa p {
     color: #666;
-    margin-bottom: 20px;
+    margin:0 20px;
 }
 
 .univo-programa a.enlace {

@@ -31,7 +31,7 @@
 
 .side-menu {
     width: 100%;
-    max-width: 250px;
+    
     margin-bottom: 20px;
     background-color: #f1f1f1;
     padding: 10px;
@@ -61,14 +61,51 @@
     color: #fff;
 }
 
+/* Cambios en .content */
 .content {
     flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background-color: #f9f9f9; /* Fondo limpio y claro */
+    padding: 30px; /* Espaciado interno amplio */
+    border: 1px solid #dcdcdc; /* Borde sutil y elegante */
+    border-radius: 8px; /* Bordes suavizados */
     max-width: calc(100% - 270px);
     box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar */
+    line-height: 1.6; /* Mejor legibilidad */
+}
+
+.content h3 {
+    font-size: 20px;
+    color: #203B5F;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #203B5F;
+    padding-bottom: 5px;
+}
+
+.content p {
+    text-align: justify;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.content a {
+    color: #203B5F;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.content a:hover {
+    color: #f454a7;
 }
 
 .info-section {
@@ -84,49 +121,39 @@
     width: 100%;
     height: auto;
     max-height: 500px;
-}
-
-.info-section p {
-    text-align: left;
-    color: #333;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .hidden {
     display: none;
 }
 
-.egresados:hover {    
-    background-color: #ffd146;
-}
+.c0 {        background-color:#fdc724;}
+.c0:hover {      background-color: #ffdd75;}
 
-.educacion:hover {    
-    background-color: #f454a7;
-}
+.c1 {        background-color: #ff7f50;}
+.c1:hover {      background-color: #ffa280;}
 
-.convenios:hover {   
-    background-color: #6fa8d7;
-}
+.c2 {        background-color: #f454a7;}
+.c2:hover {        background-color: #f489c0;}
 
-.contacto:hover {    
-    background-color: #a1b9c1;
-}
+.c3 {        background-color: #6fa8d7;}
+.c3:hover {       background-color: #3b6f98;}
 
-.egresados {    
-    background-color: #ff7f50;
-}
+.c4 {        background-color: #a1b9c1;}
+.c4:hover {        background-color: #62797f;}
 
-.educacion {    
-    background-color: #f454a7;
-}
 
-.convenios {    
-    background-color: #6fa8d7;
-}
 
-.contacto {    
-    background-color: #a1b9c1;
-}
 
+
+
+@media (min-width:769px) {
+    .side-menu{
+        max-width: 250px;
+    }
+}
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     .main_v {
@@ -135,7 +162,7 @@
     }
 
     .side-menu {
-        width: 100%;
+        width: 100%; /* Ahora ocupa el 100% en dispositivos móviles */
         margin-bottom: 20px;
     }
 
@@ -158,6 +185,11 @@
     .content {
         width: 100%;
         max-width: 100%;
+        padding: 20px;
+    }
+
+    .side-menu {
+        width: 100%; /* Asegura que también ocupe el 100% en pantallas muy pequeñas */
     }
 
     .header_v h1 {
@@ -172,3 +204,72 @@
         font-size: 14px;
     }
 }
+
+
+
+
+
+.becas-container {
+    text-align: center;
+    padding: 80px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.becas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajusta el tamaño mínimo de las columnas */
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.beca {
+    width: 100%; /* Asegura que la beca ocupe todo el espacio disponible */
+    min-width: 200px; /* Mantén el tamaño máximo */
+    max-width: 300px;
+    padding: 40px; /* Reduce el padding para pantallas más pequeñas */
+    height: auto;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease; /* Añade una transición suave */
+}
+
+.beca .numero {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.beca .nombre {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Para pantallas más pequeñas (por ejemplo, teléfonos) */
+@media (max-width: 480px) {
+    .beca {
+        padding: 15px; /* Menos padding */
+    }
+
+    .beca .numero {
+        font-size: 20px; /* Reduce el tamaño de la fuente */
+    }
+
+    .beca .nombre {
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+    }
+
+    .becas-container {
+        padding: 20px; /* Reduce el padding del contenedor */
+    }
+}
+
+
