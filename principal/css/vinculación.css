@@ -98,15 +98,7 @@
     color: #444;
 }
 
-.content a {
-    color: #203B5F;
-    text-decoration: underline;
-    transition: color 0.3s;
-}
 
-.content a:hover {
-    color: #f454a7;
-}
 
 .info-section {
     display: none;
@@ -209,6 +201,40 @@
 
 
 
+
+
+/* Icono PDF */
+.icono-pdf {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+
+/* Botón PDF */
+.boton-pdf {
+    display: inline-block;
+    background-color: #ff0000;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.boton-pdf:hover {
+    background-color: #f45454;
+    color: white;
+    
+}
+
+/* Colores de fondo específicos */
+.c0 { background-color: #fdc724; }
+.c1 { background-color: #ff7f50; }
+.c2 { background-color: #f454a7; }
+.c3 { background-color: #6fa8d7; }
+.c4 { background-color: #a1b9c1; }
+
 .becas-container {
     text-align: center;
     padding: 80px;
@@ -273,3 +299,113 @@
 }
 
 
+
+/* Menú interactivo */
+.interactive-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.menu-btn {
+    background-color: #203B5F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-btn:hover {
+    background-color: #f454a7;
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+.menu-btn:focus {
+    outline: 3px solid #f454a7;
+    outline-offset: 2px;
+}
+
+/* Contenedor de información */
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    
+    margin: 0 auto;
+}
+
+.info-block {
+    display: none; /* Por defecto, oculto */
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease; /* Animación suave */
+}
+
+.info-block h3 {
+    margin-top: 0;
+    color: #203B5F;
+    border-bottom: 2px solid #203B5F;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.info-block p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin: 10px 0 0 0;
+}
+
+.info-block:not(.hidden) {
+    display: block; /* Mostrar cuando se active */
+}
+
+
+
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .interactive-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-btn {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .info-block {
+        padding: 15px;
+    }
+}

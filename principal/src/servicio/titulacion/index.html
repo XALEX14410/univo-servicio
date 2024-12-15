@@ -72,17 +72,15 @@
             <nav class="side-menu">
                 <ul class="menu-list">
                     <li class="menu-item c0" data-target="s0">
-                        <i class="bi bi-people-fill"></i> Introducción
+                        <i class="bi bi-people-fill"></i> Opciones de titulación
                     </li>
                     <li class="menu-item c1" data-target="s1">
-                        <i class="bi bi-person-check"></i> ¿Quiénes deben prestar el servicio social?
+                        <i class="bi bi-person-check"></i> Requisitos
                     </li>
                     <li class="menu-item c2" data-target="s2">
-                        <i class="bi bi-book"></i> Requistos
+                        <i class="bi bi-book"></i> Calendario
                     </li>
-                    <li class="menu-item c3" data-target="s3">
-                        <i class="bi bi-cash"></i> ¿Dónde podrán realizar el servicio social?
-                    </li>
+
 
                 </ul>
 
@@ -93,43 +91,70 @@
                 <div id="presenta" class="info-section">
                     <img src="https://via.placeholder.com/1600x800?text=Imagen+1" alt="image" srcset="">
                 </div>
+                <!-- Primera sección de opciones -->
                 <div id="s0" class="info-section hidden">
-                    <h3>INTRODUCCIÓN</h3>
-                    <h4>¿Qué es?</h4>
-                    <p>El Servicio Social es la actividad de carácter temporal que en beneficio de la colectividad
-                        prestan
-                        los estudiantes y pasantes de las distintas profesiones, en interés de la sociedad y el Estado.
-                        Consiste en un conjunto de actividades del ámbito federal, estatal o municipal que tenga como
-                        objetivo beneficiar a un sector definido de la sociedad en circunstancias menos favorecidas, de
-                        peligro o de contingencias públicas. De igual forma, los planes o proyectos, podrán estar
-                        orientados
-                        a programas de beneficio general, que tengan por propósito el progreso científico, el fomento al
-                        deporte y la cultura, la conservación del medio ambiente o el mejoramiento de la calidad de vida
-                        de
-                        la población.</p>
-
-                    <p>El servicio social tiene como objetivos fundamentales:</p>
-
-                    <ul>
-                        <li>I. Contribuir a la satisfacción de necesidades sociales del entorno donde se desenvuelve el
-                            estudiante, </li>
-                        <li>II. Contribuir al desarrollo y progreso de su comunidad, mediante la aplicación de los
-                            conocimientos y las habilidades que han adquirido durante su formación académica. </li>
-                        <li>III. Fomentar en los estudiantes una conciencia de responsabilidad social, así como una
-                            actitud reflexiva, crítica y constructiva ante el entorno social.</li>
-                    </ul>
-                    <h4>Fundamento legal del Servicio Social</h4>
-                    <p>La obligación de prestar el social se encuentra prevista en la Ley Reglamentaria del Artículo 5º.
-                        Constitucional relativo al ejercicio de las Profesiones y su Reglamento.</p>
-
-                    <p>En ella se establece que todos los estudiantes de las profesiones, así como los profesionistas no
-                        mayores de 60 años, o impedidos por enfermedad grave, ejerzan o no, deberán prestar el servicio
-                        social en los términos de dicha Ley. Asimismo, establece que las instituciones educativas
-                        exigirán a
-                        los estudiantes, como requisito previo para otorgarles el título, que presten servicio social
-                        durante el tiempo no menor de seis meses ni mayor de dos años.</p>
+                    <h3>Opciones de titulación</h3>
+                    <p>
+                        En la Universidad del Valle de Orizaba contamos con un amplio Programa de titulación
+                        que se adapta a las preferencias y expectativas de crecimiento profesional.
+                    </p>
+                    <nav class="interactive-menu">
+                        <button class="menu-btn" data-section="content-1" aria-controls="content-1" aria-expanded="false">
+                            <i class="bi bi-people-fill"></i> Nivel Licenciatura
+                        </button>
+                        <button class="menu-btn" data-section="content-2" aria-controls="content-2" aria-expanded="false">
+                            <i class="bi bi-people-fill"></i> Nivel Posgrado
+                        </button>
+                    </nav>
+                    
+                    <!-- Contenedores de información -->
+                    <section class="info-wrapper">
+                        <div id="content-1" class="info-block hidden" role="region" aria-hidden="true">
+                            <h3>Información Licenciatura</h3>
+                            <p>Este es el contenido detallado relacionado con la sección de Licenciatura.</p>
+                            <button class="info-btn" data-target="extra1">Información Extra 1</button>
+                            <button class="info-btn" data-target="extra2">Información Extra 2</button>
+                            <button class="info-btn" data-target="extra3">Información Extra 3</button>
+                            <!-- <button class="exit-btn">Salir</button> -->
+                    
+                            <!-- Información Extra -->
+                            <div id="extra1" class="extra-info hidden">
+                                <p>Información adicional sobre Licenciatura: Datos específicos de programas y requisitos.</p>
+                            </div>
+                            <div id="extra2" class="extra-info hidden">
+                                <p>Otra información adicional sobre Licenciatura: Detalles sobre cursos y planes de estudio.</p>
+                            </div>
+                            <div id="extra3" class="extra-info hidden">
+                                <p>Más información sobre Licenciatura: Guía para estudiantes y opciones laborales.</p>
+                            </div>
+                        </div>
+                    
+                        <div id="content-2" class="info-block hidden" role="region" aria-hidden="true">
+                            <h3>Información Posgrado</h3>
+                            <p>Aquí encontrarás detalles y datos sobre la sección de Posgrado.</p>
+                            <button class="info-btn" data-target="extra1">Información Extra 1</button>
+                            <button class="info-btn" data-target="extra2">Información Extra 2</button>
+                            <button class="info-btn" data-target="extra3">Información Extra 3</button>
+                            <!-- <button class="exit-btn">Salir</button> -->
+                    
+                            <!-- Información Extra -->
+                            <div id="extra1" class="extra-info hidden">
+                                <p>Información adicional sobre Posgrado: Requisitos y programas disponibles.</p>
+                            </div>
+                            <div id="extra2" class="extra-info hidden">
+                                <p>Más detalles sobre Posgrado: Investigación y oportunidades académicas.</p>
+                            </div>
+                            <div id="extra3" class="extra-info hidden">
+                                <p>Guía para estudiantes de Posgrado: Procedimientos y orientación profesional.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    
+                    
 
                 </div>
+
                 <div id="s1" class="info-section hidden">
                     <h3>¿Quiénes deben prestar el Servicio Social?</h3>
                     <p>Todos los estudiantes de los programas académicos con Reconocimiento de Validez Oficial del nivel

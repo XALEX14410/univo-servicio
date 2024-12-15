@@ -108,6 +108,21 @@ agregarElementoMenu(
         { texto: "Planteles", enlace: `${basePath}/oferta_edu/planteles.html` },
     ]
 );
+agregarElementoMenu(
+    "",
+    "Servicios Estudiantiles",
+    "#",
+    [
+        { texto: "Becas", enlace: `${basePath}/servicio/beca`},
+        { texto: "Servicio social", enlace:  `${basePath}/servicio/servicio_social` },
+        { texto: "Titulación", enlace: `${basePath}/servicio/titulacion` },
+        { texto: "Vinculación", enlace: `${basePath}/servicio/vinculacion` },
+        { texto: "Deportivo", enlace:  `${basePath}/servicio/cultura` },
+        { texto: "Servicios bibliotecarios", enlace: `${basePath}/servicio/servicios_bibliotecarios`  },
+        { texto: "Sistema médico", enlace: `${basePath}/servicio/servicio_medico` }
+        
+    ]
+);
 
 agregarElementoMenu(
     "",
@@ -116,21 +131,6 @@ agregarElementoMenu(
 
 );
 
-agregarElementoMenu(
-    "",
-    "Servicios Estudiantiles",
-    "#",
-    [
-        { texto: "Becas", enlace: `${basePath}/servicio/beca`},
-        { texto: "Servicio social", enlace: "#" },
-        { texto: "Titulación", enlace: "#" },
-        { texto: "Vinculación", enlace: `${basePath}/servicio/vinculacion` },
-        { texto: "Deportivo", enlace: "#" },
-        { texto: "Servicios bibliotecarios", enlace: "#" },
-        { texto: "Sistema médico", enlace: "#" }
-        
-    ]
-);
 
 // agregarElementoMenu(
 //     "",
