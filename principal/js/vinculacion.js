@@ -76,3 +76,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleccionar los botones principales por id
+  const licenciaturaBtn = document.getElementById("btn-licenciatura");
+  const posgradoBtn = document.getElementById("btn-posgrado");
+
+  // Seleccionar las secciones principales por id
+  const licenciaturaContent = document.getElementById("content-licenciatura");
+  const posgradoContent = document.getElementById("content-posgrado");
+
+  // Seleccionar botones de información extra por id
+  const licenciaturaExtra1 = document.getElementById("btn-lic-extra1");
+  const licenciaturaExtra2 = document.getElementById("btn-lic-extra2");
+  const licenciaturaExtra3 = document.getElementById("btn-lic-extra3");
+  const posgradoExtra1 = document.getElementById("btn-pos-extra1");
+  const posgradoExtra2 = document.getElementById("btn-pos-extra2");
+  const posgradoExtra3 = document.getElementById("btn-pos-extra3");
+
+  // Seleccionar las secciones de información extra por id
+  const licExtra1 = document.getElementById("extra-lic1");
+  const licExtra2 = document.getElementById("extra-lic2");
+  const licExtra3 = document.getElementById("extra-lic3");
+  const posExtra1 = document.getElementById("extra-pos1");
+  const posExtra2 = document.getElementById("extra-pos2");
+  const posExtra3 = document.getElementById("extra-pos3");
+
+  // Función para manejar los botones principales
+  function showMainContent(targetContent, hideContent) {
+      // Ocultar la sección no activa
+      hideContent.classList.add("hidden");
+      hideContent.setAttribute("aria-hidden", "true");
+
+      // Mostrar la sección seleccionada
+      targetContent.classList.remove("hidden");
+      targetContent.setAttribute("aria-hidden", "false");
+
+      // Ocultar cualquier información extra visible
+      document.querySelectorAll(".extra-info").forEach((extra) => extra.classList.add("hidden"));
+  }
+
+  // Eventos de botones principales
+  licenciaturaBtn.addEventListener("click", () => {
+      showMainContent(licenciaturaContent, posgradoContent);
+  });
+
+  posgradoBtn.addEventListener("click", () => {
+      showMainContent(posgradoContent, licenciaturaContent);
+  });
+
+  // Función para manejar los botones de información extra
+  function toggleExtraInfo(targetExtra, extraGroup) {
+      // Ocultar todas las demás informaciones extra del grupo actual
+      extraGroup.forEach((extra) => extra.classList.add("hidden"));
+
+      // Mostrar u ocultar la información seleccionada
+      if (targetExtra.classList.contains("hidden")) {
+          targetExtra.classList.remove("hidden");
+      } else {
+          targetExtra.classList.add("hidden");
+      }
+  }
+
+  // Eventos para botones de información extra (Licenciatura)
+  licenciaturaExtra1.addEventListener("click", () => {
+      toggleExtraInfo(licExtra1, [licExtra1, licExtra2, licExtra3]);
+  });
+
+  licenciaturaExtra2.addEventListener("click", () => {
+      toggleExtraInfo(licExtra2, [licExtra1, licExtra2, licExtra3]);
+  });
+
+  licenciaturaExtra3.addEventListener("click", () => {
+      toggleExtraInfo(licExtra3, [licExtra1, licExtra2, licExtra3]);
+  });
+
+  // Eventos para botones de información extra (Posgrado)
+  posgradoExtra1.addEventListener("click", () => {
+      toggleExtraInfo(posExtra1, [posExtra1, posExtra2, posExtra3]);
+  });
+
+  posgradoExtra2.addEventListener("click", () => {
+      toggleExtraInfo(posExtra2, [posExtra1, posExtra2, posExtra3]);
+  });
+
+  posgradoExtra3.addEventListener("click", () => {
+      toggleExtraInfo(posExtra3, [posExtra1, posExtra2, posExtra3]);
+  });
+
+  // Mostrar la sección inicial por defecto
+  licenciaturaContent.classList.remove("hidden");
+  licenciaturaContent.setAttribute("aria-hidden", "false");
+});
+
