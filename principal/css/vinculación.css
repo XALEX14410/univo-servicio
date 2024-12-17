@@ -64,7 +64,7 @@
 /* Cambios en .content */
 .content {
     flex: 1;
-    background-color: #f9f9f9; /* Fondo limpio y claro */
+    background: url(./../img/UniVO-blanco.png) no-repeat center center/cover;
     padding: 30px; /* Espaciado interno amplio */
     border: 1px solid #dcdcdc; /* Borde sutil y elegante */
     border-radius: 8px; /* Bordes suavizados */

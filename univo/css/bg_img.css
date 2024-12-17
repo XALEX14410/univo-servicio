@@ -6,31 +6,52 @@
     background-size: cover; /* Hace que la imagen cubra todo el área */
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: block;
+
 }
 
-/* Estilo para el contenido encima del fondo */
+.fondo-presentacion-no-bg {
+    position: relative;
+    width: 100%;
+    height: auto; /* Altura completa de la pantalla */
+    margin: 80px 0 80px 0;
+    display: block;
+
+}
+
+/* Contenedor principal */
 .contenido-presentacion {
     position: relative;
     z-index: -1; /* Asegura que el contenido esté sobre el fondo */
+    height: 100vh;
+    width: 100%;
 }
-.contenido-presentacion .bg_img{
+
+/* Imagen de fondo */
+.contenido-presentacion .bg_img {
     position: fixed;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+    z-index: -2; /* Envía la imagen de fondo detrás */
 }
 
-.contenido-presentacion .logo_img{
-    position: fixed;
-    width: 40%;
-    height: 40vh;
-    top: 32%;
-    left: 32%;
+/* Logo centrado */
+.contenido-presentacion .logo_img {
+    position: fixed; /* Mantiene la posición fija */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el origen al centro */
+    width: 50%;
+    height: auto; /* Mantiene las proporciones */
+    max-height: 50vh; /* Asegura que no exceda la mitad de la altura de la ventana */
     filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 0.7));
     object-fit: contain;
-    
 }
+.contenido-presentacion .logo_img.scrolled{
+    display: none;
+}
+
 .texto-simple{
     position: absolute;
     left: 0;
