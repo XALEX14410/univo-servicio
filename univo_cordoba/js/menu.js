@@ -164,7 +164,7 @@ agregarElementoMenu(
 
 agregarElementoMenu(
     "",
-    "UniVO Córdoba",
+    "UniVO Orizaba",
     `#`
 
 );
