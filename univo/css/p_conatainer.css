@@ -1,222 +1,178 @@
 /* Hero Section */
-.univo-hero {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    position: relative;
-    padding: 80px 20px;
-    /* Agrega padding para una altura automática */
-    box-sizing: border-box;
-}
-
-/* Título de sección */
 .univo-titulo-seccion {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    /* background-color: #ffffff; */
+    border-bottom: 2px solid #ddd;
+    color: #333;
+}
+
+.univo-titulo-seccion h2 {
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    z-index: 1;
+    margin-bottom: 10px;
 }
 
-/* Grid Content */
+.univo-titulo-seccion p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contenido de la Oferta Académica */
 .univo-contenido {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px;
+    justify-content: space-between;
     gap: 30px;
-    position: relative;
-    z-index: 1;
-    box-sizing: border-box;
-}
-
-/* Ajustes para las tarjetas */
-.univo-imagen-container,
-.univo-info-tarjeta,
-.univo-redes-sociales {
-    width: 30%;
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
-}
-
-.univo-imagen-container:hover,
-.univo-info-tarjeta:hover,
-.univo-redes-sociales:hover {
-    transform: translateY(-10px);
-}
-
-.univo-info-tarjeta {
-    background-color: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-}
-
-/* Tarjetas de Información */
-.univo-redes-sociales {
-
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-
-}
-
-.univo-info-tarjeta h3,
-.univo-redes-sociales h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    padding: 10px;
-    /* color: #333; */
-    color: white;
-
-    background: #e91e63;
-}
-
-/* Imágenes */
-.univo-imagen {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
-
-.univo-imagen:hover {
-    transform: scale(1.05);
-}
-
-/* Iconos de Redes Sociales */
-.univo-icono-redes {
-    width: 28px;
-    margin-right: 12px;
-    transition: transform 0.3s ease;
-}
-
-.univo-icono-redes:hover {
-    transform: scale(1.2);
-}
-
-/* Lista de redes sociales */
-.univo-redes-sociales ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.univo-redes-sociales li {
-    display: block;
-    padding: 20px;
-    margin-right: 15px;
-}
-
-/* Radio Section */
-.univo-radio-seccion {
-    text-align: center;
     padding: 40px 20px;
-    background-color: #f3f3f3;
-    margin-top: 40px;
+    box-sizing: border-box;
 }
 
-/* Footer */
-.univo-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: white;
-    font-size: 0.9rem;
+/* Facultades */
+.univo-facultad {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 30px auto;
 }
 
-/* Botón de Info Tarjeta */
-.univo-info-tarjeta button {
-    background-color: #ff4081;
-    color: white;
-    padding: 14px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
+.univo-titulo-facultad {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 30px auto;
+}
+
+.univo-titulo-facultad h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
     font-weight: 600;
-    transition: background-color 0.3s, transform 0.2s;
+    border-bottom: 2px solid #392E72;
+    padding-bottom: 10px;
 }
 
-.univo-info-tarjeta button:hover {
-    background-color: #e91e63;
+/* Programas */
+.univo-programa {
+    background-color: #ffff;
+    border-radius: 12px;
+    padding: 50px 0 50px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin: 20px 20px 0 0px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 500px;
+}
+
+.univo-programa:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.univo-programa h4 {
+    font-size: 1.6rem;
+    color: #333;
+    margin:0 15px;
+    font-weight: 600;
+}
+
+.univo-programa i {
+    color: #392E72;
+    margin-bottom: 15px;
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.univo-programa i:hover {
     transform: scale(1.1);
 }
 
-/* Responsividad adicional */
+.univo-programa p {
+    color: #666;
+    margin:0 20px;
+}
+
+.univo-programa a.enlace {
+    color: #392E72;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.univo-programa a.enlace:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
 @media (max-width: 1024px) {
-    .univo-titulo-seccion {
-        font-size: 2.2rem;
+    .radio-container ul label{
+        display: inline-flex;
+        margin: 10px;
     }
-
-    .univo-contenido {
-        justify-content: center;
-    }
-
-    .univo-imagen-container,
-    .univo-info-tarjeta,
-    .univo-redes-sociales {
-        width: 45%;
+    .univo-facultad {
+        width: 48%;
+        display: block;
     }
 }
 
 @media (max-width: 768px) {
-    .univo-hero {
-        padding: 60px 20px;
-        /* Ajusta el padding para pantallas medianas */
+    .univo-facultad {
+        width: 100%;
     }
 
-    .univo-titulo-seccion {
-        font-size: 1.8rem;
+    .univo-titulo-seccion h2 {
+        font-size: 2rem;
     }
 
-    .univo-contenido {
-        gap: 20px;
-        flex-direction: column;
-    }
-
-    .univo-imagen-container,
-    .univo-info-tarjeta,
-    .univo-redes-sociales {
-        width: 80%;
-    }
-
-    .univo-footer {
-        font-size: 0.8rem;
+    .univo-programa {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .univo-hero {
-        padding: 50px 20px;
-        /* Ajusta el padding para pantallas más pequeñas */
-    }
-
-    .univo-titulo-seccion {
+    .univo-titulo-seccion h2 {
         font-size: 1.6rem;
     }
 
-    .univo-contenido {
-        flex-direction: column;
-        justify-content: center;
+    .univo-titulo-seccion p {
+        font-size: 1rem;
     }
+}
 
-    .univo-imagen-container,
-    .univo-info-tarjeta,
-    .univo-redes-sociales {
-        width: 90%;
-    }
+/* Radio Buttons */
+.radio-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    margin-bottom: 20px;
+}
 
-    .univo-footer {
-        font-size: 0.75rem;
-    }
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-container .radio-label {
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.radio-container input[type="radio"]:checked + .radio-label {
+    background-color: #392E72;
+    color: #fff;
 }

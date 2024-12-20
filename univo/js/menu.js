@@ -61,7 +61,8 @@ function agregarElementoMenu(icono, texto, enlace, submenus = [], target = null)
 const inicio = "/univo-servicio/univo";
 
 const basePath = "/univo-servicio/principal/src";
-const other_basePath = "/univo-servicio/principal/src";
+const univos = "/univo-servicio/univo/src";
+const other_basePath = "/univo-servicio/univo/src";
 
 
 
@@ -110,14 +111,14 @@ agregarElementoMenu(
     "Oferta educativa",
     "#",
     [
-        { texto: "Primaria Particular Valle de Orizaba", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Secundaria Valle de Orizaba", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Bachilleres Valle de Orizaba", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Licenciatura", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Posgrado", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Educación continua", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Centro de idiomas extranjeros", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Univo con el adulto mayor", enlace: `${basePath}/oferta_edu/planteles.html` },
+        { texto: "Primaria Particular Valle de Orizaba", enlace: "/univo-servicio/primaria" },
+        { texto: "Secundaria Valle de Orizaba", enlace: "/univo-servicio/secundaria" },
+        { texto: "Bachilleres Valle de Orizaba", enlace: "/univo-servicio/preparatoria" },
+        { texto: "Licenciatura", enlace: `${univos}/oferta_edu/index.html` },
+        { texto: "Posgrado", enlace: "#" },
+        { texto: "Educación continua", enlace: "#" },
+        { texto: "Centro de idiomas extranjeros", enlace: "#"},
+        { texto: "Univo con el adulto mayor", enlace: "#" },
 
     ]
 );
@@ -154,7 +155,7 @@ agregarElementoMenu(
             texto: "Sise",
             enlace: "#",
             submenus: [
-                { texto: "Alumnos", enlace: "https://sise.univo.edu.mx/SISEWEB/WebBach/Autenticacion.php", target: "_blank" },
+                { texto: "Alumnos", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
                 { texto: "Docentes UniVO", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebDocentes/", target: "_blank" }
             ]
         },
