@@ -152,7 +152,7 @@
 }
 
 /* Estilos para pantallas grandes */
-@media (min-width: 1010px) {
+@media (min-width: 1160px) {
     .nav-list {
         display: flex;
     }
@@ -169,7 +169,7 @@
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 1010px) {
+@media (max-width: 1160px) {
     .encabezado
     {
         background-color: rgb(12,23,34);
