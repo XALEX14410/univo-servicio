@@ -44,94 +44,171 @@
     color: white;
 }
 
-.program-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
-    gap: 20px;
-    padding: 20px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
 .padding--60-0{
     padding: 60px 0;
+}        
+/* Estilo general para el contenedor principal */
+.container {
+    display: grid;
+    grid-template-areas:
+        "left-top center top-right"
+        "left center right"
+        "bottom-left bottom-center bottom-right";
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.program-grid a {
-    display: block;
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
+/* Estilo para los enlaces dentro del contenedor */
+.container > a {
+    width: 220px;
+    min-height: 80px;
+    height: 100%;
     background-color: #0073e6;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
     text-decoration: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.3s ease;
 }
 
-.program-grid a:hover {
+/* Efecto hover para los enlaces */
+.container > a:hover {
     background-color: #005bb5;
 }
 
-.career-info {
-    text-align: center;
-    padding: 10px;
-    border-radius: 12px;
-    margin: 0px auto;
+/* Estilos para la sección .center */
+.center {
+    grid-area: center;
+    width: 800px;
+    height: 500px;
+    background: linear-gradient(45deg, #7f7eff, #67e6dc);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1px;
-}
-
-.career-info h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #0073e6;
-}
-
-.career-info p {
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.career-info img {
-    max-width: 100%;
-    height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.icon-container {
+/* Imagen dentro de .center */
+.center img {
+    max-width: 80%;
+}
+
+/* Estilos para las áreas del grid */
+.top-left { grid-area: left-top; }
+.top-right { grid-area: top-right; }
+.left { grid-area: left; }
+.right { grid-area: right; }
+.bottom-left { grid-area: bottom-left; }
+.bottom-right { grid-area: bottom-right; }
+
+/* Estilos para .bottom-center */
+.bottom-center {
+    grid-column: 1 / 4; /* Ocupa las 3 columnas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 5px;
+    justify-items: center;
+    padding: 10px;
+}
+
+/* Estilos para los enlaces dentro de .bottom-center */
+.bottom-center-item {
+    width: 100%;
+    min-height: 100px;
+    height: 100%;
+    background-color: #0073e6;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    min-height: 300px;
-    font-size: 4rem;
-    color: #ffffff;
-    border-radius: 5px;
-    margin: 0 auto;
+    transition: background-color 0.3s ease;
 }
 
-.career-info a {
-    margin: 10px auto;
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #0073e6;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+/* Estilo general para los enlaces y botones */
+.container > a, .bottom-center-item {
+    font-size: 30px;
 }
 
-.career-info a:hover {
+/* Efecto hover para los botones dentro de .bottom-center */
+.bottom-center-item:hover {
     background-color: #005bb5;
-    transform: scale(1.05);
+    color: white;
 }
+
+/* Responsividad para resoluciones pequeñas */
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "center"
+            "top-left"
+            "top-right"
+            "left"
+            "right"
+            "bottom-left"
+            "bottom-center"
+            "bottom-right";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .container > a {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .center {
+        width: 150px;
+        height: 150px;
+    }
+
+    .center img {
+        max-width: 100%;
+    }
+}
+
+/* Asegurar que los elementos a partir del noveno ocupen las 3 columnas */
+.container > a:nth-child(n+9) {
+    grid-column: span 3;
+    justify-self: center;
+}
+
+/* Estilos para el ícono dentro de .center */
+.center i {
+    font-size: 8rem;
+    color: white;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
+
+/* Nueva funcionalidad para ocultar y mostrar contenedores según resolución */
+#old-container {
+    display: grid;
+}
+
+#new-container {
+    display: none;
+}
+
+/* Mostrar el contenedor nuevo en resoluciones más pequeñas */
+@media (min-width: 1010px) {
+    #old-container {
+        display: none; /* Ocultar el contenedor antiguo */
+    }
+
+    #new-container {
+        display: grid; /* Mostrar el contenedor nuevo */
+    }
+}
+
+
 
 .gradient-background {
     background: linear-gradient(-45deg, #e73c7e, #23a6d5, #23d5ab);
@@ -151,31 +228,4 @@
     100% {
         background-position: 0% 50%;
     }
-}
-
-@media (max-width: 1024px) {
-    .program-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
-    }
-}
-
-@media (max-width: 768px) {
-    .header-container{
-        display: inline-block;
-        
-    }
-    .program-grid {
-        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
-    }
-}
-
-
-@media (max-width: 768px) {
-
-
-    .program-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-
 }

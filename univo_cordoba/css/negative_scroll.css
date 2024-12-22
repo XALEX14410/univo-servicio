@@ -1,0 +1,4 @@
+.encabezado{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background:linear-gradient(90deg, rgba(12,25,39,1) 0%, rgb(0, 47, 94) 100%);
+}
