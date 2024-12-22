@@ -309,7 +309,7 @@
     justify-content: center;
     align-items: center;
     padding: 15px 25px;
-    min-width: 380px; /* Ancho mínimo para mantener uniformidad */
+    min-width: 250px; /* Ancho mínimo para mantener uniformidad */
     text-align: center;
     transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }

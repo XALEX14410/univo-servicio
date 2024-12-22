@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" media="screen" href="css/style.css">
-<!-- Creador: Jesus Alejandro Lara Castro -->
 
 <head>
     <meta charset="UTF-8">
@@ -9,15 +7,15 @@
     <title>Sitios web univo</title>
     <link rel="icon" href="./GEU2030-50.png" type="image/icon">
     <style>
-    :root {
-        --color_boton: #dd00ff;
-        --color_fondo: #f0f0f0;
-        --color_blanco: #fff;
-        --color_texto: #333;
-        --color_boton_hover: #a500cc;
-        --color_borde: #dd00ff;
-        --color_boton_active: #8e00b3;
-    }
+        :root {
+            --color_boton: #dd00ff;
+            --color_fondo: #f0f0f0;
+            --color_blanco: #fff;
+            --color_texto: #333;
+            --color_boton_hover: #a500cc;
+            --color_borde: #dd00ff;
+            --color_boton_active: #8e00b3;
+        }
 
         body {
             font-family: Arial, sans-serif;
@@ -32,7 +30,6 @@
 
         .container {
             position: absolute;
-
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,7 +37,6 @@
             text-align: center;
         }
 
-        
         .container main {
             display: flex;
             margin: 40px;
@@ -48,114 +44,168 @@
 
         .container main section {
             margin: 0 20px;
+            
         }
-
 
         .container a {
-        display: block;
-        margin: 15px 0;
-        padding: 15px 25px;
-        text-decoration: none;
-        color: var(--color_blanco);
-        background-color: var(--color_boton);
-        border: 2px solid var(--color_boton);
-        /* border-radius: 30px; */
-        font-size: 18px;
-        font-weight: bold;
-        /* text-transform: uppercase; */
-        letter-spacing: 1px;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .container a:hover {
-        background-color: var(--color_boton_hover);
-        color: var(--color_blanco);
-        border-color: var(--color_boton_hover);
-        transform: scale(1.05);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .container a:active {
-        background-color: var(--color_boton_active);
-        transform: scale(1);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (max-width: 768px) {
-        .container{
-            margin-top: 100%;
+            min-height: 20px;
+            
+            
+            display: block;
+            margin: 15px 0;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: var(--color_blanco);
+            background-color: var(--color_boton);
+            border: 2px solid var(--color_boton);
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
-        .container main {
-            flex-direction: column;
-            align-items: center;
+        .container a:hover {
+            background-color: var(--color_boton_hover);
+            color: var(--color_blanco);
+            border-color: var(--color_boton_hover);
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .container main section {
-            margin-bottom: 15px;
-            flex-basis: 100%;
+        .container a:active {
+            background-color: var(--color_boton_active);
+            transform: scale(1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-    }
+
+        .container a.disabled {
+            background-color: #ccc;
+            color: #666;
+            border-color: #ccc;
+            cursor: not-allowed;
+            padding-left: 25px; /* Espacio para el ícono */
+            position: relative;
+        }
+        .container a.disabled:hover{
+            background-color: red;
+            
+        }
+        .container a.disabled:hover > i{
+            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(45deg) brightness(97%) contrast(101%);
+            
+        } 
+               .container a.disabled i {
+            display: none; /* El ícono está oculto inicialmente */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* Centra el ícono */
+            font-size: inherit; /* Toma el tamaño de la fuente del enlace */
+            color: #666;
+        }
+
+        .container a.disabled.show-icon i {
+            display: block; /* Mostrar el ícono solo al pasar el cursor */
+        }
+
+        .container a.disabled span {
+            display: block; /* Asegura que el texto se muestre inicialmente */
+        }
+
+        .container a.disabled.show-icon span {
+            display: none; /* Eliminar el texto cuando el cursor pasa */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 100%;
+            }
+
+            .container main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container main section {
+                margin-bottom: 15px;
+                flex-basis: 100%;
+            }
+        }
     </style>
 </head>
 
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 <body>
-    <!-- scripts -->
-    <div class="particles" id="particles-js" id="js/app.js"> </div>
 
-
-    <script src="particles.js"></script>
-    <script src="js/app.js"></script>
-
-    <!-- count particles -->
-    <div class="count-particles">
-        <span class="js-count-particles">--</span>
-    </div>
     <div class="container">
-
         <h1>Sitios web univo</h1>
         <img src="GEU2030-50.png" width="100px" height="100px" alt="Logo univo">
-        <!-- <a href="./apartado de ideas/index.html">Apartado de ideas</a> -->
         <main>
             <section class="section1">
                 <h1>Orizaba</h1>
                 <a href="./primaria/index.html">Primaria</a>
                 <a href="./secundaria/index.html">Secundaria</a>
                 <a href="./preparatoria/index.html">Preparatoria</a>
-                <a href="./principal/index.html">Univo principal</a>
-                <a href="./univo/index.html">Univo Orizaba</a>
+
+                <a href="./univo/index.html">UniVO Orizaba</a>
             </section>
             <section class="section2">
                 <h2>Córdoba</h2>
-                <a href="./secundaria/index.html">Secundaria</a>
-                <a href="./preparatoria/index.html">Preparatoria</a>
-                <a href="./univo_cordoba/index.html">Univo Córdoba</a>
+                <a href="#" class="disabled" data-alert="true"><span>Secundaria</span></a>
+                <a href="#" class="disabled" data-alert="true"><span>Preparatoria</span></a>
+                <a href="./univo_cordoba/index.html">UniVO Córdoba</a>
+            </section>
+
+            <section class="sectio3">
+                <h2>Grupo Educativo Univo</h2>
+                <a href="./principal/index.html">UniVO principal</a>
             </section>
         </main>
     </div>
-    <!-- <script src="js/lib/stats.js"></script> -->
-    <script>
-        var count_particles, stats, update;
-        stats = new Stats;
-        stats.setMode(0);
-        stats.domElement.style.position = 'absolute';
-        stats.domElement.style.left = '0px';
-        stats.domElement.style.top = '0px';
-        document.body.appendChild(stats.domElement);
-        count_particles = document.querySelector('.js-count-particles');
-        update = function () {
-            stats.begin();
-            stats.end();
-            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-            }
-            requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
-    </script>
-    <div id="particles-js" id="js/app.js"></div>
-</body>
 
+    <!-- Bootstrap JS (opcional para componentes interactivos) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Seleccionar todos los enlaces con la clase 'disabled'
+        const disabledLinks = document.querySelectorAll('a.disabled');
+
+        disabledLinks.forEach((link) => {
+            // Crear el ícono de candado
+            const lockIcon = document.createElement('i');
+            lockIcon.classList.add('bi', 'bi-lock-fill');
+            
+            // Insertar el ícono dentro del enlace
+            link.appendChild(lockIcon);
+
+            // Agregar el evento 'mouseenter' para mostrar el ícono cuando el cursor pasa sobre el enlace
+            link.addEventListener('mouseenter', () => {
+                link.classList.add('show-icon'); // Agregar la clase para mostrar el ícono
+            });
+
+            // Agregar el evento 'mouseleave' para ocultar el ícono cuando el cursor se va
+            link.addEventListener('mouseleave', () => {
+                link.classList.remove('show-icon'); // Eliminar la clase para ocultar el ícono
+            });
+
+            // Agregar evento de SweetAlert al hacer clic
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Evita la acción predeterminada del enlace
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Página en construcción',
+                    text: 'Esta página aún no está disponible. Por favor, regresa más tarde.',
+                    confirmButtonText: 'Entendido',
+                    confirmButtonColor: '#dd00ff'
+                });
+            });
+        });
+    </script>
+</body>
 
 </html>
