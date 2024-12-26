@@ -127,9 +127,9 @@ agregarElementoMenu(
     "SISE",
     "#",
     [
-            { texto: "Alumnos Primaria", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
-            { texto: "Alumnos Secundaria", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
-            { texto: "Alumnos Bachillerato", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Primaria", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebPrimaria/SisePrimaria/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Secundaria", enlace: "https://sise.univo.edu.mx/SISEWEB/WebSecundaria/SiseSecundaria/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Bachillerato", enlace: "https://sise.univo.edu.mx/SISEWEB/WebBach/Autenticacion.php", target: "_blank" },
             { texto: "Alumnos Licenciatura", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
             { texto: "Alumnos Posgrado", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
             { texto: "Docentes UniVO", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebDocentes/", target: "_blank" }
