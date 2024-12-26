@@ -26,7 +26,7 @@ function generarFooter() {
                 <div class="social-icons">
                     <a href="#"><img src="/univo-servicio/univo/logo_redes_sociales/instagram.svg" alt="Instagram"></a>
                     <a href="#"><img src="/univo-servicio/univo/logo_redes_sociales/tiktok.svg" alt="TikTok"></a>
-                    <a href="#"><img src="/univo-servicio/univo/logo_redes_sociales/twitter-x.svg" alt="Twitter"></a>
+                    <!--<a href="#"><img src="/univo-servicio/univo/logo_redes_sociales/twitter-x.svg" alt="Twitter"></a>-->
                     <a href="#"><img src="/univo-servicio/univo/logo_redes_sociales/facebook.svg" alt="Facebook"></a>
                     <a href="#"><img src="/univo-servicio/univo/logo_redes_sociales/youtube.svg" alt="YouTube"></a>
                 </div>

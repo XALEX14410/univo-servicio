@@ -1,0 +1,243 @@
+
+.maestrias-header {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.maestrias-header-subtitle {
+    color: #012F5D;
+    font-size: 18px;
+    margin: 0;
+}
+
+.maestrias-header-title {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.maestrias-header-line {
+    width: 80px;
+    height: 3px;
+    background-color: #012F5D;
+    border: none;
+    margin: 10px auto;
+}
+
+.maestrias-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    justify-items: center;
+    background-color: #fff;
+}
+
+.maestrias-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-width: 300px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 60px 10px 60px 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.maestrias-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.maestrias-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.maestrias-card-content {
+    padding: 20px;
+}
+
+.maestrias-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.maestrias-card-button {
+    background-color: #012F5D;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.maestrias-card-button:hover {
+    background-color: #011D3B;
+}
+
+@media (max-width: 1024px) {
+    .maestrias-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .maestrias-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    background-color: #525252;
+    color: #fff;
+}
+
+.contacto-texto {
+    padding: 20px;
+}
+
+.contacto-titulo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+
+.contacto-titulo-enfasis {
+    color: #0053a7;
+}
+
+.contacto-descripcion {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.contacto-footer {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contacto-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegúrate de que tenga una altura establecida */
+    position: relative; /* Establece una posición relativa para mantener el centrado */
+}
+
+.contacto-imagen-foto {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+
+    position: absolute;
+    top: 50%;
+}
+
+
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+.contacto-input, .contacto-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contacto-input:focus, .contacto-select:focus {
+    border-color: #012F5D;
+    outline: none;
+}
+
+.contacto-boton {
+    background-color: #012F5D;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.contacto-boton:hover {
+    background-color: #011D3B;
+}
+
+
+
+.gradient-background {
+    background: linear-gradient(-45deg, #2e296e, #482273, #00486d);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-imagen {
+        order: -1;
+    }
+
+
+
+    .contacto-imagen-foto {
+    
+        position: relative;
+        top: 0%;
+   
+        max-width: 200px;
+        height: auto;
+      
+    }
+}

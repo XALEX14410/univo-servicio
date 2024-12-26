@@ -1,0 +1,276 @@
+/* Contenedor principal */
+.container-maestria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+/* Estilos de la sección principal */
+.main-content {
+    flex: 1;
+    width: 100%;
+    /* max-width: 800px; */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.2s ease;
+}
+
+
+
+/* Estilos para la barra lateral */
+.sidebar-maestria {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.2s ease;
+}
+
+
+
+/* Estilo para los títulos principales */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilos de los botones */
+.btn-download, .btn-apply-now {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    background: rgb(1, 47, 93);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download:hover, .btn-apply-now:hover {
+    background: rgb(1, 47, 93);
+    color: white;
+    transform: scale(1.01);
+}
+
+/* Estilo específico para los iconos dentro de los botones */
+.btn-download i, .btn-apply-now i {
+    color: #fff; /* Asegura que el color de los iconos sea blanco */
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+
+/* Estilo para los iconos dentro de los botones */
+.btn-download i:hover, .btn-apply-now i:hover {
+    color: #fff; /* Mantiene el color blanco al pasar el mouse por encima del icono */
+}
+
+/* Listas con márgenes */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para las secciones de descarga */
+.download-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo para las listas en la barra lateral */
+.sidebar-list, .sidebar-requirements {
+    padding-left: 20px;
+}
+
+/* Clases específicas de título y subsecciones */
+.section-title, .subsection-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.section-title i, .subsection-title i {
+    margin-right: 10px;
+}
+
+.sidebar-title {
+    font-size: 1.4em;
+    color: rgb(1, 47, 93);
+}
+.sticky{
+    position:sticky ;
+    top: 100px;
+}
+/* Efecto de transición para los iconos de la barra lateral */
+.sidebar-maestria i {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: rgb(1, 47, 93);
+    transition: color 0.3s ease;
+}
+
+.sidebar-maestria > a > i {
+
+    color: rgb(255, 255, 255);
+
+}
+
+
+/* Fondo de los botones en los enlaces */
+.sidebar-maestria a {
+    display: block;
+    padding: 12px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    background: rgb(1, 47, 93);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar-maestria a:hover {
+    background: rgb(1, 47, 93);
+    transform: scale(1.02);
+}
+
+/* Espaciado de la sección */
+section {
+    margin-bottom: 40px;
+}
+
+/* Estilos para las secciones de requisitos */
+.requisitos-section {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.requisitos-section h3 {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-maestria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar-maestria {
+        width: 100%;
+        /* max-width: 500px; */
+    }
+
+    .main-content {
+        width: 100%;
+        /* max-width: 500px; */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el proceso de admisión */
+.admission-process {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.admission-step {
+    margin-bottom: 20px;
+}
+
+.step-title {
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.step-title:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Estilos para el mensaje importante */
+.important-notice {
+    background-color: #fff3cd; /* Color de fondo amarillo claro */
+    border: 1px solid #ffeeba; /* Borde con tono más suave */
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar */
+}
+
+.important-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #856404; /* Color de texto para el título */
+    margin-bottom: 10px;
+}
+
+.important-message {
+    font-size: 16px;
+    color: #6c757d; /* Color de texto gris */
+    line-height: 1.5;
+}
+
+
+/* Estilos para el proceso de becas */
+.beca-process {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.beca-step {
+    margin-bottom: 20px;
+}
+
+
+.step-content {
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+    margin-top: 10px;
+}
+
+/* Mostrar el contenido cuando se hace clic */
+.step-content.show {
+    display: block;
+}

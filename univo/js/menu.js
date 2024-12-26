@@ -114,14 +114,29 @@ agregarElementoMenu(
         { texto: "Primaria Particular Valle de Orizaba", enlace: "/univo-servicio/primaria" },
         { texto: "Secundaria Valle de Orizaba", enlace: "/univo-servicio/secundaria" },
         { texto: "Bachilleres Valle de Orizaba", enlace: "/univo-servicio/preparatoria" },
-        { texto: "Licenciatura", enlace: `${univos}/oferta_edu/index.html` },
-        { texto: "Posgrado", enlace: "#" },
+        { texto: "Licenciatura", enlace: `${univos}/oferta_edu/licenciatura/index.html` },
+        { texto: "Posgrado", enlace: `${univos}/oferta_edu/posgrado/index.html` },
         { texto: "Educación continua", enlace: "#" },
         { texto: "Centro de idiomas extranjeros", enlace: "#"},
         { texto: "Univo con el adulto mayor", enlace: "#" },
 
     ]
 );
+agregarElementoMenu(
+    "",
+    "SISE",
+    "#",
+    [
+            { texto: "Alumnos Primaria", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Secundaria", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Bachillerato", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Licenciatura", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Posgrado", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
+            { texto: "Docentes UniVO", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebDocentes/", target: "_blank" }
+        
+    ]
+);
+
 agregarElementoMenu(
     "",
     "Servicios Estudiantiles",
@@ -146,22 +161,7 @@ agregarElementoMenu(
 );
 
 
-agregarElementoMenu(
-    "",
-    "Accesos",
-    "#",
-    [
-        {
-            texto: "Sise",
-            enlace: "#",
-            submenus: [
-                { texto: "Alumnos", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
-                { texto: "Docentes UniVO", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebDocentes/", target: "_blank" }
-            ]
-        },
-        { texto: "Correo", enlace: "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&hl=es-419&ifkv=ARpgrqdu_oyirLljRt2jAs9hNjxwoW1B0TxQzvnbT1fRPPCsFtySg7BTKvvnYH782GSqegXSWY0o&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S555486071%3A1726589019011114&ddm=0" }
-    ]
-);
+
 
 agregarElementoMenu(
     "",
