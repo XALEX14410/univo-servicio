@@ -83,7 +83,7 @@
 }
 
 .content p {
-    text-align: justify;
+    /* text-align: justify; */
     color: #333;
     margin-bottom: 20px;
 }
@@ -98,7 +98,17 @@
     color: #444;
 }
 
-
+#presenta > img{
+    object-fit: contain;
+}
+.title_departament{
+    font-size: 50px;
+    color: #203B5F;
+    margin-bottom: 15px;
+    /* border-bottom: 2px solid #203B5F; */
+    padding-bottom: 5px;
+    text-align: center;
+}
 
 .info-section {
     display: none;
@@ -335,7 +345,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    /* padding: 20px; */
     
     margin: 0 auto;
 }
@@ -391,7 +401,10 @@
         flex-direction: column;
         align-items: center;
     }
-
+    .info-block{
+        gap: 2px;
+        padding: 2px;
+    }
     .menu-btn {
         width: 80%;
         text-align: center;

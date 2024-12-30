@@ -1,3 +1,5 @@
+// Creado por: Jesus Alejandro Lara Castro
+
 // Seleccionar elementos del menú y las secciones
 const menuItems = document.querySelectorAll('.menu-item');
 const infoSections = document.querySelectorAll('.info-section');
@@ -16,6 +18,41 @@ menuItems.forEach(item => {
     document.getElementById(target).classList.remove('hidden');
   });
 });
+
+// Agregar redirección para educación continua con parámetro de URL
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleccionar todas las secciones
+  const allSections = document.querySelectorAll(".info-section");
+
+  // Ocultar todas las secciones inicialmente
+  allSections.forEach((section) => section.classList.add("hidden"));
+
+  // Obtener el parámetro "section" de la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const section = urlParams.get("section");
+
+  // Si no se recibe un parámetro "section", mostrar la sección predeterminada
+  if (!section) {
+    // Mostrar la sección 'presenta' si no hay parámetro 'section'
+    const defaultSection = document.getElementById("presenta"); // Asegúrate de que este ID exista en tu HTML
+    if (defaultSection) {
+      defaultSection.classList.remove("hidden");
+    }
+  } else {
+    // Si se recibe el parámetro "section", mostrar la sección correspondiente
+    const targetSection = document.getElementById(section);
+    if (targetSection) {
+      targetSection.classList.remove("hidden");
+    }
+  }
+});
+
+
+
+
+  
+  
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const navButtons = document.querySelectorAll(".menu-btn");
@@ -168,4 +205,9 @@ document.addEventListener("DOMContentLoaded", function () {
   licenciaturaContent.classList.remove("hidden");
   licenciaturaContent.setAttribute("aria-hidden", "false");
 });
+
+
+
+
+// para educioacion continua para un redireccionamiento a la pagina de educacion continua
 

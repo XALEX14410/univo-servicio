@@ -116,12 +116,12 @@ agregarElementoMenu(
         { texto: "Bachilleres Valle de Orizaba", enlace: "/univo-servicio/preparatoria" },
         { texto: "Licenciatura", enlace: `${univos}/oferta_edu/licenciatura/index.html` },
         { texto: "Posgrado", enlace: `${univos}/oferta_edu/posgrado/index.html` },
-        { texto: "Educación continua", enlace: "#" },
-        { texto: "Centro de idiomas extranjeros", enlace: "#"},
-        { texto: "Univo con el adulto mayor", enlace: "#" },
-
+        { texto: "Educación continua", enlace: "/univo-servicio/principal/src/servicio/vinculacion/index.html?section=educacion" },
+        { texto: "Centro de idiomas extranjeros", enlace: "/vinculacion/index.html?section=idiomas" },
+        { texto: "Univo con el adulto mayor", enlace: "/vinculacion/index.html?section=adulto-mayor" },
     ]
 );
+
 agregarElementoMenu(
     "",
     "SISE",
