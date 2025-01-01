@@ -58,10 +58,11 @@ function agregarElementoMenu(icono, texto, enlace, submenus = [], target = null)
 }
 
 // Base para las rutas
-const inicio = "/univo-servicio/univo";
+const inicio = "/univo-servicio/univo_cordoba";
 
 const basePath = "/univo-servicio/principal/src";
-const other_basePath = "/univo-servicio/principal/src";
+const univos = "/univo-servicio/univo/src";
+const other_basePath = "/univo-servicio/univo/src";
 
 
 
@@ -104,23 +105,41 @@ agregarElementoMenu(
     ]
 );
 
+// 
+// Secundaria Particular Valle de Orizaba Plantel Córdoba
+// Bachilleres UniVO Córdoba
+// Licenciatura
+// Posgrado
 
 agregarElementoMenu(
     "",
     "Oferta educativa",
     "#",
     [
-        { texto: "Primaria Particular Valle de Orizaba", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Secundaria Valle de Orizaba", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Bachilleres Valle de Orizaba", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Licenciatura", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Posgrado", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Educación continua", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Centro de idiomas extranjeros", enlace: `${basePath}/oferta_edu/planteles.html` },
-        { texto: "Univo con el adulto mayor", enlace: `${basePath}/oferta_edu/planteles.html` },
-
+        
+        { texto: "Secundaria Valle de Orizaba", enlace: "/univo-servicio/secundaria" },
+        { texto: "Bachilleres Valle de Orizaba", enlace: "/univo-servicio/preparatoria" },
+        { texto: "Licenciatura", enlace: `${univos}/oferta_edu/licenciatura/index.html` },
+        { texto: "Posgrado", enlace: `${univos}/oferta_edu/posgrado/index.html` },
+        
     ]
 );
+
+agregarElementoMenu(
+    "",
+    "SISE",
+    "#",
+    [
+            { texto: "Alumnos Primaria", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebPrimaria/SisePrimaria/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Secundaria", enlace: "https://sise.univo.edu.mx/SISEWEB/WebSecundaria/SiseSecundaria/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Bachillerato", enlace: "https://sise.univo.edu.mx/SISEWEB/WebBach/Autenticacion.php", target: "_blank" },
+            { texto: "Alumnos Licenciatura", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
+            // { texto: "Alumnos Posgrado", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebLic/Autenticacion.php", target: "_blank" },
+            { texto: "Docentes UniVO", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebDocentes/", target: "_blank" }
+        
+    ]
+);
+
 agregarElementoMenu(
     "",
     "Servicios Estudiantiles",
@@ -140,32 +159,17 @@ agregarElementoMenu(
 agregarElementoMenu(
     "",
     "Foro UniVO",
-    `#`
+    "https://sise.univo.edu.mx/WEB2/web/ForoUniVO/"
 
 );
 
 
-agregarElementoMenu(
-    "",
-    "Accesos",
-    "#",
-    [
-        {
-            texto: "Sise",
-            enlace: "#",
-            submenus: [
-                { texto: "Alumnos", enlace: "https://sise.univo.edu.mx/SISEWEB/WebBach/Autenticacion.php", target: "_blank" },
-                { texto: "Docentes UniVO", enlace: "https://sise.univo.edu.mx/WEB2/SISE/WebDocentes/", target: "_blank" }
-            ]
-        },
-        { texto: "Correo", enlace: "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&hl=es-419&ifkv=ARpgrqdu_oyirLljRt2jAs9hNjxwoW1B0TxQzvnbT1fRPPCsFtySg7BTKvvnYH782GSqegXSWY0o&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S555486071%3A1726589019011114&ddm=0" }
-    ]
-);
+
 
 agregarElementoMenu(
     "",
     "UniVO Orizaba",
-    `#`
+    "/univo-servicio/univo"
 
 );
 

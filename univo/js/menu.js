@@ -156,7 +156,7 @@ agregarElementoMenu(
 agregarElementoMenu(
     "",
     "Foro UniVO",
-    `#`
+    "https://sise.univo.edu.mx/WEB2/web/ForoUniVO/"
 
 );
 
@@ -166,7 +166,7 @@ agregarElementoMenu(
 agregarElementoMenu(
     "",
     "UniVO Córdoba",
-    `#`
+    `${inicio}_cordoba/index.html`
 
 );
 

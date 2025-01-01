@@ -82,7 +82,16 @@
     position: relative;
     padding: 6px 0px;
 }
+.nav-list li {
+    text-shadow: -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px -0.5px 0 #000;
+}
+.nav-list ul > li, .nav-list li:hover  {
+    text-shadow: none;
 
+}
 .nav-list li a {
     color: #ffffff;
     text-decoration: none;
