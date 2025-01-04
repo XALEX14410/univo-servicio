@@ -117,7 +117,8 @@ agregarElementoMenu(
         { texto: "Servicio social", enlace:  `${basePath}/servicio/servicio_social` },
         { texto: "Titulación", enlace: `${basePath}/servicio/titulacion` },
         { texto: "Vinculación", enlace: `${basePath}/servicio/vinculacion` },
-        { texto: "Deportivo", enlace:  `${basePath}/servicio/cultura` },
+        { texto: "Cultural", enlace:  `${basePath}/servicio/cultura` },
+        { texto: "Deportivo", enlace:  `${basePath}/servicio/deportivo` },
         { texto: "Servicios bibliotecarios", enlace: `${basePath}/servicio/servicios_bibliotecarios`  },
         { texto: "Sistema médico", enlace: `${basePath}/servicio/servicio_medico` }
         
