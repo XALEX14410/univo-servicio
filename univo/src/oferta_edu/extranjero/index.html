@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univo</title>
+    <link rel="icon" href="/univo-servicio/univo/img/GEU2030-50.png" type="image/icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/header.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/all.min.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/aos.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/footer.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/estilos.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/bg_img.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/loader.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/conatainer.css">
+    <!-- <link rel="stylesheet" href="/univo-servicio/univo/css/p_conatainer.css"> -->
+    <!-- <link rel="stylesheet" href="/univo-servicio/univo/css/p_conatainer2.css"> -->
+    <!-- <link rel="stylesheet" href="/univo-servicio/univo/css/carousel/carousel.css"> -->
+    <link rel="stylesheet" href="/univo-servicio/univo/css/scroll.css">
+    <!-- <link rel="stylesheet" href="/univo-servicio/univo/css/posgrados.css"> -->
+    <link rel="stylesheet" href="/univo-servicio/univo/css/info_posgrados.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/negative_scroll.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="encabezado" id="encabezado">
+        <!-- Loader -->
+        <div class="centrado hidden">
+            <div class="centrado__icono"></div>
+        </div>
+
+
+        <!-- Botón de menú para pantallas pequeñas -->
+        <button class="nav-toggle" id="nav-toggle">
+            <i class="bi bi-list"> </i> <!-- Icono de hamburguesa -->
+            <i class="bi bi-x-lg"> </i> <!-- Icono de cierre -->
+        </button>
+        <div class="logo-container">
+            <img src="/univo-servicio/univo/img/UniVO-blanco.png" alt="Logo escolar" class="logo">
+        </div>
+        <!-- Barra de navegación -->
+        <nav class="barra-navegacion" id="barra-navegacion">
+
+            <ul class="nav-list" id="nav_list">
+
+
+            </ul>
+        </nav>
+
+
+    </header>
+    <!-- End header -->
+
+
+
+
+    <!-- Main  -->
+    <main class="contenido">
+
+
+        <section class="info_presentation2">
+            <header class="header-maestria">
+                <h1 class="visible">Centro de Idiomas Extranjeros</h1>
+            </header>
+            <script>
+                // Textos en diferentes idiomas
+                const textos = [
+                    "Centro de Idiomas Extranjeros", // Español
+                    "Foreign Language Center", // Inglés
+                    "Centre de Langues Étrangères", // Francés
+                    "Centro de Idiomas Estrangeiros" // Portugués
+                ];
+
+                let index = 0;
+                const header = document.querySelector(".header-maestria h1");
+
+                setInterval(() => {
+                    // Ocultar texto actual
+                    header.classList.remove("visible");
+                    header.classList.add("hidden");
+
+                    setTimeout(() => {
+                        // Cambiar el texto después de que esté oculto
+                        index = (index + 1) % textos.length;
+                        header.textContent = textos[index];
+
+                        // Mostrar el nuevo texto
+                        header.classList.remove("hidden");
+                        header.classList.add("visible");
+                    }, 800); // Tiempo para la transición de ocultar
+                }, 3000); // Tiempo entre cambios de texto
+            </script>
+            <div class="container-maestria">
+                <!-- Contenido Principal -->
+                <div class="main-content">
+                    <h2 class="section-title">INTRODUCCIÓN</h2>
+                    <p>La Universidad del Valle de Orizaba en su Centro de Idiomas Extranjeros te ofrece la oportunidad
+                        de prepararte y certificarte en el idioma, a través de los exámenes que ofrecemos al alumnado de
+                        la Universidad del Valle de Orizaba y al público en general. Puedes certificarte en los exámenes
+                        TOEFL INSTITUTIONAL (ITP), TOEFL Junior y TOEFL Primary.</p>
+                    <p>Cursos de Inglés:</p>
+                    <ul>
+                        <li>
+                            <p>Horarios y precios accesibles. El Centro de Idiomas Extranjeros UniVO funciona como tú
+                                quieras que sea, nuestros horarios son los más accesibles. Si tú y un grupo de 10 amigos
+                                o compañeros deciden el horario los días de su elección, las horas serán respetadas
+                                siempre y cuando sean 10 personas.</p>
+                        </li>
+                        <li>
+                            <p>Grupos reducidos, profesorado excelente, con alto sentido de responsabilidad y manejo de
+                                grupo.</p>
+                        </li>
+                        <p>
+                        <p>Aplicación de Examen TOEFL ITP con 3 horas de preparación previa (Haz clic en el banner de
+                            abajo para más información)</p>
+                        </p>
+                        <li>
+                            <p>¡NUEVO! Cursos Semestrales de 54 horas totales, 3 horas entre semana, con material de
+                                clase incluido en el costo. ¡Aparta tu lugar! Para esto, puedes dar click aquí.</p>
+                        </li>
+                        <li>
+                            <p>¡NUEVO! Cursos de preparación para TOEFL ITP con el costo del examen incluido. Durante 5
+                                sábados de 3 horas cada uno a partir de las 10 am te preparamos para el examen y
+                                resuelves un examen de práctica en computadora para evaluar el puntaje que obtengas
+                                antes de realizar el examen oficial (Mínimo 10 personas). Horario entre semana: de 6 a 7
+                                pm de Lunes a Miércoles (Se abren cursos con mínimo de 10 personas).</p>
+                        </li>
+                    </ul>
+
+                    <h3 class="subsection-title">OBJETIVO</h3>
+                    <p>El Centro de idiomas ha sido creado principalmente para proveer, a nuestros alumnos y al público
+                        en general, los idiomas extranjeros necesarios para cualquier forma de comunicación
+                        internacional, también, nuestro Centro de Idiomas Extranjeros UniVO proporciona el acceso a la
+                        cultura del idioma, el fomento de la internacionalización de todos nuestros estudios y negocios
+                        dentro de una atmósfera de concordancia comunicativa en las principales habilidades y
+                        competencias que cualquier idioma requiere para su adquisición. Con esto, preparamos a cualquier
+                        persona interesada en los idiomas que impartimos para ser un ciudadano del mundo.</p>
+
+
+                    <h3 class="subsection-title">EXINE UniVO</h3>
+                    <p>El EXINE es una evaluación institucional que todos los egresados de nivel Licenciatura de la
+                        Universidad del Valle de Orizaba deben acreditar, puesto que es requisito indispensable para la
+                        titulación.</p>
+
+                    <p>El EXINE evalúa tus habilidades en el uso del idioma inglés y es necesario que lo presentes aún
+                        cuando hayas acreditado todos los niveles de inglés que incluye tu plan de estudios de forma
+                        curricular o extracurricular. Si tienes dudas te recomendamos acudir al departamento del Centro
+                        de Idiomas Extranjeros.</p>
+
+                    <p>Importante:</p>
+                    <ul>
+                        <li>
+                            <p>Para presentar el EXINE es necesario agendar una fecha (registro en línea), pues las
+                                aplicaciones tienen cupo limitado. Consulta el calendario de aplicaciones.</p>
+                        </li>
+                        <li>
+                            <p>La primera administración de este examen NO tiene costo; la segunda tiene un costo de
+                                1200.</p>
+                        </li>
+                    </ul>
+
+                    <p>Requisitos:</p>
+                    <ul>
+                        <li>
+                            <p>El registro en línea lo deberás realizarlo desde tu SISE Web con al menos 5 días de
+                                anticipación a la fecha en que deseas aplicar.</p>
+                        </li>
+                        <li>
+                            <p>Presentar comprobante de no adeudo (de asignaturas y aranceles) firmado y sellado por
+                                Dirección de facultad y Caja. El formato lo proporciona el Centro de Idiomas
+                                Extranjeros.</p>
+                        </li>
+                    </ul>
+
+                    <p>Observaciones:</p>
+                    <ul>
+                        <li>
+                            <p>El día de la aplicación presentarse 20 minutos antes, para firmar hoja de registro; con
+                                identificación oficial.</p>
+                        </li>
+                        <li>
+                            <p>Aplicaciones sujetas a la conformación de un grupo de mínimo 5 personas y máximo 20</p>
+                        </li>
+
+                        <li>
+                            <p>La emisión de constancias se realizará 5 días hábiles posteriores a la fecha de
+                                presentación.</p>
+                        </li>
+                    </ul>
+
+
+                    <h3 class="subsection-title">Centro de Aplicación de la Familia de Exámenes TOEFL</h3>
+                    <p>El examen TOEFL es el examen de idioma inglés más respetado de todo el mundo, ha sido reconocido
+                        por más de 9,000 centros de estudios, universidades y organizaciones de más de 130 países, entre
+                        los que se incluyen Australia, Canadá, el Reino Unido y los Estados Unidos. </p>
+
+                        <object data="/univo-servicio/principal/pdf/CalendarioTitulacion.pdf" type="application/pdf"
+                        width="100%" height="800px"></object>
+
+                        <form action="#" method="post" class="contact-form">
+                            <div class="form-field">
+                              <label for="name">Nombre:</label>
+                              <input type="text" id="name" name="name" placeholder="Nombre Apellido" required>
+                            </div>
+                          
+                            <div class="form-field">
+                              <label for="email">E−mail:</label>
+                              <input type="email" id="email" name="email" placeholder="nombre@domain.com" required>
+                            </div>
+                          
+                            <div class="form-field">
+                              <label for="subject">Asunto:</label>
+                              <input type="text" id="subject" name="subject" placeholder="Información General" required>
+                            </div>
+                          
+                            <div class="form-field">
+                              <label for="message">Mensaje:</label>
+                              <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+                          
+                            <button type="submit">Enviar</button>
+                          </form>
+                          
+    
+
+
+
+                    <div class="download-section">
+                        <a href="#" class="btn-download"><i class="bi bi-download"></i> Descargar Plan de Estudios</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+    <!-- End main -->
+
+
+    <!-- End main -->
+    <script src="/univo-servicio/univo/js/admision_list.js"></script>
+    <script src="/univo-servicio/univo/js/menu.js"></script>
+    <!-- <script src="/univo-servicio/univo/js/header.js"></script> -->
+    <!-- <script src="/univo-servicio/univo/js/loader.js"></script> -->
+    <script src="/univo-servicio/univo/js/nav-toggle.js"></script>
+    <script src="/univo-servicio/univo/js/generarFooter.js"></script>
+    <script>
+        // Invoca la función al cargar la página
+        document.addEventListener('DOMContentLoaded', generarFooter);
+    </script>
+    <script src="/univo-servicio/univo/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/univo-servicio/univo/js/popper.min.js"></script>
+    <!-- <script src="/univo-servicio/univo/js/bosstrap/bootstrap.min.js"></script> -->
+    <!-- <script src="/univo-servicio/univo/js/carousel/carousel.js"></script> -->
+    <!-- <script src="js/bosstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/bosstrap/bootstrap.bundle.min.js.map"></script> -->
+    <script src="/univo-servicio/univo/js/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- <script src="/univo- servicio/univo/js/scroll.js"></script> -->
+    <script src="/univo-servicio/univo/js/script_univo.js"></script>
+</body>
+
+</html>
