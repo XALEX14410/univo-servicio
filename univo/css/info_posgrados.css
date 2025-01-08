@@ -209,10 +209,10 @@ section {
     text-align: center;
     white-space: nowrap;
 }
-.hidden {
+/* .hidden {
     transform: translateY(-100%);
     opacity: 0;
-}
+} */
 
 .visible {
     transform: translateY(0);
