@@ -16,6 +16,7 @@
     background: rgb(255, 255, 255); /* Fondo semi-transparente */
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     z-index: 2;
     opacity: 1;
@@ -44,3 +45,32 @@
     0%, 50%, 100% { transform: scale(1); }
     30%, 80% { transform: scale(0.92); }
 }
+
+.uk-progress {
+    width: 80%;
+    max-width: 500px;
+    height: 10px;
+    border-radius: 5px;
+    appearance: none;
+
+    /* Fondo de la barra de progreso */
+    background-color: #f0f0f0 !important; /* Garantiza que se aplique este color de fondo */
+
+    /* Transición suave */
+    &::-webkit-progress-value {
+        background-color: magenta !important;
+        transition: width 0.4s ease !important;
+    }
+
+    &::-moz-progress-bar {
+        background-color: magenta !important;
+        transition: width 0.4s ease !important;
+    }
+
+    &::-ms-fill {
+        background-color: magenta !important;
+        transition: width 0.4s ease !important;
+    }
+}
+
+
