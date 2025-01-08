@@ -26,8 +26,7 @@
     <!-- <link rel="stylesheet" href="/univo-servicio/univo/css/p_conatainer2.css"> -->
     <!-- <link rel="stylesheet" href="/univo-servicio/univo/css/carousel/carousel.css"> -->
     <link rel="stylesheet" href="/univo-servicio/univo/css/scroll.css">
-    <!-- <link rel="stylesheet" href="/univo-servicio/univo/css/posgrados.css"> -->
-    <link rel="stylesheet" href="/univo-servicio/univo/css/info_posgrados.css">
+    <link rel="stylesheet" href="/univo-servicio/univo/css/centro_de_idiomas_ofedu.css">
     <link rel="stylesheet" href="/univo-servicio/univo/css/negative_scroll.css">
 </head>
 
@@ -37,6 +36,7 @@
         <!-- Loader -->
         <div class="centrado hidden">
             <div class="centrado__icono"></div>
+            <progress class="uk-progress"></progress>
         </div>
 
 
@@ -68,10 +68,13 @@
     <main class="contenido">
 
 
-        <section class="info_presentation2">
+        <section class="info_presentation2 padding">
             <header class="header-maestria">
-                <h1 class="visible">Centro de Idiomas Extranjeros</h1>
+                <div class="header-text-container">
+                    <h1 class="visible">Centro de Idiomas Extranjeros</h1>
+                </div>
             </header>
+
             <script>
                 // Textos en diferentes idiomas
                 const textos = [
@@ -82,24 +85,51 @@
                 ];
 
                 let index = 0;
-                const header = document.querySelector(".header-maestria h1");
+                const header = document.querySelector(".header-maestria .header-text-container");
+
+                // Establecer la primera bandera (España) al cargar la página
+                document.addEventListener("DOMContentLoaded", () => {
+                    header.style.transition = 'background-image 1s ease-in-out';  // Animación de la bandera
+                    header.style.backgroundImage = `url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1920px-Flag_of_Mexico.svg.png')`; // Bandera de España
+                    header.querySelector("h1").textContent = textos[0]; // Mostrar el primer texto al cargar
+                    header.querySelector("h1").classList.add("visible"); // Hacer visible el primer texto
+                });
 
                 setInterval(() => {
                     // Ocultar texto actual
-                    header.classList.remove("visible");
-                    header.classList.add("hidden");
+                    header.querySelector("h1").classList.remove("visible");
+                    header.querySelector("h1").classList.add("hidden");
 
                     setTimeout(() => {
                         // Cambiar el texto después de que esté oculto
                         index = (index + 1) % textos.length;
-                        header.textContent = textos[index];
+                        const currentText = textos[index];
+
+                        // Cambiar la bandera de fondo según el idioma
+                        if (index === 0) {
+                            header.style.backgroundImage = `url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1920px-Flag_of_Mexico.svg.png')`; // Bandera de España
+                        } else if (index === 1) {
+                            header.style.backgroundImage = `url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1920px-Flag_of_the_United_Kingdom_%281-2%29.svg.png')`; // Bandera del Reino Unido
+                        } else if (index === 2) {
+                            header.style.backgroundImage = `url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg')`; // Bandera de Francia
+                        } else if (index === 3) {
+                            header.style.backgroundImage = `url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png')`; // Bandera de Brasil
+                        }
+
+                        header.querySelector("h1").textContent = currentText;
 
                         // Mostrar el nuevo texto
-                        header.classList.remove("hidden");
-                        header.classList.add("visible");
+                        header.querySelector("h1").classList.remove("hidden");
+                        header.querySelector("h1").classList.add("visible");
                     }, 800); // Tiempo para la transición de ocultar
                 }, 3000); // Tiempo entre cambios de texto
+
             </script>
+
+
+
+
+
             <div class="container-maestria">
                 <!-- Contenido Principal -->
                 <div class="main-content">
@@ -203,11 +233,14 @@
                     <p>El examen TOEFL es el examen de idioma inglés más respetado de todo el mundo, ha sido reconocido
                         por más de 9,000 centros de estudios, universidades y organizaciones de más de 130 países, entre
                         los que se incluyen Australia, Canadá, el Reino Unido y los Estados Unidos. </p>
+                    <div class="download-section">
+                        <a href="#" class="btn-download"><i class="bi bi-download"></i> Descargar PDF</a>
+                    </div>
 
-                        <object data="/univo-servicio/principal/pdf/CalendarioTitulacion.pdf" type="application/pdf"
-                        width="100%" height="800px"></object>
-
-                        <form action="#" method="post" class="contact-form">
+                    <div class="download-section">
+                        <a href="#" class="btn-apply-now"><i class="bi bi-envelope-at-fill"></i>Contactanos</a>
+                    </div>
+                    <!-- <form action="#" method="post" class="contact-form">
                             <div class="form-field">
                               <label for="name">Nombre:</label>
                               <input type="text" id="name" name="name" placeholder="Nombre Apellido" required>
@@ -229,15 +262,13 @@
                             </div>
                           
                             <button type="submit">Enviar</button>
-                          </form>
-                          
-    
+                          </form> -->
 
 
 
-                    <div class="download-section">
-                        <a href="#" class="btn-download"><i class="bi bi-download"></i> Descargar Plan de Estudios</a>
-                    </div>
+
+
+
                 </div>
 
 

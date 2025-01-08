@@ -1,0 +1,334 @@
+/* Contenedor principal */
+.container-maestria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px; /* Espaciado entre los elementos */
+    background: #f9f9f9; /* Fondo suave para agregar contraste */
+}
+
+/* Estilos de la sección principal */
+.main-content {
+    flex: 1;
+    width: 100%;
+    padding: 30px;
+    background: #fff ;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 1px solid #ddd; /* Agregué un borde sutil */
+}
+
+.padding {
+    padding:100px 50px;
+}
+
+/* Estilos para la barra lateral */
+.sidebar-maestria {
+    width: 100%;
+    max-width: 380px;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+
+
+/* Estilo para los títulos principales */
+h1, h2, h3 {
+    color: #2d3e50;
+    margin-bottom: 12px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700; /* Aumento el peso para mayor presencia */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para el texto */
+}
+
+/* Estilos de los botones */
+.btn-download, .btn-apply-now {
+    display: inline-block;
+    padding: 14px 24px;
+    color: #fff;
+    background: #01305f;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.btn-download:hover, .btn-apply-now:hover {
+    background: #014f7b;
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #f0f0f0; /* Cambio de color en hover */
+}
+
+/* Estilo para los iconos dentro de los botones */
+.btn-download i, .btn-apply-now i {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+/* Estilos de las listas */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+ul li:hover {
+    color: #01305f; /* Color de texto al pasar el ratón */
+}
+
+/* Estilo para las secciones de requisitos */
+.requisitos-section {
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.requisitos-section h3 {
+    color: #333;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+/* Efecto de transición para los iconos de la barra lateral */
+.sidebar-maestria i {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #01305f;
+    transition: color 0.3s ease;
+}
+
+.sidebar-maestria > a > i {
+    color: #fff;
+}
+
+/* Fondo de los botones en los enlaces */
+.sidebar-maestria a {
+    display: block;
+    padding: 14px 24px;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #01305f;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.sidebar-maestria a:hover {
+    background: #014f7b;
+    transform: scale(1.05);
+    color: #f0f0f0; /* Cambio de color del texto */
+}
+
+/* Estilos para el visor de PDF */
+object {
+    width: 100%;
+    height: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+object:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-maestria {
+        flex-direction: column;
+        align-items: center;
+    }
+    .padding {
+        padding: 100px 10px;
+    }
+    .sidebar-maestria {
+        width: 100%;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+/* Estilos del formulario de contacto */
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+} */
+
+/* Estilos para los campos del formulario */
+.contact-form .form-field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-field label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-form .form-field input,
+.contact-form .form-field textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .form-field input:focus,
+.contact-form .form-field textarea:focus {
+    border-color: #01305f;
+    box-shadow: 0 0 8px rgba(1, 47, 93, 0.3);
+}
+
+/* Estilo para el botón de envío */
+.contact-form button {
+    background: #01305f;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background: #014f7b;
+    transform: scale(1.05);
+}
+
+/* Estilos para mensajes de error o validación */
+.contact-form .error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form .form-field {
+        margin-bottom: 15px;
+    }
+
+    .contact-form button {
+        font-size: 1em;
+    }
+}
+.header-maestria {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    background: #f5f5f5 url("./../img/ofedu/principal.jpg") no-repeat center center / cover; /* Fondo */
+    
+}
+
+.header-text-container {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    position: relative;
+    background: rgba(255, 255, 255, 0.7) no-repeat center center / cover; /* Fondo blanco con opacidad */
+    padding: 10px;
+    min-height: 400px;
+    max-width: 1000px; /* Limitar el ancho máximo */
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.header-maestria h1 {
+    margin: 0;
+    padding: 30px;
+    color: rgb(1, 47, 93);
+    font-size: 3rem;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    background-color: rgba(255, 255, 255, 0.886); /* Fondo blanco con opacidad */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra de texto más suave */
+    word-wrap: break-word; /* Esto hace el salto de línea cuando sea necesario */
+    overflow-wrap: break-word; /* Asegura que el texto se rompa si es largo */
+    text-align: center; /* Asegura que el texto esté centrado dentro de su contenedor */
+}
+
+
+.header-maestria h1.hidden {
+    opacity: 0;
+}
+
+.header-maestria h1.visible {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .header-maestria
+    {
+        min-height: 400px;
+    }
+    .header-text-container{
+        min-height: 200px;
+    }
+}
+
+
+.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
