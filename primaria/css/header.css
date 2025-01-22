@@ -242,7 +242,7 @@ Creado por: Jesus Alejandro Lara
     opacity: 0;
     transform: translateX(0px);
     transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
-    left: 100px;
+    /* left: 100px; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
     
@@ -268,7 +268,7 @@ Creado por: Jesus Alejandro Lara
     display: block;
     opacity: 1;
     
-    transform: translateX(100px);background-color: #f9f9f9; /* Fondo del submenú */
+    transform: translateX(0px);background-color: #f9f9f9; /* Fondo del submenú */
 }
 @-moz-document url-prefix() {
     .submenu  > .submenu_2 {
@@ -319,7 +319,7 @@ Creado por: Jesus Alejandro Lara
         left: 0;
         width: 100%;
         max-height: 100vh;
-        overflow: scroll;
+        
         border-radius: 5px;
         padding: 5px 0;
         display: none; /* Se muestra solo cuando es activado */
@@ -368,7 +368,7 @@ Creado por: Jesus Alejandro Lara
         z-index: 1;
         opacity: 0;
         max-height: 350px;
-        
+        overflow-x: hidden;
         height: auto;
         overflow-y: auto;
         transition: max-height 0.5s ease, opacity 0.5s ease;

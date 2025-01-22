@@ -27,7 +27,7 @@ body {
   --bg-header: white; /* Fondo del encabezado */
   --bg-animation: headerAnimation 5s infinite; /* Animación del encabezado */
   --logo-max-width: 300px; /* Ancho máximo del logo */
-  --logo-height: 100px; /* Altura del logo */
+  --logo-height: 80px; /* Altura del logo */
   --nav-link-color: #333; /* Color de los enlaces del menú */
   --nav-link-hover-color: #986CA9; /* Color de hover en los enlaces */
 
