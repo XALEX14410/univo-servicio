@@ -1,9 +1,9 @@
 /* Contenedor de la galería */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Ajuste para dispositivos más pequeños */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajuste para dispositivos más pequeños */
     gap: 50px; /* Espacio entre los elementos */
-    padding: 40px; /* Espaciado interno */
+    padding: 20px; /* Espaciado interno */
     width: 100%;
     margin: auto;
 }

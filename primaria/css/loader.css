@@ -58,17 +58,17 @@
 
     /* Transición suave */
     &::-webkit-progress-value {
-        background-color: magenta !important;
+        background-color: #40A0DA !important;
         transition: width 0.4s ease !important;
     }
 
     &::-moz-progress-bar {
-        background-color: magenta !important;
+        background-color: #40A0DA !important;
         transition: width 0.4s ease !important;
     }
 
     &::-ms-fill {
-        background-color: magenta !important;
+        background-color: #40A0DA !important;
         transition: width 0.4s ease !important;
     }
 }

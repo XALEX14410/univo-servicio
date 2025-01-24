@@ -1,10 +1,13 @@
 .grid-container-escolar {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 20px;
-    padding: 20px 100px 20px 100px;
-    
-  }
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajuste para dispositivos más pequeños */
+    gap: 50px; /* Espacio entre los elementos */
+    padding: 50px; /* Espaciado interno */
+    width: 100%;
+    margin: auto;
+
+}
+
   .titulo-grado {
     background-color: #40A0DA;
     color: white;
@@ -75,20 +78,53 @@
     border-radius: 4px;
 }
   
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .inicial_titulo{
         padding-top: 60px;
         text-align: center;
     }
     
     
-    .contenido{
-        
-        padding: 0px 0 80px 0;
-    }
+
     .grid-container-escolar {
-        padding: 0;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajustar para pantallas más pequeñas */
+        gap: 60px; /* Espacio más pequeño en móviles */
+        
+        margin: 0px;
 
     }
+}
+/* Estilos responsivos */
+@media (max-width: 768px){
+    
+    .grid-container-escolar {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustar para pantallas más pequeñas */
+        gap: 30px; /* Espacio más pequeño en móviles */
+        padding: 0;
+        margin: 0px;
+
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 430px){
+    
+    .grid-container-escolar {
+        grid-template-columns: 1fr;/*Ajustar para pantallas más pequeñas */
+        
+        padding: 0;
+        
+
+    }
+}
+
+@media (max-width: 320px){
+    .grid-container-escolar {
+        grid-template-columns: 1fr;/*Ajustar para pantallas más pequeñas */
+        
+        
+        margin: -10px;
+
+    }
+    
 }
