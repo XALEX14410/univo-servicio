@@ -51,6 +51,7 @@
 
 .social-icons {
     margin: 20px 0; /* Espacio entre iconos sociales */
+    filter: invert(100%);
 }
 
 
