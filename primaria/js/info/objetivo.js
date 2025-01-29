@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const contenido = [
         {
-            title: "Historia",
-            description: "Grupo Educativo UniVO crea a partir de agosto de 2005 la Primaria Particular del Valle de Orizaba, una institución Privada incorporada a la Secretaría de Educación de Veracruz con la Clave de Centro de Trabajo 30PPR0020J y No. de Acuerdo PRI001/2005, siendo actualmente de las más importantes de la Zona centro del Estado de Veracruz; basada en los mismos valores y principios que fundamentan la vida de nuestra comunidad educativa.",
+            title: "Objetivo",
+            description: "Asegurar que los niños adquieran conocimientos y desarrollen habilidades intelectuales, que les                    permitan aprender permanentemente y con independencia; se formen éticamente mediante el conocimiento                    de sus derechos, deberes y la práctica de valores, así como el desarrollo de actitudes para el                    aprecio de las artes y ejercicio físico.",
             // images: [
             //     "/univservicio/primaria/../img/GEU2030-50.png",
             //     "/univseicio/primaria/../img/GEU2031-51.png"

@@ -13,7 +13,9 @@
     gap: 25px; /* Espacio más amplio entre los elementos */
 }
 
-.contact-item {  
+.contact-item {
+    word-wrap:normal;
+    overflow-wrap:anywhere;  
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 20px; /* Espaciado interno más grande */
@@ -24,13 +26,13 @@
 }
 
 .contact-item h3 {
-    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
     margin-bottom: 12px;
     color: #333;
 }
 
 .contact-item p {
-    font-size: 1rem; /* Fuente más grande para el texto */
+    font-size: 1.2rem; /* Fuente más grande para el texto */
     color: #666;
     margin: 0;
 }

@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const contenido = [
         {
-            title: "Historia",
-            description: "Grupo Educativo UniVO crea a partir de agosto de 2005 la Primaria Particular del Valle de Orizaba, una institución Privada incorporada a la Secretaría de Educación de Veracruz con la Clave de Centro de Trabajo 30PPR0020J y No. de Acuerdo PRI001/2005, siendo actualmente de las más importantes de la Zona centro del Estado de Veracruz; basada en los mismos valores y principios que fundamentan la vida de nuestra comunidad educativa.",
+            title: "Misión",
+            description: "Participar en la formación integral de sus estudiantes, promoviendo armónicamente el desarrollo de habilidades cognitivas y destrezas psicomotoras, siempre comprometidos con su entorno y capaces de enfrentar con éxito los retos que la vida les presente.",
             // images: [
             //     "/univservicio/primaria/../img/GEU2030-50.png",
             //     "/univseicio/primaria/../img/GEU2031-51.png"
@@ -16,7 +16,25 @@ document.addEventListener('DOMContentLoaded', function () {
             //     { platform: "twitter", url: "https://twitter.com/univo_primaria" },
             //     { platform: "instagram", url: "https://www.instagram.com/univo.primaria" }
             // ],
-            id: "historia"
+            id: "mision"
+        },
+        {
+            title: "Visión",
+            description: "Impartir educación primaria de alta calidad; donde los niños logren apropiarse de los contenidos educativos, solucionen problemas de carácter práctico y logren desarrollar competencias amplias para vivir y convivir en una sociedad cada vez más compleja. Logrando que la educación primaria contribuya a la formación de ciudadanos y seres humanos capaces de actuar con juicio crítico frente a los valores y normas sociales, culturales y el cuidado del medio ambiente.",
+            // images: [
+            //     "/univservicio/primaria/../img/GEU2030-50.png",
+            //     "/univseicio/primaria/../img/GEU2031-51.png"
+            // ],
+            // videos: [ // Desactivado
+            //     { url: "https://www.youtube.com/embed/xxxxxx", title: "Video de Historia" },
+            //     { url: "https://www.youtube.com/embed/yyyyyy", title: "" } // Título vacío
+            // ],
+            // social: [
+            //     { platform: "facebook", url: "https://www.facebook.com/univo.primaria" },
+            //     { platform: "twitter", url: "https://twitter.com/univo_primaria" },
+            //     { platform: "instagram", url: "https://www.instagram.com/univo.primaria" }
+            // ],
+            id: "vision"
         }
     ];
 
