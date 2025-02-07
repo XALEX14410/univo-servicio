@@ -279,7 +279,18 @@ Creado por: Jesus Alejandro Lara
 }
 
 
+.nav-list li:hover > a,
+.nav-list li:hover > .submenu li:hover > a {
+    background-color:  #b700ff36; /* Fondo de hover */
+    color: var(--nav-link-hover-color);
+}
 
+/* Reactivar hover en el submenú con colores opuestos */
+.nav-list li:hover > .submenu li a:hover,
+.nav-list li:hover > .submenu_2 li a:hover {
+    background-color:  #b700ff36;/* Fondo de hover */
+    color: var(--nav-link-hover-color);
+}
 /* Estilos para dispositivos grandes */
 @media (min-width: 1120px) {
     #container-logo-mini {

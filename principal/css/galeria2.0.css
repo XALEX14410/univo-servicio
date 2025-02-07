@@ -31,13 +31,20 @@
 
 .main-image {
     flex: 2;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 20px;   
 }
 
 .main-image img {
     width: 100%;
+   
+    margin: auto;
+    object-fit: contain;
     height: auto;
     border-radius: 10px;
+    min-height: 400px;
+    max-height: 400px;
 }
 
 .thumbnails {

@@ -136,11 +136,23 @@
     font-size: 14px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.nav-list li:hover > a,
+.nav-list li:hover > .submenu li:hover > a {
+    background-color: #e9ecef;
+    color: #007bff;
+}
 
-.submenu li a:hover, .submenu_2 li a:hover {
+/* Reactivar hover en el submenú con colores opuestos */
+.nav-list li:hover > .submenu li a:hover,
+.nav-list li:hover > .submenu_2 li a:hover {
     background-color: #007bff;
     color: white;
 }
+
+/* .submenu li a:hover, .submenu_2 li a:hover {
+    background-color: #007bff;
+    color: white;
+} */
 
 /* Botón de menú móvil */
 .nav-toggle {

@@ -21,7 +21,12 @@
     width: 80px;
     margin-bottom: 10px;
 }
-
+.footer-logo a {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: white;
+    font-weight: bold;
+}
 .footer-logo p, .footer-contact p {
     margin: 5px 0;
     font-size: 0.9em;
