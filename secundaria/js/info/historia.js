@@ -2,49 +2,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const contenido = [
         {
             title: "Historia",
-            description: "Grupo Educativo UniVO crea a partir de agosto de 2005 la Primaria Particular del Valle de Orizaba, una institución Privada incorporada a la Secretaría de Educación de Veracruz con la Clave de Centro de Trabajo 30PPR0020J y No. de Acuerdo PRI001/2005, siendo actualmente de las más importantes de la Zona centro del Estado de Veracruz; basada en los mismos valores y principios que fundamentan la vida de nuestra comunidad educativa.",
-            // images: [
-            //     "/univservicio/primaria/../img/GEU2030-50.png",
-            //     "/univseicio/primaria/../img/GEU2031-51.png"
-            // ],
-            // videos: [ // Desactivado
-            //     { url: "https://www.youtube.com/embed/xxxxxx", title: "Video de Historia" },
-            //     { url: "https://www.youtube.com/embed/yyyyyy", title: "" } // Título vacío
-            // ],
-            // social: [
-            //     { platform: "facebook", url: "https://www.facebook.com/univo.primaria" },
-            //     { platform: "twitter", url: "https://twitter.com/univo_primaria" },
-            //     { platform: "instagram", url: "https://www.instagram.com/univo.primaria" }
-            // ],
+            description: [
+                "Formando parte de Grupo Educativo UniVO, en su nivel de educación básica, el 20 Agosto de 2007 inicia sus funciones “Secundaria Valle de Orizaba”, una Institución privada incorporada a la Secretaría de Educación de Veracruz con la CCT: 30PES0503H; consolidándose como una de las más importantes del Centro del Estado de Veracruz.",
+                "Para el mes de agosto del 2011, se oferta los servicios educativos de Secundaria Particular “Secundaria Valle de Orizaba, Turno Vespertino” con la CCT: 30PES0533B, una nueva opción en éste turno."
+            ],
             id: "historia"
         }
     ];
 
-    // Referencia al contenedor principal
     const libretaContainer = document.querySelector(".libreta");
 
-    // Generar contenido dinámicamente
     contenido.forEach(item => {
         const libretaSection = document.createElement("div");
-        libretaSection.classList.add("libreta-item"); // Clase común para todos los items
-        libretaSection.id = item.id; // Asignar ID único
+        libretaSection.classList.add("libreta-item");
+        libretaSection.id = item.id;
 
-        // Crear título (si existe)
         if (item.title) {
             const titleElement = document.createElement("h1");
             titleElement.textContent = item.title;
             libretaSection.appendChild(titleElement);
         }
 
-        // Crear descripción (si existe)
-        if (item.description) {
+        if (item.description && Array.isArray(item.description)) {
             const descriptionDiv = document.createElement("div");
             descriptionDiv.classList.add("descripcion");
-            const descriptionElement = document.createElement("p");
-            descriptionElement.textContent = item.description;
-            descriptionDiv.appendChild(descriptionElement);
+
+            item.description.forEach(paragraph => {
+                const descriptionElement = document.createElement("p");
+                descriptionElement.textContent = paragraph;
+                descriptionDiv.appendChild(descriptionElement);
+            });
+
             libretaSection.appendChild(descriptionDiv);
         }
+
+        libretaContainer.appendChild(libretaSection);
+    
 
         // Crear imágenes (si existen)
         if (item.images && item.images.length > 0) {

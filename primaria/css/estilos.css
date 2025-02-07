@@ -6,7 +6,15 @@ Creado por: Jesus Alejandro Lara
 @import url("https://fonts.googleapis.com");
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
-
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.contenido {
+  flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+}
 body {
   font-family: "Itim", cursive;
   /* font-weight: 400; */

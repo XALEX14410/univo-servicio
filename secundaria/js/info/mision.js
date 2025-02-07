@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const contenido = [
         {
             title: "Misión",
-            description: "Participar en la formación integral de sus estudiantes, promoviendo armónicamente el desarrollo de habilidades cognitivas y destrezas psicomotoras, siempre comprometidos con su entorno y capaces de enfrentar con éxito los retos que la vida les presente.",
+            description: "Proporcionar al alumno un servicio educativo de calidad, que le permita desarrollar las competencias para la vida, adaptarse a sus circunstancias, transformar y contribuir a la mejora de la sociedad en la que vive.",
             // images: [
             //     "/univservicio/primaria/../img/GEU2030-50.png",
             //     "/univseicio/primaria/../img/GEU2031-51.png"
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             title: "Visión",
-            description: "Impartir educación primaria de alta calidad; donde los niños logren apropiarse de los contenidos educativos, solucionen problemas de carácter práctico y logren desarrollar competencias amplias para vivir y convivir en una sociedad cada vez más compleja. Logrando que la educación primaria contribuya a la formación de ciudadanos y seres humanos capaces de actuar con juicio crítico frente a los valores y normas sociales, culturales y el cuidado del medio ambiente.",
+            description: "En el año 2020, ser una institución educativa de alta demanda y prestigio académico, que brinde una educación de excelencia y vanguardia; centrada en el aprendizaje significativo y permanente del alumno.",
             // images: [
             //     "/univservicio/primaria/../img/GEU2030-50.png",
             //     "/univseicio/primaria/../img/GEU2031-51.png"

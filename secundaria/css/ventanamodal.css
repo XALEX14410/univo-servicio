@@ -8,7 +8,7 @@
   
   /* Botón para abrir la ventana modal */
   .btn-show-modal {
-    background: #E0586C;
+    background: #E6238B;
     color: white;
     text-decoration: none;
     font-size: 1.1em;
@@ -122,12 +122,15 @@
   .instagram{
     background:linear-gradient(45deg,#9207FF,#F3191A,#ECA50B) ;
   }
+
   .whatsapp{
     background:#25D366;
   }
   .email{
-    background:#4181E0 ;
+    background:#1763e6 ;
   }
+
+
   /* Media queries para pantallas pequeñas */
   @media (max-width: 768px) {
     .modal-content {
