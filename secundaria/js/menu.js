@@ -1,3 +1,24 @@
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Detectar y agregar imágenes al logo-container
+    const logoContainer = document.querySelector(".logo-container");
+    if (logoContainer && !logoContainer.querySelector("img")) {
+        logoContainer.innerHTML = `
+            <img src="/univo-servicio/secundaria/img/logo_secundaria.png" alt="Logo escolar" class="logo" id="logo1">
+            <a href="/univo-servicio/principal/index.html"><img src="./img/GEU2030-50.png" alt="Logo de la Empresa" class="logo" id="logo2"></a>
+        `;
+    }
+
+    // Detectar y agregar imágenes al logo-container_max
+    const logoContainerMax = document.querySelector(".logo-container_max");
+    if (logoContainerMax && !logoContainerMax.querySelector("img")) {
+        logoContainerMax.innerHTML = `
+             <img src="/univo-servicio/secundaria//img/logo_secundaria.png" alt="Logo escolar" class="logo">
+                <a href="/univo-servicio/principal/index.html"><img src="/univo-servicio/principal/img/GEU2030-50.png" alt="Logo de la Empresa" class="logo"></a>
+        `;
+    }
+});
+
 // Función para agregar elementos al menú de navegación
 function agregarElementoMenu(icono, texto, enlace, submenus = [], target = null) {
     const navList = document.getElementById("nav_list");

@@ -85,7 +85,7 @@
                 </div>
                 
                  <div class="footer-section text-center mt-2">
-                        <p><a href="https://www.univo.edu.mx/" target="_blank">Aviso de privacidad</a></p>
+                        <p><a href="/univo-servicio/principal/src/nosotros/aviso.html" target="_blank"> <i class="bi bi-box-arrow-in-up-right"></i> Aviso de privacidad</a></p>
                 </div>
             </div>                
 

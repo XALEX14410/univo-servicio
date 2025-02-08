@@ -1,17 +1,16 @@
 const images = [
-    { id: "image1", src: "/univo-servicio/primaria/img/galeria/1.webp", description: "Descripción 1", text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit." },
-    { id: "image2", src: "/univo-servicio/primaria/img/galeria/2.webp", description: "Descripción 2", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
-    { id: "image3", src: "/univo-servicio/primaria/img/galeria/3.webp", description: "Descripción 3", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
-    { id: "image4", src: "/univo-servicio/primaria/img/galeria/4.webp", description: "Descripción 4", text: "Lorem ipsum dolor sit amet consectetur." },
-    { id: "image5", src: "/univo-servicio/primaria/img/galeria/5.webp", description: "Descripción 5", text: "Lorem ipsum dolor sit amet consectetur." },
-    { id: "image6", src: "/univo-servicio/primaria/img/galeria/6.webp", description: "Descripción 6", text: "Lorem ipsum dolor sit amet consectetur." },
-    { id: "image7", src: "/univo-servicio/primaria/img/galeria/7.webp", description: "Descripción 7" },
-    { id: "image8", src: "/univo-servicio/primaria/img/galeria/8.webp", description: "Descripción 8" },
-    { id: "image9", src: "/univo-servicio/primaria/img/galeria/9.webp", description: "Descripción 9" },
-    { id: "image10", src: "/univo-servicio/primaria/img/galeria/10.webp", description: "Descripción 10" },
-    { id: "image11", src: "/univo-servicio/primaria/img/galeria/11.webp", description: "Descripción 11" },
-    { id: "image12", src: "/univo-servicio/primaria/img/galeria/12.webp", description: "Descripción 12" },
-  ];
+  { id: "image1", src: "/univo-servicio/secundaria/img/galeria/1.webp", description: "Nueva normalidad"},
+  { id: "image2", src: "/univo-servicio/secundaria/img/galeria/2.webp", description: "Instalaciones" },
+  { id: "image3", src: "/univo-servicio/secundaria/img/galeria/3.webp", description: "Desfile" },
+  { id: "image4", src: "/univo-servicio/secundaria/img/galeria/4.webp", description: "Fiesta patria" },
+  { id: "image5", src: "/univo-servicio/secundaria/img/galeria/5.webp", description: "Día de la madre" },
+  { id: "image6", src: "/univo-servicio/secundaria/img/galeria/6.webp", description: "Día de Todos los Santos" },
+  { id: "image8", src: "/univo-servicio/secundaria/img/galeria/8.webp", description: "Entonamiento del Himno Nacional" },
+  { id: "image9", src: "/univo-servicio/secundaria/img/galeria/9.webp", description: "Feria de las culturas" },
+  { id: "image10", src: "/univo-servicio/secundaria/img/galeria/10.webp", description: "Actividades Académicas" },
+  { id: "image11", src: "/univo-servicio/secundaria/img/galeria/11.webp", description: "Apoyamiento a la selección" },
+  { id: "image12", src: "/univo-servicio/secundaria/img/galeria/12.webp", description: "Pinceladas de imaginación" },
+];
   
   // Generar la galería
   const galleryContainer = document.querySelector(".galeria");

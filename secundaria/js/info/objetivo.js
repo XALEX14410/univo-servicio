@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const contenido = [
         {
             title: "Objetivo",
-            description: "Asegurar que los niños adquieran conocimientos y desarrollen habilidades intelectuales, que les                    permitan aprender permanentemente y con independencia; se formen éticamente mediante el conocimiento                    de sus derechos, deberes y la práctica de valores, así como el desarrollo de actitudes para el                    aprecio de las artes y ejercicio físico.",
+            description: "Promover en los alumnos el desarrollo integral de sus capacidades, habilidades, actitudes y valores                éticos para la vida; así como, garantizar su participación responsable en el desarrollo científico,                tecnológico, cultural, político, económico y sustentable de la sociedad.",
             // images: [
             //     "/univservicio/primaria/../img/GEU2030-50.png",
             //     "/univseicio/primaria/../img/GEU2031-51.png"

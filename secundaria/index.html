@@ -41,8 +41,7 @@
         </div>
         <!-- Contenedor del logo -->
         <div class="logo-container" id="container-logo-mini">
-            <img src="./img/logo_secundaria.png" alt="Logo escolar" class="logo" id="logo1">
-            <a href="/univo-servicio/principal/index.html"><img src="./img/GEU2030-50.png" alt="Logo de la Empresa" class="logo" id="logo2"></a>
+            
         </div>
 
         <!-- Botón de menú para pantallas pequeñas -->
@@ -54,8 +53,7 @@
         <!-- Barra de navegación -->
         <nav class="barra-navegacion" id="barra-navegacion">
             <div class="logo-container_max">
-                <img src="./img/logo_secundaria.png" alt="Logo escolar" class="logo">
-                <a href="/univo-servicio/principal/index.html"><img src="./img/GEU2030-50.png" alt="Logo de la Empresa" class="logo"></a>
+               
             </div>
             <ul class="nav-list" id="nav_list">
 
@@ -71,110 +69,84 @@
 
     <!-- End header -->
 
-    
 
-    <!-- Main  -->
-    <!-- <main class="contenido padding--100-0">  
-        <section>
-            <div class="fondo-presentacion-no-bg">
-                <div id="contenedorCarruselConAnimacion">
-                    <div id="contenedorImagenesCarrusel">
-                        <img src="/univo-servicio/secundaria/img/carousel/pagina-web-sec.webp" alt="Imagen 1" class="imagenCarrusel">
-                        <img src="/univo-servicio/secundaria/img/carousel/PW-Clases-en-linea-secu.webp" alt="Imagen 2" class="imagenCarrusel">
+    <!-- Main -->
+        <main class="contenido padding--100-0">
+            <section>
+                <div class="fondo-presentacion-no-bg">
+                    <div id="contenedorCarruselConAnimacion">
+                        <div id="contenedorImagenesCarrusel">
+                            <img src="/univo-servicio/secundaria/img/carousel/pagina-web-sec.webp" alt="Imagen 1"
+                                class="imagenCarrusel" data-modal="modal1">
+                            <img src="/univo-servicio/secundaria/img/carousel/PW-Clases-en-linea-secu.webp" alt="Imagen 2"
+                                class="imagenCarrusel" data-modal="modal2">
                         
+
+                        </div>
+                        <div id="botonesCarruselContenedor">
+                            <button id="botonIzquierdaCarrusel">&#10094;</button>
+                            <button id="botonDerechaCarrusel">&#10095;</button>
+                        </div>
+                        <div id="indicadoresCarruselContenedor">
+                            <span class="indicadorCarrusel"></span>
+                            <span class="indicadorCarrusel"></span>
+
+                        </div>
                     </div>
-                    <div id="botonesCarruselContenedor">
-                        <button id="botonIzquierdaCarrusel">&#10094;</button>
-                        <button id="botonDerechaCarrusel">&#10095;</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Ventanas modales -->
+        <div id="modal1" class="modal-overlay">
+            <div class="modal-content">
+                <header>
+                    <h2>Información General</h2>
+                    <button class="btn-close-modal" aria-label="Cerrar ventana">×</button>
+                </header>
+                <div class="modal-body">
+                    <p>Detalles sobre el servicio educativo.</p>
+
+                    <div class="modal-body-buttons">
+                        <a href="https://www.facebook.com" target="_blank" class="btn-show-modal facebook"><i class="bi bi-facebook"></i> Facebook</a>
+                        <a href="https://www.instagram.com" target="_blank" class="btn-show-modal instagram"><i class="bi bi-instagram"></i> Instagram</a>
                     </div>
-                    <div id="indicadoresCarruselContenedor">
-                        <span class="indicadorCarrusel"></span>
-                        <span class="indicadorCarrusel"></span>
-                        
+                </div>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal-overlay">
+            <div class="modal-content">
+                <header>
+                    <h2>Contacto</h2>
+                    <button class="btn-close-modal" aria-label="Cerrar ventana">×</button>
+                </header>
+                <div class="modal-body">
+                    <p>Puedes contactarnos a través de:</p>
+                    <div class="modal-body-buttons">
+                        <a href="https://wa.me/1234567890" target="_blank" class="btn-show-modal whatsapp"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:info@institucion.com" class="btn-show-modal email"><i class="bi bi-envelope"></i> Correo Electrónico</a>
                     </div>
                 </div>
-        </section>
-      
+            </div>
+        </div>
 
-
-    </main> -->
-<!-- Main -->
-<main class="contenido padding--100-0">
-    <section>
-        <div class="fondo-presentacion-no-bg">
-            <div id="contenedorCarruselConAnimacion">
-                <div id="contenedorImagenesCarrusel">
-                    <img src="/univo-servicio/secundaria/img/carousel/pagina-web-sec.webp" alt="Imagen 1"
-                        class="imagenCarrusel" data-modal="modal1">
-                    <img src="/univo-servicio/secundaria/img/carousel/PW-Clases-en-linea-secu.webp" alt="Imagen 2"
-                        class="imagenCarrusel" data-modal="modal2">
-                   
-
-                </div>
-                <div id="botonesCarruselContenedor">
-                    <button id="botonIzquierdaCarrusel">&#10094;</button>
-                    <button id="botonDerechaCarrusel">&#10095;</button>
-                </div>
-                <div id="indicadoresCarruselContenedor">
-                    <span class="indicadorCarrusel"></span>
-                    <span class="indicadorCarrusel"></span>
-
+        <div id="modal3" class="modal-overlay">
+            <div class="modal-content">
+                <header>
+                    <h2>Admisiones</h2>
+                    <button class="btn-close-modal" aria-label="Cerrar ventana">×</button>
+                </header>
+                <div class="modal-body">
+                    <p>Información sobre inscripciones y requisitos.</p>
+                    <div class="modal-body-buttons">
+                        <a href="/admisiones" class="btn-show-modal"><i class="bi bi-info-circle"></i> Más información</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-</main>
-
-<!-- Ventanas modales -->
-<div id="modal1" class="modal-overlay">
-    <div class="modal-content">
-        <header>
-            <h2>Información General</h2>
-            <button class="btn-close-modal" aria-label="Cerrar ventana">×</button>
-        </header>
-        <div class="modal-body">
-            <p>Detalles sobre el servicio educativo.</p>
-
-            <div class="modal-body-buttons">
-                <a href="https://www.facebook.com" target="_blank" class="btn-show-modal facebook"><i class="bi bi-facebook"></i> Facebook</a>
-                <a href="https://www.instagram.com" target="_blank" class="btn-show-modal instagram"><i class="bi bi-instagram"></i> Instagram</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal2" class="modal-overlay">
-    <div class="modal-content">
-        <header>
-            <h2>Contacto</h2>
-            <button class="btn-close-modal" aria-label="Cerrar ventana">×</button>
-        </header>
-        <div class="modal-body">
-            <p>Puedes contactarnos a través de:</p>
-            <div class="modal-body-buttons">
-                <a href="https://wa.me/1234567890" target="_blank" class="btn-show-modal whatsapp"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-                <a href="mailto:info@institucion.com" class="btn-show-modal email"><i class="bi bi-envelope"></i> Correo Electrónico</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal3" class="modal-overlay">
-    <div class="modal-content">
-        <header>
-            <h2>Admisiones</h2>
-            <button class="btn-close-modal" aria-label="Cerrar ventana">×</button>
-        </header>
-        <div class="modal-body">
-            <p>Información sobre inscripciones y requisitos.</p>
-            <div class="modal-body-buttons">
-                <a href="/admisiones" class="btn-show-modal"><i class="bi bi-info-circle"></i> Más información</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Ventanas modales -->
-</main>
+        <!-- End Ventanas modales -->
+    </main>
     <!-- End main -->
 
 

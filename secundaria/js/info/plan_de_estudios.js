@@ -2,38 +2,49 @@ const grados = [
     {
         nombre: "Primer Grado",
         numero: "1°",
-        formacionAcademica: ["Lengua materna", "Matemáticas", "Conocimiento del medio", "Inglés"],
-        desarrolloPersonal: ["Educación Física", "Educación Socioemocional", "Artes"]
+        formacionAcademica: [
+            "Lengua materna (Español)",
+            "Inglés",
+            "Matemáticas",
+            "Ciencias y Tecnología Biología",
+            "Historia",
+            "Geografía",
+            "Formación Cívica y Ética",
+            "Artes",
+            "Tutoría y Educación Socioemocional",
+            "Educación Física",
+            "Autonomía Curricular"
+        ]
     },
     {
         nombre: "Segundo Grado",
         numero: "2°",
-        formacionAcademica: ["Lengua materna", "Matemáticas", "Conocimiento del medio", "Inglés"],
-        desarrolloPersonal: ["Educación Física", "Educación Socioemocional", "Artes"]
+        formacionAcademica: [
+            "Español ll",
+            "Inglés ll",
+            "Matemáticas ll",
+            "Ciencias ll (Física)",
+            "Historia l",
+            "Formación Cívica y Ética l",
+            "Artes ll",
+            "Tutoría ll",
+            "Educación Física",
+            "Autonomía Curricular"
+        ]
     },
     {
         nombre: "Tercer Grado",
         numero: "3°",
-        formacionAcademica: ["Español", "Matemáticas", "Ciencias Naturales", "La Entidad Donde Vivo", "Formación Cívica y Ética", "Educación Física", "Educación Artística", "Educación Socioemocional"],
-        extracurriculares: ["Computación", "Inglés"]
-    },
-    {
-        nombre: "Cuarto Grado",
-        numero: "4°",
-        formacionAcademica: ["Español", "Matemáticas", "Ciencias Naturales", "Historia", "Geografía", "Formación Cívica y Ética", "Educación Física", "Educación Artística", "Educación Socioemocional"],
-        extracurriculares: ["Computación", "Inglés"]
-    },
-    {
-        nombre: "Quinto Grado",
-        numero: "5°",
-        formacionAcademica: ["Español", "Matemáticas", "Ciencias Naturales", "Historia", "Geografía", "Formación Cívica y Ética", "Educación Física", "Educación Artística", "Educación Socioemocional"],
-        extracurriculares: ["Computación", "Inglés"]
-    },
-    {
-        nombre: "Sexto Grado",
-        numero: "6°",
-        formacionAcademica: ["Español", "Matemáticas", "Ciencias Naturales", "Historia", "Geografía", "Formación Cívica y Ética", "Educación Física", "Educación Artística", "Educación Socioemocional"],
-        extracurriculares: ["Computación", "Inglés"]
+        formacionAcademica: [
+            "Español",
+            "Matemáticas",
+            "Ciencias Naturales",
+            "La Entidad Donde Vivo",
+            "Formación Cívica y Ética",
+            "Educación Física",
+            "Educación Artística",
+            "Educación Socioemocional"
+        ]
     }
 ];
 
