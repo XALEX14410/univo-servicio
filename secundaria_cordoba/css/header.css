@@ -1,0 +1,438 @@
+/* Código de header
+Creado por: Jesus Alejandro Lara
+*/
+@import url(estilos.css);
+
+/* Encabezado fijo */
+.encabezado {
+    background: var(--bg-header);
+    animation: var(--bg-animation);
+    position: fixed;
+    width: 100%;
+    height: 170px;
+    top: 0;
+    z-index: 1;
+    border-bottom: 7px solid #986CA9;
+
+    
+    -webkit-animation: var(--bg-animation); /* Safari y Chrome */
+    -moz-animation: var(--bg-animation); /* Firefox */
+
+}
+
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+    text-align: center;
+    padding: 20px 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+
+    
+    -webkit-transition: height 0.3s ease, opacity 0.3s ease; /* Safari y Chrome */
+    -moz-transition: height 0.3s ease, opacity 0.3s ease; /* Firefox */
+
+}
+
+.logo {
+    max-width: var(--logo-max-width);
+    height: var(--logo-height);
+    transition: transform 0.3s ease;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* Evita que la imagen sea seleccionada */
+    -webkit-user-drag: none;
+    /* Evita que la imagen sea arrastrada en navegadores WebKit */
+    pointer-events: none;
+    /* Desactiva cualquier interacción con la imagen */
+    
+    -webkit-transition: transform 0.3s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.3s ease; /* Firefox */
+
+}
+.barra-navegacion > .logo-container_max{
+    display: flex;
+    justify-content: center;
+}
+.logo-container_max .logo {
+    max-width: var(--logo-max-width);
+    height: var(--logo-height);
+    transition: transform 0.3s ease;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* Evita que la imagen sea seleccionada */
+    -webkit-user-drag: none;
+    /* Evita que la imagen sea arrastrada en navegadores WebKit */
+    pointer-events: none;
+    /* Desactiva cualquier interacción con la imagen */
+
+
+    -webkit-transition: transform 0.3s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.3s ease; /* Firefox */
+
+}
+/* Barra de navegación */
+.barra-navegacion #nav_list {
+    list-style: none;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.barra-navegacion ul li {
+    z-index: 2;
+    margin: 0 1px;
+    position: relative;
+}
+
+.barra-navegacion ul li a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 4px;
+    transition: background-color 0.4s ease, color 0.3s ease, transform 0.3s ease;
+
+    
+    -webkit-transition: background-color 0.4s ease, color 0.3s ease, transform 0.3s ease; /* Safari y Chrome */
+    -moz-transition: background-color 0.4s ease, color 0.3s ease, transform 0.3s ease; /* Firefox */
+
+}
+
+.barra-navegacion ul li a:hover {
+    color: var(--nav-link-hover-color);
+    background-color:  #b700ff36; /* Fondo de hover */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+
+    
+    -webkit-transform: translateY(-3px) scale(1.05); /* Safari y Chrome */
+    -moz-transform: translateY(-3px) scale(1.05); /* Firefox */
+
+    
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Safari y Chrome */
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Firefox */
+
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--nav-link-color);
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+
+    
+    -webkit-transition: transform 0.5s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.5s ease; /* Firefox */
+
+}
+
+/* Estilo para el ícono cuando está activo */
+.nav-toggle.is-active {
+    transform: rotate(180deg);
+
+    
+    -webkit-transform: rotate(180deg); /* Safari y Chrome */
+    -moz-transform: rotate(180deg); /* Firefox */
+
+}
+
+.nav-toggle .bi-x-lg {
+    display: none;
+}
+
+.nav-toggle.is-active .bi-list {
+    display: none;
+}
+
+.nav-toggle.is-active .bi-x-lg {
+    display: block;
+}
+
+/* Lista de navegación */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nav-list li {
+    list-style: none;
+    position: absolute;
+       
+    margin: 0;
+    
+}
+
+.nav-list li a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 10px;
+    font-size: 18px;
+    display: block;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo leve */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+    
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Safari y Chrome */
+    -moz-transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Firefox */
+
+}
+
+.nav-list li a:hover {
+    color: var(--nav-link-hover-color);
+    
+    transform: scale(1.08);
+
+    
+    -webkit-transform: scale(1.08); /* Safari y Chrome */
+    -moz-transform: scale(1.08); /* Firefox */
+
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    width: 220px;
+    opacity: 0;
+
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+
+    
+    -webkit-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Firefox */
+
+
+}
+
+.submenu_2 {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    
+    z-index: 2;
+    border-radius: 5px;
+    padding: 5px;
+    width: 220px;
+    opacity: 0;
+    transform: translateX(0px);
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+    /* left: 100px; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    
+    -webkit-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Safari y Chrome */
+    -moz-transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease; /* Firefox */
+   
+    
+
+}
+
+/* Mostrar submenús al hacer clic */
+.nav-list > li.active > .submenu
+ {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(0px);
+    background-color: #f9f9f9; /* Fondo del submenú */
+    transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.4s ease;
+
+}
+.submenu li.active > .submenu_2{
+    display: block;
+    opacity: 1;
+    
+    transform: translateX(0px);background-color: #f9f9f9; /* Fondo del submenú */
+}
+@-moz-document url-prefix() {
+    .submenu  > .submenu_2 {
+        transform: translateX(0px);
+        transform: translateY(0px); 
+        
+    }
+}
+
+
+.nav-list li:hover > a,
+.nav-list li:hover > .submenu li:hover > a {
+    background-color:  #b700ff36; /* Fondo de hover */
+    color: var(--nav-link-hover-color);
+}
+
+/* Reactivar hover en el submenú con colores opuestos */
+.nav-list li:hover > .submenu li a:hover,
+.nav-list li:hover > .submenu_2 li a:hover {
+    background-color:  #b700ff36;/* Fondo de hover */
+    color: var(--nav-link-hover-color);
+}
+/* Estilos para dispositivos grandes */
+@media (min-width: 1120px) {
+    #container-logo-mini {
+        display: none;
+    }
+    .logo-container_max {
+        position: absolute;
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 100px;
+        padding-right: 200px;
+        display: flex;
+        justify-content: flex-start; /* Alineación al inicio (techo) */
+        column-gap: 70%;
+        z-index: 1;
+    }
+}
+
+/* Estilos para dispositivos medianos */
+@media (max-width: 1120px) {
+    .encabezado {
+        height: 130px;
+    }
+    .barra-navegacion .logo-container_max {
+        display: none;
+    }
+    .barra-navegacion ul li {
+        position: relative;
+        display: block;
+        background-color: #ffffff;
+        max-height: 100vh;
+    }
+    .nav-list {
+        background-color: #ffffff;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        max-height: 100vh;
+        
+        border-radius: 5px;
+        padding: 5px 0;
+        display: none; /* Se muestra solo cuando es activado */
+    }
+
+    .nav-list.active {
+        display: flex; /* Solo se activa cuando se añade la clase 'active' */
+        flex-direction: row; /* Asegura que los elementos estén alineados verticalmente */
+        justify-content: flex-start; /* Alineación al inicio (techo) */
+    }
+
+    .nav-list li {
+        display: block; /* Cambiado a block para mejor compatibilidad */
+        width: 100%;
+        padding: 10px 0; /* Reducido el padding para hacer los elementos más pegados */
+        margin: 0 5px; /* Reducido el margen entre los elementos */
+    }
+
+    .barra-navegacion ul li a:hover {
+        transform: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: relative;
+        z-index: 2;
+        font-size: 50px;
+    }
+
+    .logo-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        padding: 20px;
+        text-align: center;
+        transition: height 0.3s ease, opacity 0.3s ease;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    /* Submenús en dispositivos móviles */
+    .submenu {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+        max-height: 350px;
+        overflow-x: hidden;
+        height: auto;
+        overflow-y: auto;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+
+    .submenu_2 {
+        position: relative;
+        width: auto;
+        margin: 0px 20px 20px 20px;
+        left: 0;
+        text-align: center;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 700px) {
+    
+    #logo2 {
+        display: none;
+    }
+}
+
+/* Pantallas pequeñas (sin altura definida) */
+@media screen and (max-width: 700px) {
+    .encabezado {
+        height: 110px;
+    }
+
+    .logo {
+        max-width: 300px;
+    }
+
+    .nav-list li a {
+        font-size: 16px;
+    }
+
+    .submenu_2 {
+        padding: 5px 5px 100% 5px;
+    }
+}
+
+/* Escritorio grande (pantallas más grandes, sin altura definida) */
+@media screen and (min-width: 1095px) {
+    .encabezado {
+        height: 170px;
+    }
+
+    .logo {
+        max-width: 200px;
+        
+    }
+
+    .nav-list li a {
+        font-size: 21px;
+    }
+}

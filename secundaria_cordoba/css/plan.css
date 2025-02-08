@@ -1,0 +1,96 @@
+.grid-container-escolar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 20px 100px 20px 100px;
+    
+  }
+  .titulo-grado {
+    background-color: #7A468F;
+    color: white;
+    padding: 2px;
+    text-align: center; /* Centra el contenido horizontalmente */
+    border-radius: 4px;
+    margin-bottom: 40px;
+    height: 130px;
+}
+
+.titulo-grado h2 {
+    margin: 20px 0px 0px 0px;
+    z-index: 1;
+}
+
+.grado {
+    display: inline-block; /* Permite centrar el bloque dentro de un contenedor de texto */
+    text-align: center; /* Centra el texto dentro del bloque */
+    color: #333;
+    background-color:  #f7f7f7;
+    width: calc(120px + auto);
+    font-size: 50px;
+    font-weight: bold;
+    transform: translateY(5px);
+    border:2px solid #f7f7f7;
+    margin: auto; /* Centra el bloque horizontalmente dentro de su contenedor */
+    padding: 10px 30px 10px 30px; /* Opcional: Añade espacio interno para mejor visualización */
+    border-radius: 100%; /* Opcional: Bordes redondeados */
+}
+
+
+.grado-escolar {
+    background-color: #f7f7f7;
+    padding: 00px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.seccion-formacion, .seccion-desarrollo, .seccion-extracurricular {
+    margin-top: 15px;
+}
+  
+.titulo-seccion {
+    text-align: center;
+    
+    /* background-color: #40A0DA; */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.lista-asignaturas {
+    list-style: none;
+    /* padding-left: 0; */
+    padding: 20px 50px 20px 50px;
+}
+  
+/* Alterna el color de las asignaturas: impares grises, pares blancas */
+.lista-asignaturas .asignatura:nth-child(odd) {
+    background-color: #e0e0e0; /* Gris claro */
+}
+  
+.lista-asignaturas .asignatura:nth-child(even) {
+    background-color: #ffffff; /* Blanco */
+}
+
+.lista-asignaturas .asignatura {
+    margin: 5px 0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+  
+ 
+@media (max-width: 768px) {
+    .inicial_titulo{
+        padding-top: 60px;
+        text-align: center;
+    }
+    
+    
+    .contenido{
+        
+        padding: 0px 0 80px 0;
+    }
+    .grid-container-escolar {
+        padding: 0;
+        grid-template-columns: 1fr;
+
+    }
+}

@@ -1,0 +1,144 @@
+:root {
+    --primary-bg: #f4f4f4;
+    --header-bg: linear-gradient(to right, #673AB7, #2196F3);
+    --header-text: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-text: #ffffff; /* Cambiado a blanco para que el texto contraste con los fondos */
+    --transition-time: 0.3s;
+
+    /* Colores específicos por tarjeta */
+    --basketball-color: #FFC107;
+    --soccer-color: #17A2B8;
+    --dance-color: #FD7E14;
+    --music-color: #007BFF;
+    --drawing-color: #28A745;
+    --math-color: #6C757D;
+    --literature-color: #FF5733;
+    --geometry-color: #FFB142;
+    --myths-color: #a605b2;
+    --radio-color: #3B9AB5;
+    --games-color: #8BC34A;
+    --technology-color: #FF4081;
+    --intelligent-house-color: #3949AB;
+}
+.container_club {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container_club .header h1 {
+    font-size: 2.5rem;
+    color: var(--header-text);
+    background: var(--header-bg);
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.container_club .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.container_club .card {
+    width: 350px; /* Aumenta el tamaño de las tarjetas */
+    height: 180px; /* Tamaño uniforme */
+    border-radius: 15px;
+    color: var(--card-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 10px var(--card-shadow);
+    transition: transform var(--transition-time) ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 15px;
+    transform: rotate(-3deg); /* Rotación */
+}
+
+.card .icon {
+    font-size: 3.5rem; /* Icono más grande */
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 0.75rem  rgba(0, 0, 0, 0.557));
+}
+
+.card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    filter: drop-shadow(0 0 0.75rem  rgba(0, 0, 0, 0.955));
+}
+
+/* Animación en hover */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos específicos por tarjeta */
+.basketball {
+    background-color: var(--basketball-color);
+}
+
+.soccer {
+    background-color: var(--soccer-color);
+}
+
+.dance {
+    background-color: var(--dance-color);
+}
+
+.music {
+    background-color: var(--music-color);
+}
+
+.drawing {
+    background-color: var(--drawing-color);
+}
+
+.math {
+    background-color: var(--math-color);
+}
+
+.literature {
+    background-color: var(--literature-color);
+}
+
+.geometry {
+    background-color: var(--geometry-color);
+}
+
+.myths {
+    background-color: var(--myths-color);
+}
+
+.radio {
+    background-color: var(--radio-color);
+}
+
+.games {
+    background-color: var(--games-color);
+}
+
+.technology {
+    background-color: var(--technology-color);
+}
+
+.intelligent-house {
+    background-color: var(--intelligent-house-color);
+}

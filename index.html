@@ -29,7 +29,7 @@
         }
 
         .container {
-            position: absolute;
+           
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -155,9 +155,9 @@
             </section>
             <section class="section2">
                 <h2>Córdoba</h2>
-                <a href="#" class="disabled" data-alert="true"><span>Secundaria</span></a>
+                <a href="./secundaria_cordoba/index.html"><span>Secundaria</span></a>
                 <a href="#" class="disabled" data-alert="true"><span>Preparatoria</span></a>
-                <a href="./univo_cordoba/index.html">UniVO Córdoba</a>
+                <a href="#" class="disabled" data-alert="true"><span>UniVO Córdoba</span></a>
             </section>
 
             <section class="sectio3">
@@ -165,6 +165,7 @@
                 <a href="./principal/index.html">UniVO principal</a>
             </section>
         </main>
+        <p>Creado po: Alejandro Lara</p>
     </div>
 
     <!-- Bootstrap JS (opcional para componentes interactivos) -->
@@ -172,36 +173,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        // Seleccionar todos los enlaces con la clase 'disabled'
-        const disabledLinks = document.querySelectorAll('a.disabled');
-
-        disabledLinks.forEach((link) => {
-            // Crear el ícono de candado
-            const lockIcon = document.createElement('i');
-            lockIcon.classList.add('bi', 'bi-lock-fill');
-            
-            // Insertar el ícono dentro del enlace
-            link.appendChild(lockIcon);
-
-            // Agregar el evento 'mouseenter' para mostrar el ícono cuando el cursor pasa sobre el enlace
-            link.addEventListener('mouseenter', () => {
-                link.classList.add('show-icon'); // Agregar la clase para mostrar el ícono
-            });
-
-            // Agregar el evento 'mouseleave' para ocultar el ícono cuando el cursor se va
-            link.addEventListener('mouseleave', () => {
-                link.classList.remove('show-icon'); // Eliminar la clase para ocultar el ícono
-            });
-
-            // Agregar evento de SweetAlert al hacer clic
-            link.addEventListener('click', (event) => {
-                event.preventDefault(); // Evita la acción predeterminada del enlace
+  document.querySelectorAll("a.disabled").forEach(link => {
+            link.addEventListener("click", event => {
+                event.preventDefault();
                 Swal.fire({
-                    icon: 'info',
-                    title: 'Página en construcción',
-                    text: 'Esta página aún no está disponible. Por favor, regresa más tarde.',
-                    confirmButtonText: 'Entendido',
-                    confirmButtonColor: '#dd00ff'
+                    icon: "info",
+                    title: "Página en construcción",
+                    text: "Esta página aún no está disponible. Por favor, regresa más tarde.",
+                    confirmButtonColor: "#dd00ff"
                 });
             });
         });
