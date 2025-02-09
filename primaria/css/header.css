@@ -421,18 +421,11 @@ Creado por: Jesus Alejandro Lara
     }
 }
 
-/* Escritorio grande (pantallas más grandes, sin altura definida) */
-@media screen and (min-width: 1095px) {
-    .encabezado {
-        height: 170px;
+@media screen and (max-width: 350px) {
+    #logo1{
+        display: none;
     }
-
-    .logo {
-        max-width: 200px;
-        
-    }
-
-    .nav-list li a {
-        font-size: 21px;
+    #logo2{
+        display: inline;
     }
 }

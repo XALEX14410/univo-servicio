@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    height: 100vh;
+}
+
+.sidebar {
+    
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Distribuir los elementos en una fila */
+    align-items: center; /* Alinear los elementos verticalmente */
+}
+
+.sidebar h2 {
+    margin-right: auto; /* Mueve el título a la izquierda */
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex; /* Cambia a distribución horizontal */
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-right: 20px; /* Espacio entre los elementos del menú */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 8px;
+}
+
+form input {
+    margin-bottom: 12px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#mensaje {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: green;
+}

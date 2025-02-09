@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoContainerMax = document.querySelector(".logo-container_max");
     if (logoContainerMax && !logoContainerMax.querySelector("img")) {
         logoContainerMax.innerHTML = `
-             <img src="/univo-servicio/secundaria//img/logo_secundaria.png" alt="Logo escolar" class="logo">
+             <img src="/univo-servicio/secundaria/img/logo_secundaria.png" alt="Logo escolar" class="logo">
                 <a href="/univo-servicio/principal/index.html"><img src="/univo-servicio/principal/img/GEU2030-50.png" alt="Logo de la Empresa" class="logo"></a>
         `;
     }

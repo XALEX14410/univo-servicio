@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         logoContainerMax.innerHTML = `
             <img src="./img/logo_primaria.png" alt="Logo escolar" class="logo">
             <a href="/univo-servicio/principal/index.html">
-                <img src="./img/GEU2030-50.png" alt="Logo de la Empresa" class="logo">
+                <img src="/univo-servicio/primaria/img/GEU2030-50.png" alt="Logo de la Empresa" class="logo">
             </a>
         `;
     }

@@ -48,24 +48,21 @@
     height: 200px; /* Altura */
     border-radius: 5px; /* Bordes redondeados */
 }
-
 .social-icons {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center; /* Centra los íconos verticalmente si hay altura definida */
     margin: 20px; /* Espacio entre iconos sociales */
     filter: invert(100%);
 }
 
-
-
-.social-icon {
-    display: inline-block; /* Íconos en línea */
-    margin: 0 10px; /* Espacio entre iconos */
-}
-
 .social-icon img {
-    width: 40px; /* Tamaño del ícono */
-    height: 40px; /* Tamaño del ícono */
+    margin: 5px;
+    width: 20px; /* Tamaño del ícono */
+    height: 20px; /* Tamaño del ícono */
     transition: transform 0.3s; /* Transición suave */
 }
+
 
 .social-icon:hover img {
     transform: scale(1.1); /* Aumento de tamaño al pasar el cursor */

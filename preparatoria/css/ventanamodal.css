@@ -1,0 +1,154 @@
+
+.modal-overlay  h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  /* Botón para abrir la ventana modal */
+  .btn-show-modal {
+    background: #E6238B;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-show-modal:hover {
+    /* background-color: #f06b7f; */
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Estilos de la ventana modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+  }
+  
+  .modal-overlay.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Estilos del contenido modal */
+  .modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: modalSlideIn 0.4s ease forwards;
+  }
+  
+  @keyframes modalSlideIn {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos del encabezado del modal */
+  .modal-overlay header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .modal-overlay h2 {
+    color: #333;
+    font-size: 1.6em;
+    font-weight: bold;
+  }
+  
+  /* Botón de cierre */
+  .btn-close-modal {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .btn-close-modal:hover {
+    color: #e74c3c;
+  }
+  
+  /* Estilos del cuerpo del modal */
+  .modal-body-buttons {
+    text-align: center;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+  }
+  
+  .modal-text {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+  
+
+
+  .facebook{
+    background:#0866FF ;
+  }
+  .instagram{
+    background:linear-gradient(45deg,#9207FF,#F3191A,#ECA50B) ;
+  }
+
+  .whatsapp{
+    background:#25D366;
+  }
+  .email{
+    background:#1763e6 ;
+  }
+
+
+  /* Media queries para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.4em;
+    }
+  
+    .modal-text {
+      font-size: 1em;
+    }
+  
+    .btn-show-modal {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  }
+  

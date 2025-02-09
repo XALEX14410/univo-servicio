@@ -1,0 +1,166 @@
+/* 
+    Creado por: Jesus Alejandro Lara Castro
+    DIseño libreta css
+ */
+
+ @import url(./estilos.css);
+
+ .libreta {
+     position: relative;
+     border-radius: 30px;
+     box-shadow:
+         rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+         rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+     width: auto;
+     height: auto;
+     margin: 0 auto;
+     /* Centra el div horizontalmente */
+     padding: 40px;
+ }
+ 
+ .libreta h1 {
+     text-align: center;
+     padding-bottom: 50px;
+     border-bottom: 2px solid black;
+     font-size: 80px;
+ }
+ 
+ .libreta h2 {
+     font-size: 60px;
+     text-align: center;
+ }
+ 
+ .libreta p {
+     font-size: 30px;
+ }
+ 
+ .libreta .texto-centrado {
+     text-align: center;
+ }
+ 
+ .libreta .azul {
+     font-size: 30px;
+     font-weight: bold;
+     color: var(--magenta-dark);
+ }
+ 
+ .libreta .linea-roja {
+     position: absolute;
+     top: 0;
+     left: 80px;
+     width: 2px;
+     height: 100%;
+ }
+ 
+ .img_club {
+     -webkit-user-drag: none;
+     user-select: none;
+     -moz-user-select: none;
+     -webkit-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     /* Evita que la imagen sea seleccionada */
+     -webkit-user-drag: none;
+     /* Evita que la imagen sea arrastrada en navegadores WebKit */
+     pointer-events: none;
+     /* Desactiva cualquier interacción con la imagen */
+     width: 100%;
+     height: auto;
+     display: block;
+     margin: 0 auto;
+     /* Centra la imagen horizontalmente */
+     max-width: 1200px;
+     /* Para asegurarse de que no exceda el contenedor */
+ }
+ 
+ .lista-en-libreta {
+     font-size: 30px;
+     list-style-type: circle;
+ }
+ 
+ .lista-en-libreta li {
+     padding: 18px;
+ }
+ 
+ .lista-en-libreta li p {
+     display: inline;
+ }
+ 
+ /* Media queries para responsividad */
+ @media (max-width: 1094px) {
+     .libreta {
+         padding: 50px;
+     }
+ 
+     .libreta .linea-roja {
+         left: 0;
+         margin-top: 50px;
+         margin-bottom: 50px;
+         width: 100%;
+         height: 2px;
+     }
+ }
+ 
+ @media (max-width: 768px) {
+     .libreta {
+         margin: -40px;
+         padding: 0;
+     }
+ 
+     .libreta h1 {
+         padding-top: 40px;
+         padding-bottom: 0px;
+         font-size: 50px;
+     }
+ 
+     .libreta h2 {
+         font-size: 40px;
+     }
+ 
+     .libreta p {
+         font-size: 20px;
+     }
+ 
+     .libreta .azul {
+         font-size: 30px;
+     }
+ 
+     .img_club {
+         width: 100%;
+         /* Imagen responsiva */
+         height: auto;
+         max-width: 100%;
+         margin: 0 auto;
+         /* Centra la imagen */
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     .libreta {
+         padding: 20px;
+     }
+ 
+     .libreta h1 {
+         font-size: 30px;
+     }
+ 
+     .libreta h2 {
+         font-size: 25px;
+     }
+ 
+     .libreta p {
+         font-size: 16px;
+     }
+ 
+     .libreta .azul {
+         font-size: 24px;
+     }
+ 
+     .img_club {
+         width: 100%;
+         height: auto;
+         max-width: 100%;
+         margin: 0 auto;
+     }
+ }
