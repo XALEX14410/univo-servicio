@@ -77,15 +77,15 @@ contacts.forEach((contact, index) => {
         : "";
 
     // Generar números de teléfono fijo
-    const fijoLinks = contact.phones.fijo.length > 0
+    const fijoLinks = contact.phones && contact.phones.fijo && contact.phones.fijo.length > 0
         ? `<p><strong>Teléfonos fijos:</strong><br>${contact.phones.fijo.map(fijo => `<a href="tel:${fijo}" class="contact-phone"><i class="bi bi-telephone-fill"></i> ${fijo}</a>`).join("<br>")}</p>`
         : "";
 
     // Generar números de WhatsApp
-    const whatsappLinks = contact.phones.whatsapp.length > 0
+    const whatsappLinks = contact.phones && contact.phones.whatsapp && contact.phones.whatsapp.length > 0
         ? `<p><strong>WhatsApp:</strong><br>${contact.phones.whatsapp.map(whatsapp => {
-            const messageParam = whatsapp.message
-                ? `?text=${encodeURIComponent(whatsapp.message)}`
+            const messageParam = whatsapp.message 
+                ? `?text=${encodeURIComponent(whatsapp.message)}` 
                 : "";
             return `<a href="https://wa.me/${whatsapp.number.replace('+', '')}${messageParam}" target="_blank" class="contact-whatsapp"><i class="bi bi-whatsapp"></i> ${whatsapp.number}</a>`;
         }).join("<br>")}</p>`

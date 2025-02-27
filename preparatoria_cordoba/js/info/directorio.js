@@ -6,7 +6,8 @@ const contacts = [
         phones: {
             fijo: [],
             whatsapp: []
-        }
+        },
+        social: {}
     },
     {
         title: "Subdirección",
@@ -14,7 +15,8 @@ const contacts = [
         phones: {
             fijo: [],
             whatsapp: []
-        }
+        },
+        social: {}
     },
     {
         title: "Control Escolar",
@@ -22,7 +24,8 @@ const contacts = [
         phones: {
             fijo: [],
             whatsapp: []
-        }
+        },
+        social: {}
     },
     {
         title: "Psicopedagógico",
@@ -30,7 +33,8 @@ const contacts = [
         phones: {
             fijo: [],
             whatsapp: []
-        }
+        },
+        social: {}
     },
     {
         title: "Comunicación Social",
@@ -38,7 +42,8 @@ const contacts = [
         phones: {
             fijo: [],
             whatsapp: []
-        }
+        },
+        social: {}
     },
     {
         title: "Caja",
@@ -46,7 +51,8 @@ const contacts = [
         phones: {
             fijo: [],
             whatsapp: []
-        }
+        },
+        social: {}
     },
     {
         title: "Cobranza",
@@ -54,10 +60,10 @@ const contacts = [
         phones: {
             fijo: [],
             whatsapp: []
-        }
+        },
+        social: {}
     }
 ];
-
 
 // Referencia al contenedor
 const contactGrid = document.getElementById("contact-grid");
@@ -74,12 +80,12 @@ contacts.forEach((contact, index) => {
         : "";
 
     // Generar números de teléfono fijo
-    const fijoLinks = contact.phones.fijo.length > 0
+    const fijoLinks = contact.phones && contact.phones.fijo && contact.phones.fijo.length > 0
         ? `<p><strong>Teléfonos fijos:</strong><br>${contact.phones.fijo.map(fijo => `<a href="tel:${fijo}" class="contact-phone"><i class="bi bi-telephone-fill"></i> ${fijo}</a>`).join("<br>")}</p>`
         : "";
 
     // Generar números de WhatsApp
-    const whatsappLinks = contact.phones.whatsapp.length > 0
+    const whatsappLinks = contact.phones && contact.phones.whatsapp && contact.phones.whatsapp.length > 0
         ? `<p><strong>WhatsApp:</strong><br>${contact.phones.whatsapp.map(whatsapp => {
             const messageParam = whatsapp.message 
                 ? `?text=${encodeURIComponent(whatsapp.message)}` 

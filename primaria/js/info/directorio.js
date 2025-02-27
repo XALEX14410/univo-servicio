@@ -3,31 +3,27 @@ const contacts = [
     {
         title: "Dirección",
         emails: ["rmartinez@correo.univo.edu.mx", "direccion2@univo.edu.mx"],
-        phones: {
-            fijo: [],
-            whatsapp: []
-        },social:{}
-        
+        // phones: {
+        //     fijo: [],
+        //     whatsapp: []
+        // },
+        social: {}
     },
     {
         title: "Control Escolar",
         emails: ["garcia@univo.edu.mx"],
         phones: {
             fijo: [],
-            whatsapp: [
-            
-            ],
+            whatsapp: []
         },
-        social: {        }
+        social: {}
     },
     {
         title: "Caja",
         emails: ["caja@univo.edu.mx"],
         phones: {
             fijo: [],
-            whatsapp: [
-               
-            ],
+            whatsapp: []
         }
     },
     {
@@ -35,9 +31,7 @@ const contacts = [
         emails: ["cobranza@univo.edu.mx"],
         phones: {
             fijo: [],
-            whatsapp: [
-               
-            ],
+            whatsapp: []
         }
     }
 ];
@@ -52,17 +46,16 @@ contacts.forEach((contact, index) => {
     contactItem.id = `contact-item-${index + 1}`;
 
     // Generar correos electrónicos
-    const emailLinks = contact.emails.length > 0
+    const emailLinks = contact.emails?.length > 0
         ? `<p><strong>Correos:</strong><br>${contact.emails.map(email => `<a href="mailto:${email}" class="contact-email"><i class="bi bi-envelope-at-fill"></i> ${email}</a>`).join("<br>")}</p>`
         : "";
 
-    // Generar números de teléfono fijo
-    const fijoLinks = contact.phones.fijo.length > 0
+    // Verificar si existen phones antes de acceder a sus propiedades
+    const fijoLinks = contact.phones?.fijo?.length > 0
         ? `<p><strong>Teléfonos fijos:</strong><br>${contact.phones.fijo.map(fijo => `<a href="tel:${fijo}" class="contact-phone"><i class="bi bi-telephone-fill"></i> ${fijo}</a>`).join("<br>")}</p>`
         : "";
 
-    // Generar números de WhatsApp
-    const whatsappLinks = contact.phones.whatsapp.length > 0
+    const whatsappLinks = contact.phones?.whatsapp?.length > 0
         ? `<p><strong>WhatsApp:</strong><br>${contact.phones.whatsapp.map(whatsapp => {
             const messageParam = whatsapp.message 
                 ? `?text=${encodeURIComponent(whatsapp.message)}` 
@@ -71,7 +64,7 @@ contacts.forEach((contact, index) => {
         }).join("<br>")}</p>`
         : "";
 
-    // Generar redes sociales solo si hay al menos un enlace válido
+    // Verificar si existen redes sociales antes de acceder a ellas
     let socialLinks = "";
     if (contact.social) {
         const { facebook, twitter, instagram } = contact.social;
